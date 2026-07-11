@@ -1,0 +1,3 @@
+model,n,mean_narrative_completeness,mean_coherence,mean_decodability_adherence,mean_target_phonics_pattern_emphasis,mean_overall_spec_adherence
+base,21,0.9048,0.7619,0.0,0.2381,0.0952
+tuned,21,0.7143,0.9048,0.6667,0.381,0.2857

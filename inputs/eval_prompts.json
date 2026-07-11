@@ -1,0 +1,34 @@
+[
+    {
+      "prompt_id": "short_vowels_1",
+      "target_phonics": ["short-vowel words"]
+    },
+    {
+      "prompt_id": "blends_digraphs_1",
+      "target_phonics": ["consonant blends", "consonant digraphs"]
+    },
+    {
+      "prompt_id": "final_e_blends_1",
+      "target_phonics": ["final-e words", "consonant blends"]
+    },
+    {
+      "prompt_id": "vowel_teams_digraphs_1",
+      "target_phonics": ["vowel teams", "consonant digraphs"]
+    },
+    {
+      "prompt_id": "r_controlled_blends_1",
+      "target_phonics": ["r-controlled vowels", "consonant blends"]
+    },
+    {
+      "prompt_id": "diphthongs_digraphs_1",
+      "target_phonics": ["diphthongs", "consonant digraphs"]
+    },
+    {
+      "prompt_id": "multisyllabic_vowel_teams_r_controlled_1",
+      "target_phonics": [
+        "multisyllabic words",
+        "vowel teams",
+        "r-controlled vowels"
+      ]
+    }
+  ]

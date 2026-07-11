@@ -1,0 +1,58 @@
+[
+  {
+    "prompt_id": "short_vowels_1",
+    "target_phonics": [
+      "short-vowel words"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- short-vowel words\n\nHere are some example words containing these patterns:\n- short-vowel words: cat, sit, red, hop\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "blends_digraphs_1",
+    "target_phonics": [
+      "consonant blends",
+      "consonant digraphs"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- consonant blends\n- consonant digraphs\n\nHere are some example words containing these patterns:\n- consonant blends: stop, frog, black, plant\n- consonant digraphs: ship, fish, that, chop\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "final_e_blends_1",
+    "target_phonics": [
+      "final-e words",
+      "consonant blends"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- final-e words\n- consonant blends\n\nHere are some example words containing these patterns:\n- final-e words: cake, bike, home, smile\n- consonant blends: stop, frog, black, plant\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "vowel_teams_digraphs_1",
+    "target_phonics": [
+      "vowel teams",
+      "consonant digraphs"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- vowel teams\n- consonant digraphs\n\nHere are some example words containing these patterns:\n- vowel teams: rain, seed, boat, play\n- consonant digraphs: ship, fish, that, chop\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "r_controlled_blends_1",
+    "target_phonics": [
+      "r-controlled vowels",
+      "consonant blends"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- r-controlled vowels\n- consonant blends\n\nHere are some example words containing these patterns:\n- r-controlled vowels: farm, bird, corn, turn\n- consonant blends: stop, frog, black, plant\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "diphthongs_digraphs_1",
+    "target_phonics": [
+      "diphthongs",
+      "consonant digraphs"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- diphthongs\n- consonant digraphs\n\nHere are some example words containing these patterns:\n- diphthongs: coin, out, toy, cloud\n- consonant digraphs: ship, fish, that, chop\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  },
+  {
+    "prompt_id": "multisyllabic_vowel_teams_r_controlled_1",
+    "target_phonics": [
+      "multisyllabic words",
+      "vowel teams",
+      "r-controlled vowels"
+    ],
+    "prompt": "Write a decodable story.\n\nEmphasize these phonics patterns:\n- multisyllabic words\n- vowel teams\n- r-controlled vowels\n\nHere are some example words containing these patterns:\n- multisyllabic words: rabbit, family, dinosaur, computer\n- vowel teams: rain, seed, boat, play\n- r-controlled vowels: farm, bird, corn, turn\n\nUse the example words only as guidance. You may use other words that contain the same patterns.\nWrite a coherent narrative with a clear beginning, middle, and ending.\nInclude a natural story title.\nDo not mention phonics terms or pattern names in the title or story."
+  }
+]
