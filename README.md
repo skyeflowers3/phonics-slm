@@ -29,7 +29,7 @@ Supporting detail:
 
 ## Evaluation design
 
-- **Objective** (`scripts/evaluate_outputs.py`): estimated rule-based spelling-pattern metrics (decodability compliance, above-level rate, target satisfaction, leakage). Not a perfect measure of linguistic decodability.
+- **Objective** (`scripts/evaluate_outputs.py`): estimated rule-based spelling-pattern metrics. Primary: decodability compliance / above-level rate. Secondary: target satisfaction with partial credit (`min(distinct_matches / 4, 1)` per requested pattern, then averaged). Also tracks phonics-term leakage. Not a perfect measure of linguistic decodability.
 - **Subjective** (`scripts/llm_judge.py`): blind LLM judge. The judge never sees the `model` column; it scores story text against the prompt/target phonics only.
 - **Error analysis** (`scripts/error_analysis.py`): combines both to surface where the tuned model improved, where it still fails, and which prompt conditions remain hard.
 

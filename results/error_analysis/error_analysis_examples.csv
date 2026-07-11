@@ -1,183 +1,53 @@
 category,rank,prompt_id,generation_id,seed,target_phonics,n_targets,likely_cause,notes,compliance_delta,base_decodability_compliance,tuned_decodability_compliance,base_above_level_rate,tuned_above_level_rate,base_weighted_above_level_rate,tuned_weighted_above_level_rate,base_target_satisfaction_rate,tuned_target_satisfaction_rate,base_word_count,tuned_word_count,tuned_decodability_adherence_score,tuned_target_phonics_pattern_emphasis_score,tuned_coherence_score,tuned_narrative_completeness_score,tuned_overall_spec_adherence_score,base_decodability_adherence_score,base_target_phonics_pattern_emphasis_score,base_coherence_score,base_narrative_completeness_score,tuned_story,base_story,tuned_decodability_adherence_justification,tuned_target_phonics_pattern_emphasis_justification,tuned_coherence_justification,tuned_narrative_completeness_justification
-largest_compliance_gain,1,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",2,generation behavior,Largest paired gain in objective decodability_compliance.,0.4282,0.4977,0.9259,0.5023,0.0741,1.9302,0.2593,1.0,0.0,215,27,2,1,0,0,0,0,0,0,0,"Title: The Frog
+largest_compliance_gain,1,short_vowels_1,2,1002,short-vowel words,1,training-data coverage,Largest paired gain in objective decodability_compliance.,0.3823,0.3869,0.7692,0.6131,0.2308,2.5779,0.6462,1.0,1.0,199,65,0,1,2,2,1,0,0,0,0,"Title: The Cat and the Dog
 
-The frog is in the pond.  
-The frog jumps to the moon.  
-The sun shines on the frog.  
-The dog runs past the pond.","**The Happy Forest Adventure**
-
-One day, a little red squirrel named Mira noticed something unusual in her favorite forest. She found a small tree with big leaves and a bright red apple on top of it. As she looked around, she saw a new animal—a curious yellow bear who was always looking for adventure.
-
-The bear had been following Mira all over the forest, but now they were together! They both wanted to explore more. After a while, Mira helped the bear find a safe place to rest by building a tiny nest made from sticks and leaves. The bear said, “I can take you somewhere,” and they both started walking through the forest.
-
-As they walked, they met many interesting creatures: a wise old owl, a clever fox, and a funny eagle. They learned about different animals and how they lived. Mira was es…",All vocabulary stays within the allowed phonics progression of consonant blends and digraphs.,"There are a few words with consonant blends and digraphs, but the patterns are not emphasized throughout.",The events are disjointed and do not form a logical or understandable sequence.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-largest_compliance_gain,2,final_e_blends_1,1,1001,"final-e words, consonant blends",2,generation behavior,Largest paired gain in objective decodability_compliance.,0.3084,0.6202,0.9286,0.3798,0.0714,1.125,0.1786,1.0,0.0,208,28,2,0,0,0,0,0,0,1,0,"Title: The Big Bat
-
-The bat is big.  
-The bat has a lot of fun.  
-The bats can play in the sun.  
-There was a bat at home.","**The Happy Garden of Lila**
-
-Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
-
-As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
-
-Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second…","All vocabulary stays within the short-vowel and basic consonant patterns, which is below the requested ceiling.",Neither final-e words nor consonant blends are present in the story.,The sentences are disjointed and do not form a logical or consistent narrative.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-largest_compliance_gain,3,vowel_teams_digraphs_1,1,1001,"vowel teams, consonant digraphs",2,conflicting training objectives,Largest paired gain in objective decodability_compliance.,0.3025,0.6571,0.9596,0.3429,0.0404,0.9029,0.101,1.0,0.5,175,99,0,0,1,1,0,0,1,1,2,"Title: The Boat Trip
-
-The dad took his son to the lake. “Can you help me pick up my hat?” asked his son. “Yes,” said his dad. “I need to get it on top of the boat.” “Oh no!” cried his son. He didn’t know how to get it off the boat. “Let’s go back!” said his dad, but he couldn’t stop the big grin on his face. His son got it on the boat again. “Now I can put it on top! Oh yeah!” said his son. Then he was glad he had the hat on the boat.","**The Boat Adventure**
-
-It was a sunny afternoon, and the sun was shining brightly outside the old wooden house where Lily lived. She had always loved to go on adventures—especially going on trips like this. So she decided to take a small boat to explore the river nearby.
-
-Lily found a little old man who owned a boat. He said he used to sail far away for fun. “I can see the big ones,” he said, pointing at the water. “You’ll be there soon.”
-
-As they traveled, they saw many interesting things. They met a group of fish that were so happy, they sang songs. Then they saw a ship that was very long and strong. It carried them all around the river. After a while, they reached the other side.
-
-They spent the day exploring the river and meeting new friends. At night, Lily felt very proud of her adv…","The story uses many words above the vowel teams and consonant digraphs level, such as 'took', 'lake', 'again', and 'couldn’t'.",Vowel teams and consonant digraphs are almost entirely absent from the story.,The story is mostly understandable but contains confusing actions regarding the hat and the boat.,"The story has a beginning, middle, and end, but transitions are weak and the resolution is unclear."
-largest_compliance_gain,4,short_vowels_1,2,1002,short-vowel words,1,generation behavior,Largest paired gain in objective decodability_compliance.,0.2956,0.3869,0.6825,0.6131,0.3175,2.5779,0.9683,1.0,1.0,199,63,0,0,0,0,0,0,0,1,0,"Title: The Cat and the Dog
-
-The dog is playing outside when it sees the cat.
-The cat jumps onto the dog’s back to play.
-When they get home, the dog will run fast for the cat.
-“Can you help me get the cat,” said the dog.
-“Yes!” ran the cat up high and down.
-The cat was so happy to see them!","**The Happy Forest of Squirrels**
+The dog was playing when he saw the cat. He jumped up on his bed to see if he could catch it. “What do you think?” asked the cat. “I like this spot!” said the dog. “You can sit on my lap,” said the cat. Then they both sat in a big pile of straw! They were so happy.","**The Happy Forest of Squirrels**
 
 In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
 
 One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
 
-One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story includes above-level words such as 'playing,' 'outside,' 'jumps,' 'onto,' 'back,' 'home,' and 'happy,' which are not short-vowel words.","Short-vowel words are rarely present, and most words do not practice the target pattern.","The story is confusing, with unclear actions and dialogue that do not logically connect, making it difficult to follow.","The story is disjointed, lacks a clear sequence of events, and does not have a clear beginning, middle, and ending."
-largest_compliance_gain,5,short_vowels_1,1,1001,short-vowel words,1,training-data coverage,Largest paired gain in objective decodability_compliance.,0.2658,0.4842,0.75,0.5158,0.25,2.0316,0.8214,1.0,1.0,190,28,1,1,2,1,1,0,0,1,2,"Title: The Cat and the Sun
+One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story contains several above-level words and patterns such as 'playing', 'could', 'think', 'like', 'spot', 'both', 'pile', and 'straw', which are not short-vowel words.","Some short-vowel words are present (cat, dog, bed, lap, sat), but many sentences do not emphasize the target pattern.","The story is easy to follow and internally consistent, with logical actions and dialogue.","The story has a clear beginning (dog sees cat), middle (interaction and dialogue), and ending (they sit together and are happy)."
+largest_compliance_gain,2,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",2,generation behavior,Largest paired gain in objective decodability_compliance.,0.3594,0.4977,0.8571,0.5023,0.1429,1.9302,0.4643,1.0,0.5,215,28,2,1,2,1,1,0,1,1,0,"Title: The Frog
 
-The sun is shining bright.  
-A cat sits on the mat.  
-The cat can run fast!  
-The sun has made it warm.","**The Happy Rabbit Who Jumped to the Moon**
+The frog is in the pond.  
+A snake jumps over the frog.  
+The frog can swim fast!  
+The frog will go to bed at night.","**The Happy Forest Adventure**
 
-One day, there was a rabbit named Max who lived on a small hill near a mountain. One morning, he noticed something unusual—there were stars shining bright above the hills, and a strange shape of a little moon that had been up high for a long time.
+One day, a little red squirrel named Mira noticed something unusual in her favorite forest. She found a small tree with big leaves and a bright red apple on top of it. As she looked around, she saw a new animal—a curious yellow bear who was always looking for adventure.
 
-Max was curious, so he climbed up the hill and looked at the sky. He saw a big, round thing moving through the air like it was going somewhere far away. It was a starry moon, but instead of a full moon, it was just a tiny bit smaller and brighter than usual. The moon was glowing because it wasn't dark anymore.
+The bear had been following Mira all over the forest, but now they were together! They both wanted to explore more. After a while, Mira helped the bear find a safe place to rest by building a tiny nest made from sticks and leaves. The bear said, “I can take you somewhere,” and they both started walking through the forest.
 
-Now the next day, Max went back home. But this time, he didn’t go back down. Instead, he jumped into a tall tree, reached out to the top, and found himself flying across the sky once more.
+As they walked, they met many interesting creatures: a wise old owl, a clever fox, and a funny eagle. They learned about different animals and how they lived. Mira was es…",All vocabulary stays within the consonant blends and digraphs phonics progression.,Consonant blends and digraphs appear but are not emphasized throughout the story.,The story is easy to follow and internally consistent.,The story has a beginning and middle but the ending is abrupt and lacks a clear resolution.
+largest_compliance_gain,3,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,Largest paired gain in objective decodability_compliance.,0.3395,0.4313,0.7708,0.5687,0.2292,2.1754,0.8333,1.0,1.0,211,48,1,1,1,1,1,0,0,0,0,"Title: A Cat on the Bed
 
-He…","Most words are short-vowel, but 'bright' and 'shining' are above the short-vowel level.",Short-vowel words appear several times but are not strongly emphasized throughout.,The story is easy to follow and internally consistent.,The story has a beginning and middle but lacks a clear ending or resolution.
-least_compliance_gain,1,multisyllabic_vowel_teams_r_controlled_1,1,1001,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.6667,202,139,1,1,2,2,1,0,0,0,0,"Title: The Family Trip to the Zoo
-
-Mom and Dad had a big day at the zoo. They went on a trip with their kids. The kids were so happy when they saw animals!  
-The kids ran up to see what animals lived there. There was a big red dog who ran fast! It did not stop running until it got to a big blue duck that sat on top of a log.  
-Dad had a fun time taking pictures. “What do you think this is?” asked Mom.  
-“Is this a frog?” said Sam.  
-“This is a turtle,” said Tom.  
-“Are these all new animals for us?” asked Sam.  
-They got lots of questions about why these animals live here.  
-Then, they had lunch and got to nap. They had a lot to enjoy and had an amazing day!","**The Happy Garden of Lila**
-
-In a small village, there lived a girl named Lila who loved to read books and learn new things. One day, she found a book called *The Magic Treehouse* which told her about a forest full of animals and plants. The trees had big leaves, and the flowers were colorful. She learned that the forest was home for many different creatures—birds, squirrels, rabbits, and more.
-
-One morning, Lila discovered a special plant called *Corn*. This plant had a tall stalk and a sweet flavor. It also had a lot of seeds inside, so it could grow a garden. Lila thought this was very fun.
-
-Then one day, Lila met a wise old man who said something like, ""You can be curious and learn from everyone."" He gave her a small box with a map and a basket filled with food. With this, Lila becam…","While most vocabulary is appropriate, there are several words (e.g., 'amazing', 'pictures', 'questions', 'enjoy') that contain advanced patterns beyond the requested progression.","There are a few multisyllabic words and some r-controlled vowels, but vowel teams are almost entirely absent and the target patterns are not strongly emphasized.","The story is easy to follow and internally consistent, describing a family trip to the zoo with logical events.","The story has a clear beginning (arriving at the zoo), middle (exploring animals and asking questions), and ending (having lunch and reflecting on the day)."
-least_compliance_gain,2,multisyllabic_vowel_teams_r_controlled_1,2,1002,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,209,77,2,0,2,1,1,0,0,0,0,"Title: The Farmhouse
-
-The barn was big. It had a shed for hay. The yard was wide. The kids got to run around.  
-A duck flew from the barn to get on a log. A chicken came up from the coop to feed the ducks.  
-Mom made pancakes. Dad made a pie. The kids were playing near the pond.  
-At night, they went back to sleep. They all fell asleep when they looked out at their home.","**The Forest Hunt**
-
-In the heart of the forest, there lived a young fox named Timmy. One day, he noticed a strange sight—there was a big, red squirrel hiding under a bush. Timmy thought it was just a normal squirrel, but then he saw something more important. A group of birds were flying high above the trees, their feathers shimmering like stars. They were all on a long journey to find food for themselves.
-
-Timmy followed them, and soon they met a wise old owl who had been listening for a long time. The owl told Timmy that the forest was full of hidden treasures, and each one could be found by following the clues given. After much searching, Timmy found a map marked with a special symbol—a number that said ""Rabbit"" in bold letters next to it.
-
-He realized that this was a multisyllabic wor…",All vocabulary stays within or below the requested phonics progression.,"The story rarely uses multisyllabic words, vowel teams, or r-controlled vowels, missing the requested emphasis.",The story is easy to follow and internally consistent.,"The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-least_compliance_gain,3,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,138,76,1,0,0,0,0,0,1,2,2,"Title: A Family on the Farm
-
-Dad is at the barn with his kids, while Mom is reading to them.  
-The dogs come and run up to the barn when they hear the news.  
-Mom says to Dad, “You can go back home if you want!”  
-“Go! I am going to be there,” said Dad.  
-The children ran out of the barn, but they did not forget about dad.  
-They will visit their grandparent this week!","**The Forest's Whisper**
-
-In a small forest where the trees hummed with old songs, there lived a curious young squirrel named Tim. One day, he noticed something unusual: a strange shape was growing in the moss under a tree. The next morning, he found a new creature — a giant raccoon! Tim felt so happy to see such an animal. But then he heard a voice saying, *""Look at the plant!""* And just then, a leaf fell from the oak tree, revealing a map of a hidden path leading deep into the forest. As they walked along, Tim saw many things — a river, a bridge, a pond full of water, and even a big stone made of wood. He learned how to listen carefully and find what others didn't. Now, he knew more about the world than ever before. 🌿✨","Most vocabulary stays within the requested phonics progression, but some words like 'news' and 'forget' are above the target level.","There is minimal use of multisyllabic words, vowel teams, or r-controlled vowels, with almost no repetition or emphasis.","The story is confusing, with unclear actions and relationships between events and characters.","The story lacks a clear beginning, middle, and ending, and feels disjointed and incomplete."
-least_compliance_gain,4,final_e_blends_1,3,1003,"final-e words, consonant blends",2,conflicting training objectives,Smallest paired compliance_delta. Tuned absolute compliance remains relatively weak.,0.0814,0.6259,0.7073,0.3741,0.2927,1.0816,0.8415,1.0,0.5,147,82,0,0,0,1,0,0,0,2,2,"Title: A Trip to the Farmyard
-
-The family has just left their house for a trip to the farmyard.  
-They will ride on their horses to see the animals there!  
-As they ride by the barn, they spot many small birds on the grass.  
-They run into a big red cow who looks very sad.  
-The cows are happy to be at the farm, so the cows give them a big hug.  
-Then they look back at the farm and say goodbye!","**The Happy Forest Adventure**
-
-In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
-
-Max thought, “I wonder if I can help this bear.” He decided to go with the bear and helped him find food for himself. Together they found a big pile of apples, bananas, and nuts.
-
-Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
-
-That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","The story uses above-level vocabulary and multisyllabic words like 'family,' 'animals,' and 'goodbye,' which exceed the requested phonics progression.",There are almost no final-e words or consonant blends practiced in the story.,"The story is confusing and internally inconsistent, especially with the cows giving hugs and being both sad and happy.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-least_compliance_gain,5,r_controlled_blends_1,3,1003,"r-controlled vowels, consonant blends",2,conflicting training objectives,Smallest paired compliance_delta. Tuned absolute compliance remains relatively weak.,0.1119,0.7186,0.8305,0.2814,0.1695,0.5389,0.322,1.0,1.0,167,59,1,1,2,1,1,0,1,2,2,"Title: A Trip to the Farmyard
-
-The family has just left their house for a trip to the farmyard.  
-They will go into the barn to see the animals there.  
-As they walk through the yard, they spot many small birds on the tree tops.  
-The family can’t wait to see how much fun it is to be outside!","**The Forest's Whisper**
-
-In a small forest where the trees hummed with old songs, there lived a young fox named Luna. One day, she heard a soft sound from a tree high above—like a melody. The tree was full of tiny creatures, all curious and happy. They danced together, their colors flashing like stars.
-
-Luna followed them to a big oak tree, which had many branches. She found a hidden cave filled with shiny rocks. Inside, there were plants growing tall, and a big red bird sitting on its wing. The birds sang again, and so did Luna.
-
-As the days passed, more animals came to the forest. A wise owl told her about a secret map. With each step, they could find answers. But one night, when the forest trembled with magic, Luna realized something new: every creature in the forest knew that magic w…","Most vocabulary is within scope, but words like 'family', 'animals', and 'outside' are above the requested phonics progression.","There are a few examples of r-controlled vowels and consonant blends, but they are not emphasized or repeated throughout.",The story is easy to follow and internally consistent.,The story has a beginning and middle but lacks a clear ending or resolution.
-low_decodability_adherence,1,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,Tuned subjective decodability_adherence_score == 0. n_tuned_flagged=11/21.,0.2477,0.4313,0.679,0.5687,0.321,2.1754,1.2099,1.0,1.0,211,81,0,0,1,1,0,0,0,0,0,"Title: A Hot Day at Home
-
-Dad is sitting on the couch watching a movie while Mom is reading a book.  
-I am getting ready to go for lunch with Dad.  
-Mom says I can take my hat if it’s hot outside.  
-I get to the kitchen and find two pots of soup in the sink.  
-The pot has a lid, so it will be good to heat up the soup.  
-When I put the lid back, the pot is warm!","**The Little Red Rabbit's Adventure**
+A cat is sitting on a bed. The cat will nap for hours.  
+The dog will run when it sees the cat. It jumps up to sit.  
+The cat looks at the dog and says, “I am glad we are all happy!”","**The Little Red Rabbit's Adventure**
 
 One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
 
 The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
 
-Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","The story includes several above-level words and patterns such as 'watching,' 'movie,' 'reading,' 'lunch,' 'kitchen,' 'find,' 'soup,' and 'outside,' which are not short-vowel words.","Short-vowel words are rarely emphasized, with most content relying on above-level vocabulary.","The story is mostly understandable but contains some confusing transitions and unclear actions, such as the sudden focus on soup and the warm pot.",The story has a beginning and middle but lacks a clear ending or resolution.
-low_decodability_adherence,2,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,rule-based evaluation limitation,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.1634,0.7981,0.9615,0.2019,0.0385,0.2019,0.0385,1.0,0.5,208,78,0,0,0,0,0,0,0,0,0,"Title: The Big Dog
+Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","Most words are short-vowel, but 'hours', 'jumps', and 'glad' are above the short-vowel level and not strictly necessary.","Short-vowel words appear several times, but not consistently throughout the story.","The story is mostly understandable, but the sequence of events is somewhat unclear and the dog's actions are confusing.","The story has a beginning (cat on bed), middle (dog runs and jumps), and an ending (cat expresses happiness), but transitions are weak and the ending is abrupt."
+largest_compliance_gain,4,blends_digraphs_1,3,1003,"consonant blends, consonant digraphs",2,generation behavior,Largest paired gain in objective decodability_compliance.,0.3183,0.5024,0.8207,0.4976,0.1793,1.9171,0.5924,1.0,1.0,205,184,0,1,1,1,0,0,0,1,0,"Title: A Frog’s Adventure
 
-The dog has a big tail, he can run fast,
-His fur is white on his back.
-He likes to jump high when it’s hot outside,
-But he doesn’t like to play if there is no rain.
-The cat likes to nap at night while the sun shines,
-but she can get lost by the moonlight.
-They have a long way to go on their trip!
-Their big tails will help them stay safe!","**The Happy Garden of Lila**
+A frog wants to go on an adventure. The frog sees a lot of frogs near the pond. He can see them all. Then he sees a lot more frogs near the lake! They do not want to come close. So he runs from the pond to the lake. When he gets there, he is so tired! The frogs will not wait for him anymore. But when he comes back, they are still not coming near him. His job is done. What does his job look like? It is to find a spot where he can rest. If he has no place to rest, then he must stay until the next day. He can not rest at the pond because there is nothing else to rest at. He must find another spot. This is a problem. He can’t find any spots to rest. He had to ask the frogs if they could help him. “Yes,” says one frog, “I can help you.” “You mean help me rest?” asks…","**The Forest's Whisper**
 
-In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
+In a quiet forest where the trees hummed with old songs, there lived a young girl named Lila. She had never heard anything except the soft rustle of leaves and the distant calls of her friends. One day, she found a small book filled with colorful pictures and simple sentences. As she read, she began to hear something new—words that made her feel connected to the world around her. 
 
-Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
+One day, a rabbit came to the edge of the forest, wagging its tail. “I want to go far,” it said, and so Lila followed. They walked through tall grasses, where the wind carried stories like whispers. A squirrel sat on a stone, talking about rivers and streams. Another animal, a bird, flew high above, telling tales of the sky.
 
-One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…","The story uses many words outside the diphthongs and consonant digraphs progression, such as 'outside,' 'doesn’t,' and 'moonlight.'","There is almost no emphasis on diphthongs or consonant digraphs, with very few target-pattern words present.","The story is confusing and disjointed, with unclear relationships between events and characters.","The story lacks a clear beginning, middle, and ending, instead presenting a series of loosely connected statements."
-low_decodability_adherence,3,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,rule-based evaluation limitation,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.1961,0.7401,0.9362,0.2599,0.0638,0.2599,0.0638,1.0,0.0,177,47,0,0,2,1,0,0,0,1,2,"Title: A Trip to the Beach
+They met a wise owl who had seen many places. The owl told L…","The story includes many words above the consonant blends and digraphs level, such as 'adventure,' 'nothing,' 'another,' and 'together.'","Some consonant blends and digraphs are present (frog, pond, spot, rest), but they are not emphasized or repeated throughout the story.","The story is mostly understandable but contains confusing elements, such as the frog's 'job' and unclear motivations.","The story has a beginning, middle, and end, but transitions are weak and the resolution is somewhat unclear."
+largest_compliance_gain,5,final_e_blends_1,2,1002,"final-e words, consonant blends",2,conflicting training objectives,Largest paired gain in objective decodability_compliance.,0.3037,0.5659,0.8696,0.4341,0.1304,1.3512,0.2826,1.0,0.375,205,46,2,0,2,1,0,0,1,2,2,"Title: The Big Red Bus
 
-Dad and Mom went on a trip to the beach.  
-We were all wet and tired! We had a good time.  
-Mom took us to the sand and gave us treats.  
-The sun was shining down and we laughed so much.","**The Magic Treehouse Adventure**
-
-Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
-
-Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
-
-But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses several words above the diphthongs and consonant digraphs level, such as 'beach,' 'tired,' 'treats,' and 'shining,' which are not decodable at the requested level.",There are no clear examples of diphthongs or consonant digraphs practiced in the story.,The story is easy to follow and internally consistent.,"The story has a loose beginning, middle, and end, but transitions are weak and the ending is abrupt."
-low_decodability_adherence,4,final_e_blends_1,2,1002,"final-e words, consonant blends",2,training-data coverage,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.1525,0.5659,0.7184,0.4341,0.2816,1.3512,0.7282,1.0,1.0,205,103,0,1,1,1,0,0,0,2,2,"Title: The Big Race
-
-Mia and Sam have to race to get first place at school. They both need to run fast.
-It is Mia’s turn. She can’t wait to get first. When she gets to the finish line,
-she feels so proud of herself. Mia and Sam will be the best team for next year!
-When they meet their rivals in the big race, Mia wins by 10 seconds. But when it’s
-Sam’s turn to race, he does not let his friends down. He runs faster than all his
-friends. It is amazing how much each of them has made this race fun!","**The Happy Forest Adventure**
+Mom and Dad ride to work every day by bus.  
+A big red bus is on the street.  
+The bus has lots of kids!  
+The kids sit on the seats.  
+What can we do?  
+We get on the bus and go!","**The Happy Forest Adventure**
 
 In a small forest called Maple Grove, there lived a curious little fox named Muffy. One day, while exploring the woods, Muffy noticed a new creature – a wise old owl who had been on the tree for many years.
 
@@ -185,56 +55,13 @@ The owl said, “I see you have a friend here, Muffy. The forest is full of wond
 
 “Now I can fly,” the bird said. Then, when it turned, a group of animals came together. They were all curious about nature and each could tell what was happening around them.
 
-Muffy was especially happy because he saw many things that showed the beauty of th…","The story contains many above-level words (e.g., 'amazing', 'rivals', 'proud', 'finish', 'friends', 'school', 'seconds', 'each', 'much', 'year', 'does', 'himself'), which are not decodable at the requested level.","Some final-e words ('race', 'place', 'line', 'made') and a few blends ('first', 'friends', 'school') appear, but the patterns are not strongly or consistently emphasized.","The story is mostly understandable, but the sequence of events and team structure are somewhat confusing.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-low_decodability_adherence,5,final_e_blends_1,3,1003,"final-e words, consonant blends",2,conflicting training objectives,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.0814,0.6259,0.7073,0.3741,0.2927,1.0816,0.8415,1.0,0.5,147,82,0,0,0,1,0,0,0,2,2,"Title: A Trip to the Farmyard
+Muffy was especially happy because he saw many things that showed the beauty of th…",All vocabulary stays within or below the requested phonics progression.,The story does not include any final-e words or consonant blends.,The story is easy to follow and internally consistent.,"The story has a basic beginning, middle, and end, but transitions are weak and the ending is abrupt."
+least_compliance_gain,1,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",2,conflicting training objectives,Smallest paired compliance_delta. Tuned absolute compliance remains relatively weak.,-0.0089,0.8294,0.8205,0.1706,0.1795,0.1706,0.1795,1.0,0.5,170,39,0,0,1,1,0,0,1,1,2,"Title: The Fun Game
 
-The family has just left their house for a trip to the farmyard.  
-They will ride on their horses to see the animals there!  
-As they ride by the barn, they spot many small birds on the grass.  
-They run into a big red cow who looks very sad.  
-The cows are happy to be at the farm, so the cows give them a big hug.  
-Then they look back at the farm and say goodbye!","**The Happy Forest Adventure**
-
-In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
-
-Max thought, “I wonder if I can help this bear.” He decided to go with the bear and helped him find food for himself. Together they found a big pile of apples, bananas, and nuts.
-
-Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
-
-That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","The story uses above-level vocabulary and multisyllabic words like 'family,' 'animals,' and 'goodbye,' which exceed the requested phonics progression.",There are almost no final-e words or consonant blends practiced in the story.,"The story is confusing and internally inconsistent, especially with the cows giving hugs and being both sad and happy.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-low_target_phonics_emphasis,1,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,Tuned target_phonics_pattern_emphasis_score == 0. n_tuned_flagged=13/21.,0.2477,0.4313,0.679,0.5687,0.321,2.1754,1.2099,1.0,1.0,211,81,0,0,1,1,0,0,0,0,0,"Title: A Hot Day at Home
-
-Dad is sitting on the couch watching a movie while Mom is reading a book.  
-I am getting ready to go for lunch with Dad.  
-Mom says I can take my hat if it’s hot outside.  
-I get to the kitchen and find two pots of soup in the sink.  
-The pot has a lid, so it will be good to heat up the soup.  
-When I put the lid back, the pot is warm!","**The Little Red Rabbit's Adventure**
-
-One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
-
-The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
-
-Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","The story includes several above-level words and patterns such as 'watching,' 'movie,' 'reading,' 'lunch,' 'kitchen,' 'find,' 'soup,' and 'outside,' which are not short-vowel words.","Short-vowel words are rarely emphasized, with most content relying on above-level vocabulary.","The story is mostly understandable but contains some confusing transitions and unclear actions, such as the sudden focus on soup and the warm pot.",The story has a beginning and middle but lacks a clear ending or resolution.
-low_target_phonics_emphasis,2,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.1634,0.7981,0.9615,0.2019,0.0385,0.2019,0.0385,1.0,0.5,208,78,0,0,0,0,0,0,0,0,0,"Title: The Big Dog
-
-The dog has a big tail, he can run fast,
-His fur is white on his back.
-He likes to jump high when it’s hot outside,
-But he doesn’t like to play if there is no rain.
-The cat likes to nap at night while the sun shines,
-but she can get lost by the moonlight.
-They have a long way to go on their trip!
-Their big tails will help them stay safe!","**The Happy Garden of Lila**
-
-In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
-
-Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
-
-One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…","The story uses many words outside the diphthongs and consonant digraphs progression, such as 'outside,' 'doesn’t,' and 'moonlight.'","There is almost no emphasis on diphthongs or consonant digraphs, with very few target-pattern words present.","The story is confusing and disjointed, with unclear relationships between events and characters.","The story lacks a clear beginning, middle, and ending, instead presenting a series of loosely connected statements."
-low_target_phonics_emphasis,3,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",2,conflicting training objectives,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.1211,0.8294,0.9505,0.1706,0.0495,0.1706,0.0495,1.0,0.5,170,101,2,0,1,1,0,0,1,1,1,"Title: The Fish and the Boat
-
-The boat was on a long trip by the sea when it saw a big red dog. It ran up to see him. “Oh no!” cried Sam. “Is this the dog?” asked Ben. Sam put his hand on the top of the boat. He got a new hat from his dad. He went inside to see if he could get help. When they were off the boat, Sam took a nap on a log. Ben sat beside him for a while. After a while, Sam and Ben had fun in their time on the water.","**The Sunny Farm and Its Friends**
+Sara and Sam have fun playing games together.  
+They play ball and they play hopscotch too.  
+Sam has two cups of lemonade to drink.  
+The game ends when the kids say “No!” from the table.","**The Sunny Farm and Its Friends**
 
 One day, there was a new friend named Mr. Piggy who came to live on the farm. The old farmer had a garden full of flowers, but now Mr. Pig was growing vegetables from seeds. He brought in a big pot of tomatoes, carrots, and a bunch of strawberries.
 
@@ -242,231 +69,176 @@ The farmers were all happy to see him come. They planted more crops together and
 
 Then one morning, the group decided to play games. They played hopscotch, chased each other around the farm, and even built a new bridge. They learned how to move faster than the others.
 
-After a long time, the friends left the farm for another day. They went home, and Mr. Pig st…","The vocabulary stays within or below the requested phonics progression, with no above-level words.","Diphthongs and consonant digraphs are almost entirely absent from the story, with only 'boat' and 'fish' (in the title) as possible examples.","The story is mostly understandable but contains confusing elements, such as the unclear role of the dog and inconsistent actions.","The story has a loose beginning, middle, and end, but transitions are weak and the ending is abrupt."
-low_target_phonics_emphasis,4,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,conflicting training objectives,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.1961,0.7401,0.9362,0.2599,0.0638,0.2599,0.0638,1.0,0.0,177,47,0,0,2,1,0,0,0,1,2,"Title: A Trip to the Beach
+After a long time, the friends left the farm for another day. They went home, and Mr. Pig st…","The story includes above-level words such as 'lemonade,' 'together,' and 'hopscotch,' which are not decodable at the diphthongs and consonant digraphs level.","There are almost no words with diphthongs or consonant digraphs, so the requested patterns are not practiced.","The story is mostly understandable, but the ending is confusing as it is unclear why the kids say 'No!' from the table to end the game.","The story has a beginning (Sara and Sam play), a middle (they play games and drink lemonade), and an ending (the game ends), but transitions and the ending are abrupt and underdeveloped."
+least_compliance_gain,2,multisyllabic_vowel_teams_r_controlled_1,1,1001,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.8333,202,35,2,0,2,1,0,0,0,0,0,"Title: The Game
 
-Dad and Mom went on a trip to the beach.  
-We were all wet and tired! We had a good time.  
-Mom took us to the sand and gave us treats.  
-The sun was shining down and we laughed so much.","**The Magic Treehouse Adventure**
+Milo is playing a game. He has to get 10 points. Milo got two of his first three shots right. Then he had one shot left. He took it for himself. Milo won!","**The Happy Garden of Lila**
 
-Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
+In a small village, there lived a girl named Lila who loved to read books and learn new things. One day, she found a book called *The Magic Treehouse* which told her about a forest full of animals and plants. The trees had big leaves, and the flowers were colorful. She learned that the forest was home for many different creatures—birds, squirrels, rabbits, and more.
 
-Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
+One morning, Lila discovered a special plant called *Corn*. This plant had a tall stalk and a sweet flavor. It also had a lot of seeds inside, so it could grow a garden. Lila thought this was very fun.
 
-But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses several words above the diphthongs and consonant digraphs level, such as 'beach,' 'tired,' 'treats,' and 'shining,' which are not decodable at the requested level.",There are no clear examples of diphthongs or consonant digraphs practiced in the story.,The story is easy to follow and internally consistent.,"The story has a loose beginning, middle, and end, but transitions are weak and the ending is abrupt."
-low_target_phonics_emphasis,5,final_e_blends_1,1,1001,"final-e words, consonant blends",2,generation behavior,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.3084,0.6202,0.9286,0.3798,0.0714,1.125,0.1786,1.0,0.0,208,28,2,0,0,0,0,0,0,1,0,"Title: The Big Bat
+Then one day, Lila met a wise old man who said something like, ""You can be curious and learn from everyone."" He gave her a small box with a map and a basket filled with food. With this, Lila becam…",All vocabulary stays within or below the requested phonics progression.,"The story does not include any multisyllabic words, vowel teams, or r-controlled vowels.",The story is easy to follow and internally consistent.,"The story has a beginning, middle, and end, but the transitions are abrupt and the ending is weak."
+least_compliance_gain,3,multisyllabic_vowel_teams_r_controlled_1,2,1002,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.9167,209,51,2,1,2,2,1,0,0,0,0,"Title: The Farm Family’s Fun Trip
 
-The bat is big.  
-The bat has a lot of fun.  
-The bats can play in the sun.  
-There was a bat at home.","**The Happy Garden of Lila**
+The family goes to the farm where they meet their dog.  
+They have fun eating sandwiches and playing games.  
+The dog can run fast on the field.  
+The family has lots of food for lunch.  
+They play together until it is time to go home.","**The Forest Hunt**
 
-Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
+In the heart of the forest, there lived a young fox named Timmy. One day, he noticed a strange sight—there was a big, red squirrel hiding under a bush. Timmy thought it was just a normal squirrel, but then he saw something more important. A group of birds were flying high above the trees, their feathers shimmering like stars. They were all on a long journey to find food for themselves.
 
-As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
+Timmy followed them, and soon they met a wise old owl who had been listening for a long time. The owl told Timmy that the forest was full of hidden treasures, and each one could be found by following the clues given. After much searching, Timmy found a map marked with a special symbol—a number that said ""Rabbit"" in bold letters next to it.
 
-Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second…","All vocabulary stays within the short-vowel and basic consonant patterns, which is below the requested ceiling.",Neither final-e words nor consonant blends are present in the story.,The sentences are disjointed and do not form a logical or consistent narrative.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-low_coherence,1,short_vowels_1,2,1002,short-vowel words,1,generation behavior,Tuned coherence_score == 0. n_tuned_flagged=9/21.,0.2956,0.3869,0.6825,0.6131,0.3175,2.5779,0.9683,1.0,1.0,199,63,0,0,0,0,0,0,0,1,0,"Title: The Cat and the Dog
+He realized that this was a multisyllabic wor…","All vocabulary stays within or below the requested phonics progression, with no above-level words present.","There are a few multisyllabic words and some r-controlled vowels, but vowel teams are minimally represented and overall pattern emphasis is limited.","The story is easy to follow and internally consistent, describing a family outing in logical order.","The story has a clear beginning (the family goes to the farm), middle (they eat and play), and ending (they go home)."
+least_compliance_gain,4,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,Smallest paired compliance_delta. Ceiling effect: both models already near-perfect on this metric.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,138,65,1,0,1,1,0,0,1,2,2,"Title: A Happy Family
 
-The dog is playing outside when it sees the cat.
-The cat jumps onto the dog’s back to play.
-When they get home, the dog will run fast for the cat.
-“Can you help me get the cat,” said the dog.
-“Yes!” ran the cat up high and down.
-The cat was so happy to see them!","**The Happy Forest of Squirrels**
+Mom has a big bag of treats for all of us to eat together at dinner.
+Dad is so happy when they get his treat!
+Buddy likes the hot soup and smooth jelly.
+Patty wants to run fast on the grass. He can run up a hill if he gets there first.
+We will have so much fun eating our treats!","**The Forest's Whisper**
 
-In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
+In a small forest where the trees hummed with old songs, there lived a curious young squirrel named Tim. One day, he noticed something unusual: a strange shape was growing in the moss under a tree. The next morning, he found a new creature — a giant raccoon! Tim felt so happy to see such an animal. But then he heard a voice saying, *""Look at the plant!""* And just then, a leaf fell from the oak tree, revealing a map of a hidden path leading deep into the forest. As they walked along, Tim saw many things — a river, a bridge, a pond full of water, and even a big stone made of wood. He learned how to listen carefully and find what others didn't. Now, he knew more about the world than ever before. 🌿✨","The vocabulary mostly stays within the requested phonics progression, but includes some words (e.g., 'treats', 'together', 'smooth') that do not clearly fit the target patterns and may be above level.","The story rarely uses multisyllabic words, vowel teams, or r-controlled vowels, with almost no emphasis on the requested patterns.","The story is mostly understandable but has some confusing elements, such as unclear character actions and inconsistent focus.","The story has a beginning (Mom brings treats), a middle (family members react), and an ending (they will have fun eating), but transitions are weak and the ending is abrupt."
+least_compliance_gain,5,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Smallest paired compliance_delta. Tuned absolute compliance remains relatively weak.,0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
 
-One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
-
-One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story includes above-level words such as 'playing,' 'outside,' 'jumps,' 'onto,' 'back,' 'home,' and 'happy,' which are not short-vowel words.","Short-vowel words are rarely present, and most words do not practice the target pattern.","The story is confusing, with unclear actions and dialogue that do not logically connect, making it difficult to follow.","The story is disjointed, lacks a clear sequence of events, and does not have a clear beginning, middle, and ending."
-low_coherence,2,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.4282,0.4977,0.9259,0.5023,0.0741,1.9302,0.2593,1.0,0.0,215,27,2,1,0,0,0,0,0,0,0,"Title: The Frog
-
-The frog is in the pond.  
-The frog jumps to the moon.  
-The sun shines on the frog.  
-The dog runs past the pond.","**The Happy Forest Adventure**
-
-One day, a little red squirrel named Mira noticed something unusual in her favorite forest. She found a small tree with big leaves and a bright red apple on top of it. As she looked around, she saw a new animal—a curious yellow bear who was always looking for adventure.
-
-The bear had been following Mira all over the forest, but now they were together! They both wanted to explore more. After a while, Mira helped the bear find a safe place to rest by building a tiny nest made from sticks and leaves. The bear said, “I can take you somewhere,” and they both started walking through the forest.
-
-As they walked, they met many interesting creatures: a wise old owl, a clever fox, and a funny eagle. They learned about different animals and how they lived. Mira was es…",All vocabulary stays within the allowed phonics progression of consonant blends and digraphs.,"There are a few words with consonant blends and digraphs, but the patterns are not emphasized throughout.",The events are disjointed and do not form a logical or understandable sequence.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-low_coherence,3,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.1634,0.7981,0.9615,0.2019,0.0385,0.2019,0.0385,1.0,0.5,208,78,0,0,0,0,0,0,0,0,0,"Title: The Big Dog
-
-The dog has a big tail, he can run fast,
-His fur is white on his back.
-He likes to jump high when it’s hot outside,
-But he doesn’t like to play if there is no rain.
-The cat likes to nap at night while the sun shines,
-but she can get lost by the moonlight.
-They have a long way to go on their trip!
-Their big tails will help them stay safe!","**The Happy Garden of Lila**
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
 
 In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
 
 Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
 
-One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…","The story uses many words outside the diphthongs and consonant digraphs progression, such as 'outside,' 'doesn’t,' and 'moonlight.'","There is almost no emphasis on diphthongs or consonant digraphs, with very few target-pattern words present.","The story is confusing and disjointed, with unclear relationships between events and characters.","The story lacks a clear beginning, middle, and ending, instead presenting a series of loosely connected statements."
-low_coherence,4,final_e_blends_1,1,1001,"final-e words, consonant blends",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.3084,0.6202,0.9286,0.3798,0.0714,1.125,0.1786,1.0,0.0,208,28,2,0,0,0,0,0,0,1,0,"Title: The Big Bat
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+low_decodability_adherence,1,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,Tuned subjective decodability_adherence_score == 0. n_tuned_flagged=8/21.,0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
 
-The bat is big.  
-The bat has a lot of fun.  
-The bats can play in the sun.  
-There was a bat at home.","**The Happy Garden of Lila**
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
 
-Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
 
-As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
 
-Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second…","All vocabulary stays within the short-vowel and basic consonant patterns, which is below the requested ceiling.",Neither final-e words nor consonant blends are present in the story.,The sentences are disjointed and do not form a logical or consistent narrative.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-low_coherence,5,final_e_blends_1,3,1003,"final-e words, consonant blends",2,conflicting training objectives,Tuned coherence_score == 0. additional flagged example.,0.0814,0.6259,0.7073,0.3741,0.2927,1.0816,0.8415,1.0,0.5,147,82,0,0,0,1,0,0,0,2,2,"Title: A Trip to the Farmyard
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
 
-The family has just left their house for a trip to the farmyard.  
-They will ride on their horses to see the animals there!  
-As they ride by the barn, they spot many small birds on the grass.  
-They run into a big red cow who looks very sad.  
-The cows are happy to be at the farm, so the cows give them a big hug.  
-Then they look back at the farm and say goodbye!","**The Happy Forest Adventure**
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+low_decodability_adherence,2,blends_digraphs_1,3,1003,"consonant blends, consonant digraphs",2,training-data coverage,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.3183,0.5024,0.8207,0.4976,0.1793,1.9171,0.5924,1.0,1.0,205,184,0,1,1,1,0,0,0,1,0,"Title: A Frog’s Adventure
 
-In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
-
-Max thought, “I wonder if I can help this bear.” He decided to go with the bear and helped him find food for himself. Together they found a big pile of apples, bananas, and nuts.
-
-Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
-
-That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","The story uses above-level vocabulary and multisyllabic words like 'family,' 'animals,' and 'goodbye,' which exceed the requested phonics progression.",There are almost no final-e words or consonant blends practiced in the story.,"The story is confusing and internally inconsistent, especially with the cows giving hugs and being both sad and happy.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-incomplete_narrative,1,short_vowels_1,2,1002,short-vowel words,1,generation behavior,Tuned narrative_completeness_score == 0. n_tuned_flagged=8/21.,0.2956,0.3869,0.6825,0.6131,0.3175,2.5779,0.9683,1.0,1.0,199,63,0,0,0,0,0,0,0,1,0,"Title: The Cat and the Dog
-
-The dog is playing outside when it sees the cat.
-The cat jumps onto the dog’s back to play.
-When they get home, the dog will run fast for the cat.
-“Can you help me get the cat,” said the dog.
-“Yes!” ran the cat up high and down.
-The cat was so happy to see them!","**The Happy Forest of Squirrels**
-
-In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
-
-One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
-
-One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story includes above-level words such as 'playing,' 'outside,' 'jumps,' 'onto,' 'back,' 'home,' and 'happy,' which are not short-vowel words.","Short-vowel words are rarely present, and most words do not practice the target pattern.","The story is confusing, with unclear actions and dialogue that do not logically connect, making it difficult to follow.","The story is disjointed, lacks a clear sequence of events, and does not have a clear beginning, middle, and ending."
-incomplete_narrative,2,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.4282,0.4977,0.9259,0.5023,0.0741,1.9302,0.2593,1.0,0.0,215,27,2,1,0,0,0,0,0,0,0,"Title: The Frog
-
-The frog is in the pond.  
-The frog jumps to the moon.  
-The sun shines on the frog.  
-The dog runs past the pond.","**The Happy Forest Adventure**
-
-One day, a little red squirrel named Mira noticed something unusual in her favorite forest. She found a small tree with big leaves and a bright red apple on top of it. As she looked around, she saw a new animal—a curious yellow bear who was always looking for adventure.
-
-The bear had been following Mira all over the forest, but now they were together! They both wanted to explore more. After a while, Mira helped the bear find a safe place to rest by building a tiny nest made from sticks and leaves. The bear said, “I can take you somewhere,” and they both started walking through the forest.
-
-As they walked, they met many interesting creatures: a wise old owl, a clever fox, and a funny eagle. They learned about different animals and how they lived. Mira was es…",All vocabulary stays within the allowed phonics progression of consonant blends and digraphs.,"There are a few words with consonant blends and digraphs, but the patterns are not emphasized throughout.",The events are disjointed and do not form a logical or understandable sequence.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-incomplete_narrative,3,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.1634,0.7981,0.9615,0.2019,0.0385,0.2019,0.0385,1.0,0.5,208,78,0,0,0,0,0,0,0,0,0,"Title: The Big Dog
-
-The dog has a big tail, he can run fast,
-His fur is white on his back.
-He likes to jump high when it’s hot outside,
-But he doesn’t like to play if there is no rain.
-The cat likes to nap at night while the sun shines,
-but she can get lost by the moonlight.
-They have a long way to go on their trip!
-Their big tails will help them stay safe!","**The Happy Garden of Lila**
-
-In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
-
-Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
-
-One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…","The story uses many words outside the diphthongs and consonant digraphs progression, such as 'outside,' 'doesn’t,' and 'moonlight.'","There is almost no emphasis on diphthongs or consonant digraphs, with very few target-pattern words present.","The story is confusing and disjointed, with unclear relationships between events and characters.","The story lacks a clear beginning, middle, and ending, instead presenting a series of loosely connected statements."
-incomplete_narrative,4,final_e_blends_1,1,1001,"final-e words, consonant blends",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.3084,0.6202,0.9286,0.3798,0.0714,1.125,0.1786,1.0,0.0,208,28,2,0,0,0,0,0,0,1,0,"Title: The Big Bat
-
-The bat is big.  
-The bat has a lot of fun.  
-The bats can play in the sun.  
-There was a bat at home.","**The Happy Garden of Lila**
-
-Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
-
-As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
-
-Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second…","All vocabulary stays within the short-vowel and basic consonant patterns, which is below the requested ceiling.",Neither final-e words nor consonant blends are present in the story.,The sentences are disjointed and do not form a logical or consistent narrative.,"The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements."
-incomplete_narrative,5,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",3,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,138,76,1,0,0,0,0,0,1,2,2,"Title: A Family on the Farm
-
-Dad is at the barn with his kids, while Mom is reading to them.  
-The dogs come and run up to the barn when they hear the news.  
-Mom says to Dad, “You can go back home if you want!”  
-“Go! I am going to be there,” said Dad.  
-The children ran out of the barn, but they did not forget about dad.  
-They will visit their grandparent this week!","**The Forest's Whisper**
-
-In a small forest where the trees hummed with old songs, there lived a curious young squirrel named Tim. One day, he noticed something unusual: a strange shape was growing in the moss under a tree. The next morning, he found a new creature — a giant raccoon! Tim felt so happy to see such an animal. But then he heard a voice saying, *""Look at the plant!""* And just then, a leaf fell from the oak tree, revealing a map of a hidden path leading deep into the forest. As they walked along, Tim saw many things — a river, a bridge, a pond full of water, and even a big stone made of wood. He learned how to listen carefully and find what others didn't. Now, he knew more about the world than ever before. 🌿✨","Most vocabulary stays within the requested phonics progression, but some words like 'news' and 'forget' are above the target level.","There is minimal use of multisyllabic words, vowel teams, or r-controlled vowels, with almost no repetition or emphasis.","The story is confusing, with unclear actions and relationships between events and characters.","The story lacks a clear beginning, middle, and ending, and feels disjointed and incomplete."
-high_above_level,1,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,Tuned above_level_rate >= 0.20. n_tuned_flagged=6/21.,0.2477,0.4313,0.679,0.5687,0.321,2.1754,1.2099,1.0,1.0,211,81,0,0,1,1,0,0,0,0,0,"Title: A Hot Day at Home
-
-Dad is sitting on the couch watching a movie while Mom is reading a book.  
-I am getting ready to go for lunch with Dad.  
-Mom says I can take my hat if it’s hot outside.  
-I get to the kitchen and find two pots of soup in the sink.  
-The pot has a lid, so it will be good to heat up the soup.  
-When I put the lid back, the pot is warm!","**The Little Red Rabbit's Adventure**
-
-One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
-
-The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
-
-Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","The story includes several above-level words and patterns such as 'watching,' 'movie,' 'reading,' 'lunch,' 'kitchen,' 'find,' 'soup,' and 'outside,' which are not short-vowel words.","Short-vowel words are rarely emphasized, with most content relying on above-level vocabulary.","The story is mostly understandable but contains some confusing transitions and unclear actions, such as the sudden focus on soup and the warm pot.",The story has a beginning and middle but lacks a clear ending or resolution.
-high_above_level,2,short_vowels_1,2,1002,short-vowel words,1,generation behavior,Tuned above_level_rate >= 0.20. additional flagged example.,0.2956,0.3869,0.6825,0.6131,0.3175,2.5779,0.9683,1.0,1.0,199,63,0,0,0,0,0,0,0,1,0,"Title: The Cat and the Dog
-
-The dog is playing outside when it sees the cat.
-The cat jumps onto the dog’s back to play.
-When they get home, the dog will run fast for the cat.
-“Can you help me get the cat,” said the dog.
-“Yes!” ran the cat up high and down.
-The cat was so happy to see them!","**The Happy Forest of Squirrels**
-
-In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
-
-One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
-
-One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story includes above-level words such as 'playing,' 'outside,' 'jumps,' 'onto,' 'back,' 'home,' and 'happy,' which are not short-vowel words.","Short-vowel words are rarely present, and most words do not practice the target pattern.","The story is confusing, with unclear actions and dialogue that do not logically connect, making it difficult to follow.","The story is disjointed, lacks a clear sequence of events, and does not have a clear beginning, middle, and ending."
-high_above_level,3,blends_digraphs_1,3,1003,"consonant blends, consonant digraphs",2,training-data coverage,Tuned above_level_rate >= 0.20. additional flagged example.,0.2,0.5024,0.7024,0.4976,0.2976,1.9171,1.0238,1.0,1.0,205,84,1,1,2,2,1,0,0,1,0,"Title: A Trip to the Farmyard
-
-The family has just left their farm for a trip to the farmyard.  
-They will go on a walk to see the animals and plants in the yard.  
-Dad will lead them up to the barn to see all the animals inside.  
-Mom will give a treat to each animal they meet.  
-There is a big pond where they can play with ducks and frogs.  
-After the trip, Dad and Mom will take a rest before heading home.","**The Forest's Whisper**
+A frog wants to go on an adventure. The frog sees a lot of frogs near the pond. He can see them all. Then he sees a lot more frogs near the lake! They do not want to come close. So he runs from the pond to the lake. When he gets there, he is so tired! The frogs will not wait for him anymore. But when he comes back, they are still not coming near him. His job is done. What does his job look like? It is to find a spot where he can rest. If he has no place to rest, then he must stay until the next day. He can not rest at the pond because there is nothing else to rest at. He must find another spot. This is a problem. He can’t find any spots to rest. He had to ask the frogs if they could help him. “Yes,” says one frog, “I can help you.” “You mean help me rest?” asks…","**The Forest's Whisper**
 
 In a quiet forest where the trees hummed with old songs, there lived a young girl named Lila. She had never heard anything except the soft rustle of leaves and the distant calls of her friends. One day, she found a small book filled with colorful pictures and simple sentences. As she read, she began to hear something new—words that made her feel connected to the world around her. 
 
 One day, a rabbit came to the edge of the forest, wagging its tail. “I want to go far,” it said, and so Lila followed. They walked through tall grasses, where the wind carried stories like whispers. A squirrel sat on a stone, talking about rivers and streams. Another animal, a bird, flew high above, telling tales of the sky.
 
-They met a wise owl who had seen many places. The owl told L…","Most vocabulary stays within the consonant blends and digraphs level, but words like 'family,' 'animals,' and 'before' introduce above-level patterns unnecessarily.","Consonant blends and digraphs appear (e.g., 'plant,' 'barn,' 'treat,' 'pond,' 'frogs'), but the emphasis is moderate rather than strong throughout the story.","The story is easy to follow and internally consistent, describing a logical sequence of events during a farmyard visit.","The story has a clear beginning (arriving at the farmyard), middle (exploring and interacting with animals), and ending (resting before heading home)."
-high_above_level,4,final_e_blends_1,3,1003,"final-e words, consonant blends",2,conflicting training objectives,Tuned above_level_rate >= 0.20. additional flagged example.,0.0814,0.6259,0.7073,0.3741,0.2927,1.0816,0.8415,1.0,0.5,147,82,0,0,0,1,0,0,0,2,2,"Title: A Trip to the Farmyard
+They met a wise owl who had seen many places. The owl told L…","The story includes many words above the consonant blends and digraphs level, such as 'adventure,' 'nothing,' 'another,' and 'together.'","Some consonant blends and digraphs are present (frog, pond, spot, rest), but they are not emphasized or repeated throughout the story.","The story is mostly understandable but contains confusing elements, such as the frog's 'job' and unclear motivations.","The story has a beginning, middle, and end, but transitions are weak and the resolution is somewhat unclear."
+low_decodability_adherence,3,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
 
-The family has just left their house for a trip to the farmyard.  
-They will ride on their horses to see the animals there!  
-As they ride by the barn, they spot many small birds on the grass.  
-They run into a big red cow who looks very sad.  
-The cows are happy to be at the farm, so the cows give them a big hug.  
-Then they look back at the farm and say goodbye!","**The Happy Forest Adventure**
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
 
-In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
 
-Max thought, “I wonder if I can help this bear.” He decided to go with the bear and helped him find food for himself. Together they found a big pile of apples, bananas, and nuts.
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
 
-Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+low_decodability_adherence,4,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",2,training-data coverage,Tuned subjective decodability_adherence_score == 0. additional flagged example.,-0.0089,0.8294,0.8205,0.1706,0.1795,0.1706,0.1795,1.0,0.5,170,39,0,0,1,1,0,0,1,1,2,"Title: The Fun Game
 
-That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","The story uses above-level vocabulary and multisyllabic words like 'family,' 'animals,' and 'goodbye,' which exceed the requested phonics progression.",There are almost no final-e words or consonant blends practiced in the story.,"The story is confusing and internally inconsistent, especially with the cows giving hugs and being both sad and happy.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-high_above_level,5,final_e_blends_1,2,1002,"final-e words, consonant blends",2,training-data coverage,Tuned above_level_rate >= 0.20. additional flagged example.,0.1525,0.5659,0.7184,0.4341,0.2816,1.3512,0.7282,1.0,1.0,205,103,0,1,1,1,0,0,0,2,2,"Title: The Big Race
+Sara and Sam have fun playing games together.  
+They play ball and they play hopscotch too.  
+Sam has two cups of lemonade to drink.  
+The game ends when the kids say “No!” from the table.","**The Sunny Farm and Its Friends**
 
-Mia and Sam have to race to get first place at school. They both need to run fast.
-It is Mia’s turn. She can’t wait to get first. When she gets to the finish line,
-she feels so proud of herself. Mia and Sam will be the best team for next year!
-When they meet their rivals in the big race, Mia wins by 10 seconds. But when it’s
-Sam’s turn to race, he does not let his friends down. He runs faster than all his
-friends. It is amazing how much each of them has made this race fun!","**The Happy Forest Adventure**
+One day, there was a new friend named Mr. Piggy who came to live on the farm. The old farmer had a garden full of flowers, but now Mr. Pig was growing vegetables from seeds. He brought in a big pot of tomatoes, carrots, and a bunch of strawberries.
+
+The farmers were all happy to see him come. They planted more crops together and made new toys with their own hands. One day, they found a special toy called ""the Fish."" It was a small boat, and it could go far. The water was blue.
+
+Then one morning, the group decided to play games. They played hopscotch, chased each other around the farm, and even built a new bridge. They learned how to move faster than the others.
+
+After a long time, the friends left the farm for another day. They went home, and Mr. Pig st…","The story includes above-level words such as 'lemonade,' 'together,' and 'hopscotch,' which are not decodable at the diphthongs and consonant digraphs level.","There are almost no words with diphthongs or consonant digraphs, so the requested patterns are not practiced.","The story is mostly understandable, but the ending is confusing as it is unclear why the kids say 'No!' from the table to end the game.","The story has a beginning (Sara and Sam play), a middle (they play games and drink lemonade), and an ending (the game ends), but transitions and the ending are abrupt and underdeveloped."
+low_decodability_adherence,5,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,rule-based evaluation limitation,Tuned subjective decodability_adherence_score == 0. additional flagged example.,0.1669,0.7401,0.907,0.2599,0.093,0.2599,0.093,1.0,0.125,177,43,0,0,1,0,0,0,0,2,2,"Title: A Trip to the Zoo
+
+Dad and Mom went on a trip to the zoo.  
+We met lots of animals!  
+A big cat sat next to us.  
+A monkey looked at us from above.  
+There was a lot of fun and joy!","**The Magic Treehouse Adventure**
+
+Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
+
+Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
+
+But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses above-level words such as 'monkey,' 'looked,' and 'animals,' which are not decodable at the requested phonics progression.","There are no words featuring diphthongs or consonant digraphs, so the target patterns are not practiced.","The story is understandable and events are related, but the abrupt transitions and lack of narrative flow reduce overall coherence.","The story lacks a clear beginning, middle, and ending, and reads more like a list of events than a complete narrative."
+low_target_phonics_emphasis,1,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,Tuned target_phonics_pattern_emphasis_score == 0. n_tuned_flagged=8/21.,0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
+
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
+
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+low_target_phonics_emphasis,2,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
+
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
+
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
+
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
+
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+low_target_phonics_emphasis,3,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",2,training-data coverage,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,-0.0089,0.8294,0.8205,0.1706,0.1795,0.1706,0.1795,1.0,0.5,170,39,0,0,1,1,0,0,1,1,2,"Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and they play hopscotch too.  
+Sam has two cups of lemonade to drink.  
+The game ends when the kids say “No!” from the table.","**The Sunny Farm and Its Friends**
+
+One day, there was a new friend named Mr. Piggy who came to live on the farm. The old farmer had a garden full of flowers, but now Mr. Pig was growing vegetables from seeds. He brought in a big pot of tomatoes, carrots, and a bunch of strawberries.
+
+The farmers were all happy to see him come. They planted more crops together and made new toys with their own hands. One day, they found a special toy called ""the Fish."" It was a small boat, and it could go far. The water was blue.
+
+Then one morning, the group decided to play games. They played hopscotch, chased each other around the farm, and even built a new bridge. They learned how to move faster than the others.
+
+After a long time, the friends left the farm for another day. They went home, and Mr. Pig st…","The story includes above-level words such as 'lemonade,' 'together,' and 'hopscotch,' which are not decodable at the diphthongs and consonant digraphs level.","There are almost no words with diphthongs or consonant digraphs, so the requested patterns are not practiced.","The story is mostly understandable, but the ending is confusing as it is unclear why the kids say 'No!' from the table to end the game.","The story has a beginning (Sara and Sam play), a middle (they play games and drink lemonade), and an ending (the game ends), but transitions and the ending are abrupt and underdeveloped."
+low_target_phonics_emphasis,4,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,generation behavior,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.1669,0.7401,0.907,0.2599,0.093,0.2599,0.093,1.0,0.125,177,43,0,0,1,0,0,0,0,2,2,"Title: A Trip to the Zoo
+
+Dad and Mom went on a trip to the zoo.  
+We met lots of animals!  
+A big cat sat next to us.  
+A monkey looked at us from above.  
+There was a lot of fun and joy!","**The Magic Treehouse Adventure**
+
+Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
+
+Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
+
+But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses above-level words such as 'monkey,' 'looked,' and 'animals,' which are not decodable at the requested phonics progression.","There are no words featuring diphthongs or consonant digraphs, so the target patterns are not practiced.","The story is understandable and events are related, but the abrupt transitions and lack of narrative flow reduce overall coherence.","The story lacks a clear beginning, middle, and ending, and reads more like a list of events than a complete narrative."
+low_target_phonics_emphasis,5,final_e_blends_1,2,1002,"final-e words, consonant blends",2,conflicting training objectives,Tuned target_phonics_pattern_emphasis_score == 0. additional flagged example.,0.3037,0.5659,0.8696,0.4341,0.1304,1.3512,0.2826,1.0,0.375,205,46,2,0,2,1,0,0,1,2,2,"Title: The Big Red Bus
+
+Mom and Dad ride to work every day by bus.  
+A big red bus is on the street.  
+The bus has lots of kids!  
+The kids sit on the seats.  
+What can we do?  
+We get on the bus and go!","**The Happy Forest Adventure**
 
 In a small forest called Maple Grove, there lived a curious little fox named Muffy. One day, while exploring the woods, Muffy noticed a new creature – a wise old owl who had been on the tree for many years.
 
@@ -474,37 +246,195 @@ The owl said, “I see you have a friend here, Muffy. The forest is full of wond
 
 “Now I can fly,” the bird said. Then, when it turned, a group of animals came together. They were all curious about nature and each could tell what was happening around them.
 
-Muffy was especially happy because he saw many things that showed the beauty of th…","The story contains many above-level words (e.g., 'amazing', 'rivals', 'proud', 'finish', 'friends', 'school', 'seconds', 'each', 'much', 'year', 'does', 'himself'), which are not decodable at the requested level.","Some final-e words ('race', 'place', 'line', 'made') and a few blends ('first', 'friends', 'school') appear, but the patterns are not strongly or consistently emphasized.","The story is mostly understandable, but the sequence of events and team structure are somewhat confusing.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-prompt_difficulty,1,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,conflicting training objectives,"Prompt-level difficulty rank #1. tuned_overall=0.00, emphasis=0.00, full_spec=0.00.",0.1961,0.7401,0.9362,0.2599,0.0638,0.2599,0.0638,1.0,0.0,177,47,0,0,2,1,0,0,0,1,2,"Title: A Trip to the Beach
+Muffy was especially happy because he saw many things that showed the beauty of th…",All vocabulary stays within or below the requested phonics progression.,The story does not include any final-e words or consonant blends.,The story is easy to follow and internally consistent.,"The story has a basic beginning, middle, and end, but transitions are weak and the ending is abrupt."
+low_coherence,1,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,Tuned coherence_score == 0. n_tuned_flagged=5/21.,0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
 
-Dad and Mom went on a trip to the beach.  
-We were all wet and tired! We had a good time.  
-Mom took us to the sand and gave us treats.  
-The sun was shining down and we laughed so much.","**The Magic Treehouse Adventure**
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
+
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
+
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+low_coherence,2,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
+
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
+
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
+
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
+
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+low_coherence,3,short_vowels_1,1,1001,short-vowel words,1,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.2301,0.4842,0.7143,0.5158,0.2857,2.0316,0.9643,1.0,1.0,190,28,1,1,0,0,0,0,0,1,2,"Title: The Cat and the Hare
+
+The hare ran fast.  
+The cat sat on the mat.  
+The hare ran to the log.  
+The hat was made of straw.","**The Happy Rabbit Who Jumped to the Moon**
+
+One day, there was a rabbit named Max who lived on a small hill near a mountain. One morning, he noticed something unusual—there were stars shining bright above the hills, and a strange shape of a little moon that had been up high for a long time.
+
+Max was curious, so he climbed up the hill and looked at the sky. He saw a big, round thing moving through the air like it was going somewhere far away. It was a starry moon, but instead of a full moon, it was just a tiny bit smaller and brighter than usual. The moon was glowing because it wasn't dark anymore.
+
+Now the next day, Max went back home. But this time, he didn’t go back down. Instead, he jumped into a tall tree, reached out to the top, and found himself flying across the sky once more.
+
+He…","Most words are short-vowel, but 'hare' and 'straw' are above the short-vowel level.","Short-vowel words appear in several sentences, but not all sentences emphasize the target pattern.","The sentences do not connect logically, making the story confusing and inconsistent.","The story consists of unrelated sentences and lacks a clear beginning, middle, and ending."
+low_coherence,4,vowel_teams_digraphs_1,2,1002,"vowel teams, consonant digraphs",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.1743,0.7081,0.8824,0.2919,0.1176,0.7267,0.3235,1.0,0.5,161,34,0,0,0,0,0,0,1,1,2,"Title: The Fun Game
+
+Sara and Sam have fun playing a game.  
+They play on the mats.  
+A team has to jump up and down.  
+The mats are big! They can be so fun!","**The Sea and the Squirrel**
+
+One day, a little squirrel found a small island by the sea. The sun was shining bright, and the birds sang their songs from high up above. A new tree grew tall next to the island, and it had a big bird named Seashell living there.
+
+Seashell was really happy because he saw many different things on the island. He met a fisherman who told him about the fish they could catch for food. Then he went to see a boy playing with his friends at the beach, and he got some shiny shells.
+
+Later, Seashell decided to go back home. He brought all his toys and some fish, and even gave them to the others on the island.
+
+At home, Seashill played games with his friends and made sure that the ocean would be safe for everyone. And now, every time Seashell came back, he knew that th…","The story uses above-level words like 'game,' 'play,' and 'team' (vowel teams), but also includes words like 'mats,' 'jump,' and 'down' that do not fit the requested patterns and are not decodable at this level.","Vowel teams and consonant digraphs are almost entirely absent, with only 'team' and 'game' as weak examples and no consonant digraphs present.",The story is disjointed and does not explain the game or connect the events logically.,"The story lacks a clear middle and ending, with no resolution or narrative arc."
+low_coherence,5,final_e_blends_1,1,1001,"final-e words, consonant blends",2,generation behavior,Tuned coherence_score == 0. additional flagged example.,0.1969,0.6202,0.8171,0.3798,0.1829,1.125,0.6829,1.0,0.875,208,82,2,1,0,1,1,0,0,1,0,"Title: The Bike
+
+Milo is riding his bike to school. He saw a red bike next to him. Milo stops and sees it is a dog. “I will ride my bike to the dog,” said Milo. Milo gets on his bike. He rides fast until he spots a cat. Then he jumps into the dog’s lap. Milo does not get off his bike. Milo sits on the dog’s side of the bike. Milo is happy! Milo rides his bike back to school.","**The Happy Garden of Lila**
+
+Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
+
+As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
+
+Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second…","The vocabulary stays within the requested phonics progression, using only short-vowel, consonant blend, and final-e words.","Final-e words like 'bike' and 'side' and blends like 'stop' and 'school' appear, but not with strong repetition or variety.","The story is confusing and internally inconsistent, especially regarding the dog, cat, and bike interactions.","The story has a beginning, middle, and end, but transitions are abrupt and the ending is weak."
+incomplete_narrative,1,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. n_tuned_flagged=5/21.,0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
+
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
+
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+incomplete_narrative,2,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
+
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
+
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
+
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
+
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+incomplete_narrative,3,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.1669,0.7401,0.907,0.2599,0.093,0.2599,0.093,1.0,0.125,177,43,0,0,1,0,0,0,0,2,2,"Title: A Trip to the Zoo
+
+Dad and Mom went on a trip to the zoo.  
+We met lots of animals!  
+A big cat sat next to us.  
+A monkey looked at us from above.  
+There was a lot of fun and joy!","**The Magic Treehouse Adventure**
 
 Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
 
 Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
 
-But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses several words above the diphthongs and consonant digraphs level, such as 'beach,' 'tired,' 'treats,' and 'shining,' which are not decodable at the requested level.",There are no clear examples of diphthongs or consonant digraphs practiced in the story.,The story is easy to follow and internally consistent.,"The story has a loose beginning, middle, and end, but transitions are weak and the ending is abrupt."
-prompt_difficulty,2,vowel_teams_digraphs_1,3,1003,"vowel teams, consonant digraphs",2,generation behavior,"Prompt-level difficulty rank #2. tuned_overall=0.00, emphasis=0.33, full_spec=0.00.",0.2599,0.6946,0.9545,0.3054,0.0455,0.7389,0.0909,1.0,0.0,203,44,0,0,0,0,0,0,0,0,0,"Title: A Trip to the Beach
+But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop g…","The story uses above-level words such as 'monkey,' 'looked,' and 'animals,' which are not decodable at the requested phonics progression.","There are no words featuring diphthongs or consonant digraphs, so the target patterns are not practiced.","The story is understandable and events are related, but the abrupt transitions and lack of narrative flow reduce overall coherence.","The story lacks a clear beginning, middle, and ending, and reads more like a list of events than a complete narrative."
+incomplete_narrative,4,short_vowels_1,1,1001,short-vowel words,1,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.2301,0.4842,0.7143,0.5158,0.2857,2.0316,0.9643,1.0,1.0,190,28,1,1,0,0,0,0,0,1,2,"Title: The Cat and the Hare
 
-Dad and Mom went on a trip to the beach.  
-We were all wet from the sand!  
-The sun was hot, but we got used to it.  
-I had a fun time at the beach with my dog!","**The Magic Boat Adventure**
+The hare ran fast.  
+The cat sat on the mat.  
+The hare ran to the log.  
+The hat was made of straw.","**The Happy Rabbit Who Jumped to the Moon**
 
-It was a sunny afternoon when the little boy named Jack found his toy boat in the lake. He was curious about how it worked, so he asked his teacher if he could help him find out. The teacher said, ""Oh, I've got a special way to teach you!"" And then they used their knowledge of phonics to explain it.
+One day, there was a rabbit named Max who lived on a small hill near a mountain. One morning, he noticed something unusual—there were stars shining bright above the hills, and a strange shape of a little moon that had been up high for a long time.
 
-Jack listened carefully, and he learned that the boat was made of a special kind of wood. It had a big wooden sail on one side and a small wooden bridge on the other. The teacher also explained that there were two vowels together, like 'aa' or 'ee', which helped make the word *boat* come to life. Then the teacher mentioned that the letters A and E can be combined to form words like *seed*, and they often have pairs like this: **rain**, **play**, **sept**, and **f…","The story includes above-level words such as 'beach,' 'used,' and 'sand,' which are not decodable at the requested phonics level.","There is almost no use of vowel teams or consonant digraphs, with only 'beach' and 'sand' marginally fitting but not as clear practice.","The story is confusing and lacks logical flow, with abrupt topic changes and unclear events.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of statements rather than a complete narrative."
-prompt_difficulty,3,final_e_blends_1,3,1003,"final-e words, consonant blends",2,conflicting training objectives,"Prompt-level difficulty rank #3. tuned_overall=0.00, emphasis=0.33, full_spec=0.33.",0.0814,0.6259,0.7073,0.3741,0.2927,1.0816,0.8415,1.0,0.5,147,82,0,0,0,1,0,0,0,2,2,"Title: A Trip to the Farmyard
+Max was curious, so he climbed up the hill and looked at the sky. He saw a big, round thing moving through the air like it was going somewhere far away. It was a starry moon, but instead of a full moon, it was just a tiny bit smaller and brighter than usual. The moon was glowing because it wasn't dark anymore.
 
-The family has just left their house for a trip to the farmyard.  
-They will ride on their horses to see the animals there!  
-As they ride by the barn, they spot many small birds on the grass.  
-They run into a big red cow who looks very sad.  
-The cows are happy to be at the farm, so the cows give them a big hug.  
-Then they look back at the farm and say goodbye!","**The Happy Forest Adventure**
+Now the next day, Max went back home. But this time, he didn’t go back down. Instead, he jumped into a tall tree, reached out to the top, and found himself flying across the sky once more.
+
+He…","Most words are short-vowel, but 'hare' and 'straw' are above the short-vowel level.","Short-vowel words appear in several sentences, but not all sentences emphasize the target pattern.","The sentences do not connect logically, making the story confusing and inconsistent.","The story consists of unrelated sentences and lacks a clear beginning, middle, and ending."
+incomplete_narrative,5,vowel_teams_digraphs_1,2,1002,"vowel teams, consonant digraphs",2,generation behavior,Tuned narrative_completeness_score == 0. additional flagged example.,0.1743,0.7081,0.8824,0.2919,0.1176,0.7267,0.3235,1.0,0.5,161,34,0,0,0,0,0,0,1,1,2,"Title: The Fun Game
+
+Sara and Sam have fun playing a game.  
+They play on the mats.  
+A team has to jump up and down.  
+The mats are big! They can be so fun!","**The Sea and the Squirrel**
+
+One day, a little squirrel found a small island by the sea. The sun was shining bright, and the birds sang their songs from high up above. A new tree grew tall next to the island, and it had a big bird named Seashell living there.
+
+Seashell was really happy because he saw many different things on the island. He met a fisherman who told him about the fish they could catch for food. Then he went to see a boy playing with his friends at the beach, and he got some shiny shells.
+
+Later, Seashell decided to go back home. He brought all his toys and some fish, and even gave them to the others on the island.
+
+At home, Seashill played games with his friends and made sure that the ocean would be safe for everyone. And now, every time Seashell came back, he knew that th…","The story uses above-level words like 'game,' 'play,' and 'team' (vowel teams), but also includes words like 'mats,' 'jump,' and 'down' that do not fit the requested patterns and are not decodable at this level.","Vowel teams and consonant digraphs are almost entirely absent, with only 'team' and 'game' as weak examples and no consonant digraphs present.",The story is disjointed and does not explain the game or connect the events logically.,"The story lacks a clear middle and ending, with no resolution or narrative arc."
+high_above_level,1,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,Tuned above_level_rate >= 0.20. n_tuned_flagged=5/21.,0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
+
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
+
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+high_above_level,2,short_vowels_1,1,1001,short-vowel words,1,generation behavior,Tuned above_level_rate >= 0.20. additional flagged example.,0.2301,0.4842,0.7143,0.5158,0.2857,2.0316,0.9643,1.0,1.0,190,28,1,1,0,0,0,0,0,1,2,"Title: The Cat and the Hare
+
+The hare ran fast.  
+The cat sat on the mat.  
+The hare ran to the log.  
+The hat was made of straw.","**The Happy Rabbit Who Jumped to the Moon**
+
+One day, there was a rabbit named Max who lived on a small hill near a mountain. One morning, he noticed something unusual—there were stars shining bright above the hills, and a strange shape of a little moon that had been up high for a long time.
+
+Max was curious, so he climbed up the hill and looked at the sky. He saw a big, round thing moving through the air like it was going somewhere far away. It was a starry moon, but instead of a full moon, it was just a tiny bit smaller and brighter than usual. The moon was glowing because it wasn't dark anymore.
+
+Now the next day, Max went back home. But this time, he didn’t go back down. Instead, he jumped into a tall tree, reached out to the top, and found himself flying across the sky once more.
+
+He…","Most words are short-vowel, but 'hare' and 'straw' are above the short-vowel level.","Short-vowel words appear in several sentences, but not all sentences emphasize the target pattern.","The sentences do not connect logically, making the story confusing and inconsistent.","The story consists of unrelated sentences and lacks a clear beginning, middle, and ending."
+high_above_level,3,short_vowels_1,2,1002,short-vowel words,1,training-data coverage,Tuned above_level_rate >= 0.20. additional flagged example.,0.3823,0.3869,0.7692,0.6131,0.2308,2.5779,0.6462,1.0,1.0,199,65,0,1,2,2,1,0,0,0,0,"Title: The Cat and the Dog
+
+The dog was playing when he saw the cat. He jumped up on his bed to see if he could catch it. “What do you think?” asked the cat. “I like this spot!” said the dog. “You can sit on my lap,” said the cat. Then they both sat in a big pile of straw! They were so happy.","**The Happy Forest of Squirrels**
+
+In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
+
+One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
+
+One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new frie…","The story contains several above-level words and patterns such as 'playing', 'could', 'think', 'like', 'spot', 'both', 'pile', and 'straw', which are not short-vowel words.","Some short-vowel words are present (cat, dog, bed, lap, sat), but many sentences do not emphasize the target pattern.","The story is easy to follow and internally consistent, with logical actions and dialogue.","The story has a clear beginning (dog sees cat), middle (interaction and dialogue), and ending (they sit together and are happy)."
+high_above_level,4,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,Tuned above_level_rate >= 0.20. additional flagged example.,0.3395,0.4313,0.7708,0.5687,0.2292,2.1754,0.8333,1.0,1.0,211,48,1,1,1,1,1,0,0,0,0,"Title: A Cat on the Bed
+
+A cat is sitting on a bed. The cat will nap for hours.  
+The dog will run when it sees the cat. It jumps up to sit.  
+The cat looks at the dog and says, “I am glad we are all happy!”","**The Little Red Rabbit's Adventure**
+
+One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
+
+The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
+
+Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","Most words are short-vowel, but 'hours', 'jumps', and 'glad' are above the short-vowel level and not strictly necessary.","Short-vowel words appear several times, but not consistently throughout the story.","The story is mostly understandable, but the sequence of events is somewhat unclear and the dog's actions are confusing.","The story has a beginning (cat on bed), middle (dog runs and jumps), and an ending (cat expresses happiness), but transitions are weak and the ending is abrupt."
+high_above_level,5,final_e_blends_1,3,1003,"final-e words, consonant blends",2,training-data coverage,Tuned above_level_rate >= 0.20. additional flagged example.,0.1741,0.6259,0.8,0.3741,0.2,1.0816,0.5667,1.0,0.875,147,90,1,1,1,1,1,0,0,2,2,"Title: A Trip to the Farm
+
+Dad has made lots of cakes! I have so many cakes, too!
+My mom will make them when it is time for me to go on her trip to the farm.
+We will see what we can find out about animals and plants at the farm. We also
+will have fun playing games at the farm.
+I am going to be a good kid, Dad. My sister will be there to help us. The kids
+and I will learn so much from this trip!","**The Happy Forest Adventure**
 
 In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
 
@@ -512,29 +442,70 @@ Max thought, “I wonder if I can help this bear.” He decided to go with the b
 
 Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
 
-That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","The story uses above-level vocabulary and multisyllabic words like 'family,' 'animals,' and 'goodbye,' which exceed the requested phonics progression.",There are almost no final-e words or consonant blends practiced in the story.,"The story is confusing and internally inconsistent, especially with the cows giving hugs and being both sad and happy.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt."
-prompt_difficulty,4,r_controlled_blends_1,1,1001,"r-controlled vowels, consonant blends",2,training-data coverage,"Prompt-level difficulty rank #4. tuned_overall=0.33, emphasis=0.33, full_spec=0.67.",0.1583,0.7053,0.8636,0.2947,0.1364,0.5474,0.2727,1.0,1.0,190,88,0,0,1,1,0,0,0,0,0,"Title: The Farmhouse
+That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟","Most vocabulary stays within the requested phonics progression, but words like 'about', 'animals', and 'learn' are above the target level.",Final-e words and consonant blends appear but are not emphasized or repeated throughout the story.,The story is mostly understandable but contains confusing phrasing and unclear transitions.,The story has a beginning and middle but lacks a clear ending or resolution.
+prompt_difficulty,1,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",2,generation behavior,"Prompt-level difficulty rank #1. tuned_overall=0.00, emphasis=0.00, tgt_sat=0.38.",0.0182,0.7981,0.8163,0.2019,0.1837,0.2019,0.1837,1.0,0.5,208,49,0,0,0,0,0,0,0,0,0,"Title: The Puffing Puff
 
-The farmer has two children. One is named Max. He likes to play on his dad’s yard. His mom says he must do his homework before bedtime. “I wish I knew this,” said Max. “I will help you,” said his dad. “You can be my best friend if you promise not to mess up your homework.” The kids did their homework all day long. Then they went for lunch. They were happy! Their father said, “I think it is time for me to go home.”","**The Happy Forest Adventure**
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!","**The Happy Garden of Lila**
 
-One day, a curious little squirrel named Sammy found a old tree full of treasure. The trunk had strange leaves made of different colors and shapes. Inside, there were stories hidden on each leaf. One was about a wise old owl who told Sammy how to find his own treasure.
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
 
-Sammy listened carefully and learned something new. He discovered a map in the form of a word—*farm*. The word spelled *f-r-a-m*, which included a r-controlled vowel (the 'a' sound) and a consonant blend between the 'r' and 'm'. 
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
 
-Then he saw another leaf with the word *turn*. It contained the pattern *t-u-n*, where the 'u' is a r-controlled letter, and the 'n' is pronounced like 'n', but it's still a consonant blending. 
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt…",The story uses above-level words like 'wings' and 'storm' and does not focus on the requested phonics patterns.,There are no clear examples of diphthongs or consonant digraphs being practiced in the story.,"The story is confusing, with unclear references and contradictory statements about characters and actions.","The story lacks a clear beginning, middle, and ending, and reads as a series of disconnected statements."
+prompt_difficulty,2,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",3,rule-based evaluation limitation,"Prompt-level difficulty rank #2. tuned_overall=0.33, emphasis=0.33, tgt_sat=0.92.",0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,138,65,1,0,1,1,0,0,1,2,2,"Title: A Happy Family
 
-Another leaf showed the word *plant*. The letters spell *p-l-a-n-t*,…","The story includes many words above the requested phonics level, such as 'children,' 'before,' 'knew,' 'promise,' and 'homework,' which are not decodable at the r-controlled vowels and consonant blends stage.","There are very few words with r-controlled vowels or consonant blends, so the target patterns are not sufficiently practiced.","The story is mostly understandable but contains confusing elements, such as the father's statement about going home despite being at the farmhouse.","The story has a beginning, middle, and end, but transitions are weak and the ending is abrupt and confusing."
-prompt_difficulty,5,short_vowels_1,3,1003,short-vowel words,1,training-data coverage,"Prompt-level difficulty rank #5. tuned_overall=0.33, emphasis=0.33, full_spec=1.00.",0.2477,0.4313,0.679,0.5687,0.321,2.1754,1.2099,1.0,1.0,211,81,0,0,1,1,0,0,0,0,0,"Title: A Hot Day at Home
+Mom has a big bag of treats for all of us to eat together at dinner.
+Dad is so happy when they get his treat!
+Buddy likes the hot soup and smooth jelly.
+Patty wants to run fast on the grass. He can run up a hill if he gets there first.
+We will have so much fun eating our treats!","**The Forest's Whisper**
 
-Dad is sitting on the couch watching a movie while Mom is reading a book.  
-I am getting ready to go for lunch with Dad.  
-Mom says I can take my hat if it’s hot outside.  
-I get to the kitchen and find two pots of soup in the sink.  
-The pot has a lid, so it will be good to heat up the soup.  
-When I put the lid back, the pot is warm!","**The Little Red Rabbit's Adventure**
+In a small forest where the trees hummed with old songs, there lived a curious young squirrel named Tim. One day, he noticed something unusual: a strange shape was growing in the moss under a tree. The next morning, he found a new creature — a giant raccoon! Tim felt so happy to see such an animal. But then he heard a voice saying, *""Look at the plant!""* And just then, a leaf fell from the oak tree, revealing a map of a hidden path leading deep into the forest. As they walked along, Tim saw many things — a river, a bridge, a pond full of water, and even a big stone made of wood. He learned how to listen carefully and find what others didn't. Now, he knew more about the world than ever before. 🌿✨","The vocabulary mostly stays within the requested phonics progression, but includes some words (e.g., 'treats', 'together', 'smooth') that do not clearly fit the target patterns and may be above level.","The story rarely uses multisyllabic words, vowel teams, or r-controlled vowels, with almost no emphasis on the requested patterns.","The story is mostly understandable but has some confusing elements, such as unclear character actions and inconsistent focus.","The story has a beginning (Mom brings treats), a middle (family members react), and an ending (they will have fun eating), but transitions are weak and the ending is abrupt."
+prompt_difficulty,3,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",2,generation behavior,"Prompt-level difficulty rank #3. tuned_overall=0.33, emphasis=0.67, tgt_sat=0.79.",0.0898,0.5673,0.6571,0.4327,0.3429,1.5146,1.1143,1.0,0.875,171,35,0,0,0,0,0,0,0,0,1,"Title: The Fun Game
 
-One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!","**The Forest and the Lizard**
 
-The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
 
-Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and…","The story includes several above-level words and patterns such as 'watching,' 'movie,' 'reading,' 'lunch,' 'kitchen,' 'find,' 'soup,' and 'outside,' which are not short-vowel words.","Short-vowel words are rarely emphasized, with most content relying on above-level vocabulary.","The story is mostly understandable but contains some confusing transitions and unclear actions, such as the sudden focus on soup and the warm pot.",The story has a beginning and middle but lacks a clear ending or resolution.
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if yo…","The story uses above-level words like 'together', 'happening', and 'jump', which are not limited to consonant blends and digraphs.","There is almost no use of consonant blends or digraphs, with only 'grass' and 'jump' as possible examples, and these are not emphasized.","The story is confusing and lacks logical flow, making it hard to follow.","The story lacks a clear beginning, middle, and ending, and reads as a disconnected set of events."
+prompt_difficulty,4,vowel_teams_digraphs_1,2,1002,"vowel teams, consonant digraphs",2,generation behavior,"Prompt-level difficulty rank #4. tuned_overall=0.67, emphasis=0.67, tgt_sat=0.62.",0.1743,0.7081,0.8824,0.2919,0.1176,0.7267,0.3235,1.0,0.5,161,34,0,0,0,0,0,0,1,1,2,"Title: The Fun Game
+
+Sara and Sam have fun playing a game.  
+They play on the mats.  
+A team has to jump up and down.  
+The mats are big! They can be so fun!","**The Sea and the Squirrel**
+
+One day, a little squirrel found a small island by the sea. The sun was shining bright, and the birds sang their songs from high up above. A new tree grew tall next to the island, and it had a big bird named Seashell living there.
+
+Seashell was really happy because he saw many different things on the island. He met a fisherman who told him about the fish they could catch for food. Then he went to see a boy playing with his friends at the beach, and he got some shiny shells.
+
+Later, Seashell decided to go back home. He brought all his toys and some fish, and even gave them to the others on the island.
+
+At home, Seashill played games with his friends and made sure that the ocean would be safe for everyone. And now, every time Seashell came back, he knew that th…","The story uses above-level words like 'game,' 'play,' and 'team' (vowel teams), but also includes words like 'mats,' 'jump,' and 'down' that do not fit the requested patterns and are not decodable at this level.","Vowel teams and consonant digraphs are almost entirely absent, with only 'team' and 'game' as weak examples and no consonant digraphs present.",The story is disjointed and does not explain the game or connect the events logically.,"The story lacks a clear middle and ending, with no resolution or narrative arc."
+prompt_difficulty,5,final_e_blends_1,2,1002,"final-e words, consonant blends",2,conflicting training objectives,"Prompt-level difficulty rank #5. tuned_overall=0.67, emphasis=0.67, tgt_sat=0.71.",0.3037,0.5659,0.8696,0.4341,0.1304,1.3512,0.2826,1.0,0.375,205,46,2,0,2,1,0,0,1,2,2,"Title: The Big Red Bus
+
+Mom and Dad ride to work every day by bus.  
+A big red bus is on the street.  
+The bus has lots of kids!  
+The kids sit on the seats.  
+What can we do?  
+We get on the bus and go!","**The Happy Forest Adventure**
+
+In a small forest called Maple Grove, there lived a curious little fox named Muffy. One day, while exploring the woods, Muffy noticed a new creature – a wise old owl who had been on the tree for many years.
+
+The owl said, “I see you have a friend here, Muffy. The forest is full of wonders to discover.” With that, Muffy followed the owl to a hidden path where a long, stone bridge met a big oak tree. As they walked up, they heard a soft sound. It was a song from a young bird, who had just learned to fly.
+
+“Now I can fly,” the bird said. Then, when it turned, a group of animals came together. They were all curious about nature and each could tell what was happening around them.
+
+Muffy was especially happy because he saw many things that showed the beauty of th…",All vocabulary stays within or below the requested phonics progression.,The story does not include any final-e words or consonant blends.,The story is easy to follow and internally consistent.,"The story has a basic beginning, middle, and end, but transitions are weak and the ending is abrupt."

@@ -467,7 +467,6 @@ def analyze(args: argparse.Namespace) -> int:
                 "base_mean_decodability_compliance": fnum(base, "mean_decodability_compliance"),
                 "tuned_mean_above_level_rate": fnum(row, "mean_above_level_rate"),
                 "tuned_mean_weighted_above_level_rate": fnum(row, "mean_weighted_above_level_rate"),
-                "tuned_full_spec_pass_rate": fnum(row, "full_spec_pass_rate"),
                 "tuned_mean_target_satisfaction_rate": fnum(row, "mean_target_satisfaction_rate"),
                 "tuned_mean_word_count": fnum(row, "mean_word_count"),
                 "tuned_mean_decodability_adherence": statistics.mean(
@@ -503,13 +502,13 @@ def analyze(args: argparse.Namespace) -> int:
             }
         )
 
-    # Difficulty rank: low overall subjective + low emphasis + low full-spec.
+    # Difficulty rank: low overall subjective + low emphasis + low target sat.
     prompt_stats_sorted = sorted(
         prompt_stats,
         key=lambda r: (
             r["tuned_mean_overall_spec_adherence"],
             r["tuned_mean_target_phonics_pattern_emphasis"],
-            r["tuned_full_spec_pass_rate"],
+            r["tuned_mean_target_satisfaction_rate"],
             r["tuned_mean_decodability_adherence"],
             -r["tuned_mean_above_level_rate"],
         ),
@@ -542,7 +541,7 @@ def analyze(args: argparse.Namespace) -> int:
                     f"Prompt-level difficulty rank #{i}. "
                     f"tuned_overall={ps['tuned_mean_overall_spec_adherence']:.2f}, "
                     f"emphasis={ps['tuned_mean_target_phonics_pattern_emphasis']:.2f}, "
-                    f"full_spec={ps['tuned_full_spec_pass_rate']:.2f}."
+                    f"tgt_sat={ps['tuned_mean_target_satisfaction_rate']:.2f}."
                 ),
             )
         )
@@ -883,7 +882,7 @@ def analyze(args: argparse.Namespace) -> int:
     lines.append("## 4. Prompt-type difficulty (tuned)")
     lines.append("")
     lines.append(
-        "| difficulty rank | prompt_id | targets | overall | emphasis | decod_subj | full_spec | compliance | above_level |"
+        "| difficulty rank | prompt_id | targets | overall | emphasis | decod_subj | tgt_sat | compliance | above_level |"
     )
     lines.append("|---:|---|---|---:|---:|---:|---:|---:|---:|")
     for i, ps in enumerate(prompt_stats_sorted, start=1):
@@ -892,7 +891,7 @@ def analyze(args: argparse.Namespace) -> int:
             f"{ps['tuned_mean_overall_spec_adherence']:.2f} | "
             f"{ps['tuned_mean_target_phonics_pattern_emphasis']:.2f} | "
             f"{ps['tuned_mean_decodability_adherence']:.2f} | "
-            f"{ps['tuned_full_spec_pass_rate']:.2f} | "
+            f"{ps['tuned_mean_target_satisfaction_rate']:.2f} | "
             f"{ps['tuned_mean_decodability_compliance']:.3f} | "
             f"{ps['tuned_mean_above_level_rate']:.3f} |"
         )

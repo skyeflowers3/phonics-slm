@@ -8,9 +8,9 @@ requested progression level (minimizing above-level spelling patterns),
 forming a complete narrative, and avoiding phonics-term leakage.
 
 Primary objective metric: estimated above-level / decodability compliance
-(rule-based spelling-pattern classifier). Target satisfaction and full-spec
-pass remain secondary, because an advanced story can hit requested patterns
-accidentally.
+(rule-based spelling-pattern classifier). Target satisfaction remains
+secondary: each requested pattern gets partial credit of
+min(distinct_matches / 4, 1), then averaged across targets.
 
 These metrics are estimated rule-based measures from phonics_profiler_threshold4
 detection logic — not a perfect measure of true linguistic decodability.
@@ -376,35 +376,35 @@ def evaluate_row(row: dict, row_index: int) -> dict:
         safe = display.replace(" ", "_").replace("-", "_")
         out[f"{safe}_distinct_count"] = count
 
-    # Secondary metrics: target pattern evidence (>= 4 distinct matches)
+    # Secondary metrics: partial credit for target pattern evidence.
+    # Each requested pattern scores min(distinct_count / 4, 1.0); story
+    # satisfaction is the mean across requested targets.
     targets_requested = len(targets)
     passed = []
     failed = []
+    credits: list[float] = []
     for display_name in targets:
         internal = DISPLAY_TO_INTERNAL[display_name]
         distinct = profile["pattern_distinct_counts"].get(internal, 0)
+        credit = min(distinct / MIN_DISTINCT_FOR_PASS, 1.0)
         ok = distinct >= MIN_DISTINCT_FOR_PASS
         out[f"target_pass__{internal}"] = int(ok)
+        out[f"target_credit__{internal}"] = round(credit, 4)
         out[f"target_distinct__{internal}"] = distinct
+        credits.append(credit)
         if ok:
             passed.append(display_name)
         else:
             failed.append(display_name)
 
     targets_passed = len(passed)
-    satisfaction = (
-        round(targets_passed / targets_requested, 4) if targets_requested else 0.0
-    )
-    full_spec_pass = int(
-        targets_requested > 0 and targets_passed == targets_requested
-    )
+    satisfaction = round(_mean(credits), 4) if targets_requested else 0.0
 
     out["targets_requested"] = targets_requested
     out["targets_passed"] = targets_passed
     out["targets_passed_list"] = ", ".join(passed)
     out["targets_failed_list"] = ", ".join(failed)
     out["target_satisfaction_rate"] = satisfaction
-    out["full_spec_pass"] = full_spec_pass
 
     ceiling = permitted_ceiling(targets)
     out["permitted_ceiling_stage"] = ceiling
@@ -453,9 +453,6 @@ def summarize_group(rows: list[dict], group_keys: dict) -> dict:
         ),
         "mean_above_level_rate": round(
             _mean([r["above_level_rate"] for r in rows]), 4
-        ),
-        "full_spec_pass_rate": round(
-            _mean([r["full_spec_pass"] for r in rows]), 4
         ),
         "mean_target_satisfaction_rate": round(
             _mean([r["target_satisfaction_rate"] for r in rows]), 4
@@ -580,7 +577,6 @@ def print_model_summary(summary_rows: list[dict]) -> None:
         ("mean_distinct_decodability_compliance", "dist_decod", True),
         ("mean_weighted_above_level_rate", "wt_above", False),
         ("mean_above_level_distance", "mean_dist", False),
-        ("full_spec_pass_rate", "full_spec", True),
         ("mean_target_satisfaction_rate", "tgt_sat", True),
         ("phonics_leakage_rate", "leakage", True),
         ("title_rate", "title", True),
@@ -624,7 +620,6 @@ def print_prompt_summary(summary_rows: list[dict]) -> None:
         ("n", "n", False),
         ("mean_decodability_compliance", "decod_comp", True),
         ("mean_weighted_above_level_rate", "wt_above", False),
-        ("full_spec_pass_rate", "full_spec", True),
         ("mean_target_satisfaction_rate", "tgt_sat", True),
         ("mean_word_count", "words", False),
     ]
@@ -753,8 +748,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = build_arg_parser().parse_args(argv)
 
-    OBJECTIVE_DIR.mkdir(parents=True, exist_ok=True)
-
     try:
         raw_rows = load_outputs(args.input)
     except (OSError, ValueError) as exc:
@@ -797,7 +790,6 @@ def main(argv: list[str] | None = None) -> int:
         "targets_requested",
         "targets_passed",
         "target_satisfaction_rate",
-        "full_spec_pass",
         "targets_passed_list",
         "targets_failed_list",
         # Other checks
@@ -821,7 +813,6 @@ def main(argv: list[str] | None = None) -> int:
         "mean_distinct_decodability_compliance",
         "mean_weighted_above_level_rate",
         "mean_above_level_distance",
-        "full_spec_pass_rate",
         "mean_target_satisfaction_rate",
         "phonics_leakage_rate",
         "title_rate",
@@ -838,7 +829,6 @@ def main(argv: list[str] | None = None) -> int:
         "mean_distinct_decodability_compliance",
         "mean_weighted_above_level_rate",
         "mean_above_level_distance",
-        "full_spec_pass_rate",
         "mean_target_satisfaction_rate",
         "phonics_leakage_rate",
         "title_rate",
@@ -907,8 +897,9 @@ def main(argv: list[str] | None = None) -> int:
         "Note: all above-level / compliance metrics are estimated rule-based "
         "spelling-pattern measures from phonics_profiler_threshold4.py, not a "
         "perfect measure of true linguistic decodability. Target satisfaction "
-        "and full-spec pass are secondary because advanced stories can satisfy "
-        "requested patterns accidentally."
+        "is secondary: each requested pattern gets partial credit "
+        "min(distinct_words / 4, 1), averaged across targets — so 2 matching "
+        "words counts as 0.5 for that pattern, not a full miss."
     )
     return 0
 

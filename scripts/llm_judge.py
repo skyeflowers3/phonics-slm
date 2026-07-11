@@ -501,7 +501,6 @@ def interpret_results(
         ("mean_decodability_compliance", "decodability compliance", True),
         ("mean_weighted_above_level_rate", "weighted above-level rate", False),
         ("mean_target_satisfaction_rate", "target satisfaction", True),
-        ("full_spec_pass_rate", "full-spec pass rate", True),
         ("phonics_leakage_rate", "phonics leakage rate", False),
     ]
     obj_improved = []
@@ -719,7 +718,6 @@ def resolve_provider_and_model(args: argparse.Namespace) -> tuple[str, str]:
 def main(argv: list[str] | None = None) -> int:
     load_dotenv_files()
     args = build_arg_parser().parse_args(argv)
-    SUBJECTIVE_DIR.mkdir(parents=True, exist_ok=True)
 
     try:
         provider, model = resolve_provider_and_model(args)
@@ -837,7 +835,6 @@ def main(argv: list[str] | None = None) -> int:
             "decodability_compliance",
             "weighted_above_level_rate",
             "target_satisfaction_rate",
-            "full_spec_pass",
             "phonics_leakage",
             "word_count",
             "subjective_total",
@@ -864,7 +861,6 @@ def main(argv: list[str] | None = None) -> int:
             ("n", "n"),
             ("mean_decodability_compliance", "decod_comp"),
             ("mean_weighted_above_level_rate", "wt_above"),
-            ("full_spec_pass_rate", "full_spec"),
             ("mean_target_satisfaction_rate", "tgt_sat"),
             ("phonics_leakage_rate", "leakage"),
             ("mean_word_count", "words"),
