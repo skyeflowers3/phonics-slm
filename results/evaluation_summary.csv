@@ -1,0 +1,14 @@
+metric,metric_family,base_mean,tuned_mean,tuned_minus_base,n_base,n_tuned
+target_phonics_coverage,objective,1.0,0.7679,-0.2321,21,21
+off_target_phonics_rate,objective,0.3227,0.1509,-0.1718,21,21
+on_level_rate,objective,0.6773,0.8491,0.1718,21,21
+title_present,objective,1.0,1.0,0.0,21,21
+no_duplicate_sentences,objective,1.0,1.0,0.0,21,21
+complete_output,objective,0.5714,1.0,0.4286,21,21
+no_phonics_leakage,objective,0.7619,1.0,0.2381,21,21
+word_count,objective,188.4286,63.8095,-124.6191,21,21
+sentence_count,objective,13.5714,7.4762,-6.0952,21,21
+spec_adherence_score,judge,0.1905,1.2381,1.0476,21,21
+robustness_score,judge,1.5238,1.8571,0.3333,21,21
+task_quality_score,judge,0.1905,1.0952,0.9047,21,21
+consistency_score,judge,0.0,0.4286,0.4286,21,21

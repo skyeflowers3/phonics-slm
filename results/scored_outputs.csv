@@ -1,0 +1,864 @@
+model,prompt_id,generation_id,seed,target_phonics,target_phonics_coverage,off_target_phonics_rate,on_level_rate,weighted_above_level_rate,title_present,sentence_count,no_duplicate_sentences,has_duplicate_sentences,complete_output,incomplete_output,no_phonics_leakage,phonics_leakage,word_count,spec_adherence_score,robustness_score,task_quality_score,consistency_score,spec_adherence_justification,robustness_justification,task_quality_justification,consistency_justification,detected_title,duplicate_sentence_norms,incomplete_reasons,phonics_leakage_terms,above_level_words,permitted_ceiling_stage,raw_story_judge_json,raw_consistency_judge_json,prompt,story
+base,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",1.0,0.5023,0.4977,1.9302,1,14,1,0,0,1,1,0,215,0,1,0,0,"The story uses much above-level vocabulary and sentence structure, making it unreadable for students at this phonics stage.",The story is mostly coherent but is truncated and ends mid-sentence.,It does not provide accessible or focused practice with consonant blends and digraphs for early readers.,All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.,The Happy Forest Adventure,,"ends_mid_phrase,no_terminal_punctuation",,"about, adventure, adventures, after, all, always, animal, animals, apple, around, bear, because, better, bigger, bright, building, built, came, clever, creatures, curious, day, decided, different, each, eagle, especially, explore, favorite, first, following, for, forest, found, friendship, funny, future, gave, happy, helping, her, home, how, instead, interesting, knew, learned, leaves, leaving, like, little, looked, looking, made, make, many, mira, more, needed, new, none, noticed, now, other, over, owl, place, safe, saw, share, shiny, small, something, somewhere, special, squirrel, started, stay, take, time, tiny, together, tool, tree, unusual, walked, walking, wanted, while, wise, wooden, world, yellow",2,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and sentence structure, making it unreadable for students at this phonics stage.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and ends mid-sentence.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible or focused practice with consonant blends and digraphs for early readers.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Forest Adventure**
+
+One day, a little red squirrel named Mira noticed something unusual in her favorite forest. She found a small tree with big leaves and a bright red apple on top of it. As she looked around, she saw a new animal—a curious yellow bear who was always looking for adventure.
+
+The bear had been following Mira all over the forest, but now they were together! They both wanted to explore more. After a while, Mira helped the bear find a safe place to rest by building a tiny nest made from sticks and leaves. The bear said, “I can take you somewhere,” and they both started walking through the forest.
+
+As they walked, they met many interesting creatures: a wise old owl, a clever fox, and a funny eagle. They learned about different animals and how they lived. Mira was especially happy because she felt like she was helping make the world better.
+
+Then came the time when they needed to go home. But instead of leaving, they decided to stay and share their friendship. Together, they built a bigger nest and gave the bear a special gift—a shiny wooden stick that would be a great tool for future adventures.
+
+At first, none of them knew each other, but"
+tuned,blends_digraphs_1,1,1001,"consonant blends, consonant digraphs",0.5,0.1429,0.8571,0.4643,1,4,1,0,1,0,1,0,28,2,2,1,1,The story is fully decodable at the target level with a natural title and simple narrative.,"The text is clean, coherent, and free from errors or formatting issues.",It is readable but offers limited practice with blends and digraphs beyond 'frog' and 'snake.',"All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.",The Frog,,,,"night, over, snake, title",2,"{""spec_adherence"": {""score"": 2, ""justification"": ""The story is fully decodable at the target level with a natural title and simple narrative.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is clean, coherent, and free from errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It is readable but offers limited practice with blends and digraphs beyond 'frog' and 'snake.'""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Frog
+
+The frog is in the pond.  
+A snake jumps over the frog.  
+The frog can swim fast!  
+The frog will go to bed at night."
+base,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",1.0,0.4327,0.5673,1.5146,1,14,1,0,1,0,1,0,171,0,2,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.",The story is coherent and free of formatting or structural errors.,It provides little useful practice with blends or digraphs and is not accessible for students at this level.,All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.,The Forest and the Lizard,,,,"about, all, animal, appeared, beautiful, became, began, bloomed, blue, bright, came, covered, creature, curious, day, different, ears, enough, everyone, flowers, for, forest, found, fur, green, grew, heads, home, how, learned, leaves, letters, like, little, lizard, looked, made, magical, many, might, more, morning, moving, new, noticed, now, owl, shape, shiny, small, something, sound, speak, sweet, tall, those, tree, trees, visit",2,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It provides little useful practice with blends or digraphs and is not accessible for students at this level.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest and the Lizard**
+
+One day, a little fox found a small tree full of shiny leaves. The leaves were green, but they had a strange shape—like the letters *stop*. The fox was curious about them and thought it might be a kind of animal. 
+
+Then one morning, a big lizard came to visit the forest. He was tall, covered in long fur, and his eyes were bright blue. He noticed that there were many plants with big ears and small heads. Those plants were different from the ones on the leaves. They looked like *ship*, which made a sound when moving.
+
+The next day, the forest began to grow more beautiful. Trees bloomed, flowers grew, and a new creature appeared—the owl. The owl said something sweet and magical to everyone in the forest. And so the forest became home for all things.
+
+Now, if you want to know more about the forest, I can tell you how the trees learned to speak. But just this is enough! 🌳✨"
+tuned,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",0.875,0.3429,0.6571,1.1143,1,4,1,0,1,0,1,0,35,1,2,1,1,The story is mostly decodable but uses above-level words like 'together' and lacks strong target pattern emphasis.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with blends and digraphs, limiting its effectiveness for targeted phonics instruction.","All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.",The Fun Game,,,,"ball, for, game, happening, park, play, playing, rope, sara, title, together",2,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is mostly decodable but uses above-level words like 'together' and lacks strong target pattern emphasis.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is clean, coherent, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with blends and digraphs, limiting its effectiveness for targeted phonics instruction.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and jump rope.  
+A big game is happening at the park!  
+We run to get on the grass for fun!"
+base,blends_digraphs_1,3,1003,"consonant blends, consonant digraphs",1.0,0.4976,0.5024,1.9171,1,14,1,0,0,1,1,0,205,0,2,0,0,The story uses advanced vocabulary and sentence structures far beyond early decodable text level.,"The story is coherent, complete, and free of formatting or structural errors.",It is not suitable for phonics practice due to above-level words and complex sentences.,All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.,The Forest's Whisper,,no_terminal_punctuation,,"about, above, adventure, animal, another, anything, around, began, bird, book, calls, came, carried, clouds, colorful, connected, day, deep, distant, except, far, feel, feeling, few, flew, flowed, followed, forest, found, friends, girl, grasses, greatest, happy, hear, heard, her, hidden, high, home, hummed, inspired, journey, learned, leaves, like, lila, little, made, many, mountain, never, new, owl, pictures, places, proud, quiet, rabbit, read, returned, river, rivers, rustle, seen, sentences, simple, small, something, sometimes, squirrel, stone, stories, streams, tail, tales, talking, tall, telling, trees, wagging, walked, way, whisper, whispers, wise, wonder, woods, words, world, young",2,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses advanced vocabulary and sentence structures far beyond early decodable text level.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is not suitable for phonics practice due to above-level words and complex sentences.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to produce consistently decodable text focused on consonant blends and digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest's Whisper**
+
+In a quiet forest where the trees hummed with old songs, there lived a young girl named Lila. She had never heard anything except the soft rustle of leaves and the distant calls of her friends. One day, she found a small book filled with colorful pictures and simple sentences. As she read, she began to hear something new—words that made her feel connected to the world around her. 
+
+One day, a rabbit came to the edge of the forest, wagging its tail. “I want to go far,” it said, and so Lila followed. They walked through tall grasses, where the wind carried stories like whispers. A squirrel sat on a stone, talking about rivers and streams. Another animal, a bird, flew high above, telling tales of the sky.
+
+They met a wise owl who had seen many places. The owl told Lila about a mountain hidden deep in the woods, and a river that flowed from the clouds. It was a journey full of wonder, and Lila felt proud to have helped them find their way.
+
+At the end, they returned home, feeling happy and inspired. Lila learned a few things: sometimes the greatest adventure is just a little step"
+tuned,blends_digraphs_1,3,1003,"consonant blends, consonant digraphs",1.0,0.1793,0.8207,0.5924,1,21,1,0,1,0,1,0,184,1,2,1,1,The story uses mostly decodable words but includes above-level vocabulary and complex sentence structures for this stage.,"The story is coherent, complete, and free from formatting or logical errors.","There is some practice with blends and digraphs, but not enough emphasis or repetition for strong phonics learning.","All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.",A Frog’s Adventure,,,,"adventure, all, another, answers, any, anymore, because, close, coming, day, for, lake, like, look, mean, more, near, nothing, place, problem, see, sees, stay, tired, title, together, until, wait",2,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story uses mostly decodable words but includes above-level vocabulary and complex sentence structures for this stage.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free from formatting or logical errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""There is some practice with blends and digraphs, but not enough emphasis or repetition for strong phonics learning.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- consonant blends
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- consonant blends: stop, frog, black, plant
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Frog’s Adventure
+
+A frog wants to go on an adventure. The frog sees a lot of frogs near the pond. He can see them all. Then he sees a lot more frogs near the lake! They do not want to come close. So he runs from the pond to the lake. When he gets there, he is so tired! The frogs will not wait for him anymore. But when he comes back, they are still not coming near him. His job is done. What does his job look like? It is to find a spot where he can rest. If he has no place to rest, then he must stay until the next day. He can not rest at the pond because there is nothing else to rest at. He must find another spot. This is a problem. He can’t find any spots to rest. He had to ask the frogs if they could help him. “Yes,” says one frog, “I can help you.” “You mean help me rest?” asks the frog. “Yes!” answers the frog. So they sit together and rest."
+base,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",1.0,0.2019,0.7981,0.2019,1,14,1,0,0,1,1,0,208,0,1,0,0,The story uses advanced vocabulary and complex sentences far beyond decodable text for this phonics level.,The story is mostly coherent but is truncated and ends abruptly.,It is not suitable for phonics practice due to above-level words and insufficient focus on target patterns.,"Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.",The Happy Garden of Lila,,no_terminal_punctuation,,"about, across, adventure, ago, alive, always, animals, around, began, between, carrying, colors, curious, dreaming, faraway, feeling, garden, happy, herself, instead, lila, listening, magic, nestled, opened, picture, playing, rabbit, realized, something, special, stories, story, village, wonder",6,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses advanced vocabulary and complex sentences far beyond decodable text for this phonics level.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and ends abruptly.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is not suitable for phonics practice due to above-level words and insufficient focus on target patterns.""}}","{""consistency"": {""score"": 0, ""justification"": ""Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Garden of Lila**
+
+In a small village nestled between two hills, there lived a girl named Lila who loved playing with her stuffed animals. One day, she found a box full of toys. She opened it and saw a big picture on the front. It was a map to a faraway land where all the stars were alive.
+
+Lila had always thought of herself as a curious child, but one day she realized something new. The stars didn’t just shine; they sang stories. They told tales about adventure and magic. Each star had its own name—*a brave knight*, *a wise owl*, *a happy rabbit*—and each one had their own special way to tell their story.
+
+One night, the sky began to change colors. A storm came, but instead of rain, there were clouds made from dreams. These clouds were real and could be heard by Lila, who felt safe and happy. She spent hours listening and feeling that the world around her was filled with wonder.
+
+Then, a long time ago, when the stars were still young and dreaming, there once lived a ship that sailed across the stars, carrying the joy of adventure and the magic of life. Now, with her heart full"
+tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.5,0.1837,0.8163,0.1837,1,5,1,0,1,0,1,0,49,0,0,0,0,"The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.","The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.",It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.,None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.,The Puffing Puff,,,,"because, daisy, funny, puffing, taller, title",6,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.""}, ""robustness"": {""score"": 0, ""justification"": ""The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Puffing Puff
+
+Daisy is the puffing puff.  
+She can puff up her wings like a storm!  
+The puffing puff has a funny look on his face.  
+He looks sad because he is so much taller than him!  
+His puffing puff is too tall for him to see!"
+base,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",1.0,0.1706,0.8294,0.1706,1,16,1,0,1,0,1,0,170,1,2,1,0,The story contains above-level vocabulary and complex sentences that make it challenging for early decodable readers.,"The story is coherent, complete, and free from formatting or logical errors.","Target patterns appear but are not emphasized enough, and the text is not fully accessible for decodable practice.","Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.",The Sunny Farm and Its Friends,,,,"after, another, around, carrots, decided, even, farmer, farmers, faster, flowers, garden, growing, happy, hopscotch, morning, mr, other, others, piggy, planted, special, strawberries, sunny, together, tomatoes, vegetables, water",6,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story contains above-level vocabulary and complex sentences that make it challenging for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free from formatting or logical errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""Target patterns appear but are not emphasized enough, and the text is not fully accessible for decodable practice.""}}","{""consistency"": {""score"": 0, ""justification"": ""Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Sunny Farm and Its Friends**
+
+One day, there was a new friend named Mr. Piggy who came to live on the farm. The old farmer had a garden full of flowers, but now Mr. Pig was growing vegetables from seeds. He brought in a big pot of tomatoes, carrots, and a bunch of strawberries.
+
+The farmers were all happy to see him come. They planted more crops together and made new toys with their own hands. One day, they found a special toy called ""the Fish."" It was a small boat, and it could go far. The water was blue.
+
+Then one morning, the group decided to play games. They played hopscotch, chased each other around the farm, and even built a new bridge. They learned how to move faster than the others.
+
+After a long time, the friends left the farm for another day. They went home, and Mr. Pig still lived on the farm with his plants and his toys. And there was a lot of fun! 🌸✨"
+tuned,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",0.5,0.1795,0.8205,0.1795,1,4,1,0,1,0,1,0,39,1,2,1,0,"The story is decodable but barely uses diphthongs or consonant digraphs, limiting its value for targeted practice.","The text is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the target patterns, reducing its effectiveness as a focused learning tool.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.,The Fun Game,,,,"hopscotch, lemonade, playing, sara, table, title, together",6,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is decodable but barely uses diphthongs or consonant digraphs, limiting its value for targeted practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is coherent, complete, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with the target patterns, reducing its effectiveness as a focused learning tool.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Fun Game
+
+Sara and Sam have fun playing games together.  
+They play ball and they play hopscotch too.  
+Sam has two cups of lemonade to drink.  
+The game ends when the kids say “No!” from the table."
+base,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",1.0,0.2599,0.7401,0.2599,1,13,1,0,1,0,1,0,177,0,2,0,0,"The story uses much above-level vocabulary and complex sentence structures, making it unreadable for early decodable readers.","The story is coherent, complete, and free of formatting or logical errors.",It does not provide accessible practice with diphthongs or consonant digraphs for students at this level.,"Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.",The Magic Treehouse Adventure,,,,"adventure, around, became, becoming, before, bigger, colorful, even, every, everyone, flowers, forever, garden, grander, growing, happened, happening, happier, inside, little, magic, magical, morning, something, special, started, stronger, suddenly, taller, treehouse, understand, upon, very, wooden",6,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentence structures, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or logical errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible practice with diphthongs or consonant digraphs for students at this level.""}}","{""consistency"": {""score"": 0, ""justification"": ""Across all three generations, the stories do not consistently produce in-level decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Magic Treehouse Adventure**
+
+Once upon a time, there lived a small wooden house called The Magic Treehouse. It had a big tree and it was full of toys and colorful things. Each day, the house had a special job — the trees would plant flowers to make the garden bloom. But one day, the tree suddenly started to grow taller than before, and the whole house looked grander and more magical.
+
+Then one morning, a boy named Max came to The Magic TreeHOUSE. He saw something very strange on the tree — it was growing up. And he could see that the magic was inside. So he asked everyone else around the house if they knew how this happened. They all said they didn't know what was happening.
+
+But then, one by one, they started to understand. The trees were becoming stronger, and they couldn’t stop growing. And so the Magic Treehouse became even bigger, and the world got a little happier.
+
+Now, every child knows that the magic is still here, and the treehouse stays magical forever. 🌟✨"
+tuned,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",0.125,0.093,0.907,0.093,1,5,1,0,1,0,1,0,43,1,2,1,0,The story is simple and decodable but barely uses diphthongs or consonant digraphs for practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its instructional value for this phonics focus.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.,A Trip to the Zoo,,,,"above, animals, monkey, title",6,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is simple and decodable but barely uses diphthongs or consonant digraphs for practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is clean, coherent, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with the target patterns, limiting its instructional value for this phonics focus.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- diphthongs
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- diphthongs: coin, out, toy, cloud
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Trip to the Zoo
+
+Dad and Mom went on a trip to the zoo.  
+We met lots of animals!  
+A big cat sat next to us.  
+A monkey looked at us from above.  
+There was a lot of fun and joy!"
+base,final_e_blends_1,1,1001,"final-e words, consonant blends",1.0,0.3798,0.6202,1.125,1,15,1,0,0,1,1,0,208,0,1,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.",The story is mostly coherent but is truncated and ends abruptly.,It does not provide accessible or focused practice with final-e words and consonant blends for beginning readers.,All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.,The Happy Garden of Lila,,no_terminal_punctuation,,"about, adventure, after, all, books, boy, called, cherry, colorful, day, decided, different, each, echoes, ended, every, everyday, first, flowers, found, friendly, friends, fruit, fruits, garden, girl, grumble, happy, her, hidden, interesting, joy, kindness, knew, leaving, lila, magic, magical, many, more, new, now, play, princess, second, shiny, small, soon, squirrel, stories, tail, tale, third, together, took, tree, trees, very, visit, walked, wanted, within, year, young",3,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and ends abruptly.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible or focused practice with final-e words and consonant blends for beginning readers.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Garden of Lila**
+
+Lila was a young girl who lived in a small garden. She loved to play with her friends and her dog, Max. One day, they decided to go on an adventure together. They wanted to visit a place called ""The Grove of Echoes."" There, they would find old books, shiny stones, and colorful flowers.
+
+As they walked through the grove, they met a wise old man named Grumble. He told them about a magical tree that could bring new stories to life. The tree had many fruits, each one different every year. But the most interesting fruit was a cherry that said, “I am happy.” 
+
+Max got a cherry, and soon after, they found more stories hidden within the trees. Each tree told a tale from their lives. The first one was a cat with a big tail, but now it's a friendly squirrel. The second one was a brave boy who saved his friend, and the third one was a princess who gave back what she took.
+
+They all came back to their own garden, where Lila felt very happy. Now she knew that kindness brings joy, and that magic can be found in everyday things. And so the adventure ended, leaving"
+tuned,final_e_blends_1,1,1001,"final-e words, consonant blends",0.875,0.1829,0.8171,0.6829,1,11,1,0,1,0,1,0,82,1,1,1,0,The story is mostly decodable but includes above-level words like 'until' and confusing narrative elements.,The story is readable but contains unclear plot points and some logical inconsistencies.,"There is some practice with final-e words and blends, but coverage and clarity are limited.",The three generations show highly inconsistent decodability and readability for the target level.,The Bike,,,,"happy, into, milo, riding, saw, sees, title, until",3,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is mostly decodable but includes above-level words like 'until' and confusing narrative elements.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is readable but contains unclear plot points and some logical inconsistencies.""}, ""task_quality"": {""score"": 1, ""justification"": ""There is some practice with final-e words and blends, but coverage and clarity are limited.""}}","{""consistency"": {""score"": 0, ""justification"": ""The three generations show highly inconsistent decodability and readability for the target level.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Bike
+
+Milo is riding his bike to school. He saw a red bike next to him. Milo stops and sees it is a dog. “I will ride my bike to the dog,” said Milo. Milo gets on his bike. He rides fast until he spots a cat. Then he jumps into the dog’s lap. Milo does not get off his bike. Milo sits on the dog’s side of the bike. Milo is happy! Milo rides his bike back to school."
+base,final_e_blends_1,2,1002,"final-e words, consonant blends",1.0,0.4341,0.5659,1.3512,1,14,1,0,1,0,1,0,205,0,2,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.","The story is coherent, complete, and free of formatting or structural errors.",It does not provide accessible practice with final-e words or blends for students at this phonics level.,All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.,The Happy Forest Adventure,,,,"about, adventure, all, also, animals, around, beauty, because, bigger, bird, book, called, creature, curious, day, discover, each, ended, especially, every, exploring, followed, for, forest, found, group, happening, happy, heard, hidden, himself, knew, learn, learned, little, looked, magic, many, maple, message, muffy, nature, new, noticed, now, oak, out, owl, part, returned, saw, see, showed, simple, small, something, sound, story, titled, together, tree, turned, walked, wonders, woods, world, years, young",3,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible practice with final-e words or blends for students at this phonics level.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Forest Adventure**
+
+In a small forest called Maple Grove, there lived a curious little fox named Muffy. One day, while exploring the woods, Muffy noticed a new creature – a wise old owl who had been on the tree for many years.
+
+The owl said, “I see you have a friend here, Muffy. The forest is full of wonders to discover.” With that, Muffy followed the owl to a hidden path where a long, stone bridge met a big oak tree. As they walked up, they heard a soft sound. It was a song from a young bird, who had just learned to fly.
+
+“Now I can fly,” the bird said. Then, when it turned, a group of animals came together. They were all curious about nature and each could tell what was happening around them.
+
+Muffy was especially happy because he saw many things that showed the beauty of the world. He also felt strong and loved to learn.
+
+As the day ended, Muffy returned home and found a new book titled *The Magic Forest*. Now every time Muffy looked out, he knew he was part of something bigger than himself.
+
+The story ends with a simple message: *In every place, magic lives.*"
+tuned,final_e_blends_1,2,1002,"final-e words, consonant blends",0.375,0.1304,0.8696,0.2826,1,6,1,0,1,0,1,0,46,1,2,1,0,The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.",The three generations show highly inconsistent decodability and readability for the target level.,The Big Red Bus,,,,"day, every, seats, street, title, work",3,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is clean, coherent, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.""}}","{""consistency"": {""score"": 0, ""justification"": ""The three generations show highly inconsistent decodability and readability for the target level.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Big Red Bus
+
+Mom and Dad ride to work every day by bus.  
+A big red bus is on the street.  
+The bus has lots of kids!  
+The kids sit on the seats.  
+What can we do?  
+We get on the bus and go!"
+base,final_e_blends_1,3,1003,"final-e words, consonant blends",1.0,0.3741,0.6259,1.0816,1,9,1,0,1,0,1,0,147,0,2,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.","The story is coherent, complete, and free of formatting or structural errors.",It provides little accessible practice with final-e words or blends due to high-level language throughout.,All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.,The Happy Forest Adventure,,,,"adventure, after, all, animals, apples, bananas, bear, continued, day, decided, energy, favorite, food, foods, for, forest, found, friendship, fur, green, happy, heard, heart, high, himself, how, joy, looked, loud, now, prosper, saw, shared, shiny, small, sound, standing, stayed, tall, together, trees, wonder, young",3,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It provides little accessible practice with final-e words or blends due to high-level language throughout.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on final-e words and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Forest Adventure**
+
+In a small forest where the trees were all tall and green, there lived a young fox named Max. One day, Max heard a sound so loud it made his heart jump. He ran to the edge of the forest and saw a big white bear standing on a high hill. The bear was full of energy and had a shiny red fur.
+
+Max thought, “I wonder if I can help this bear.” He decided to go with the bear and helped him find food for himself. Together they found a big pile of apples, bananas, and nuts.
+
+Now, when Max looked back, he saw the bear still happy and the forest full of wild animals. They shared their favorite foods and stayed together long after the bear left.
+
+That's how the forest continued to grow and prosper, filled with joy and friendship. 🌟"
+tuned,final_e_blends_1,3,1003,"final-e words, consonant blends",0.875,0.2,0.8,0.5667,1,10,1,0,1,0,1,0,90,1,2,1,0,The story is mostly decodable but includes above-level words like 'animals' and 'playing' that may challenge learners.,"The story is coherent, complete, and free from formatting or structural errors.","There is some practice with target patterns, but coverage is light and not strongly emphasized.",The three generations show highly inconsistent decodability and readability for the target level.,A Trip to the Farm,,,,"about, also, animals, farm, for, going, her, learn, many, out, playing, see, sister, title, too",3,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is mostly decodable but includes above-level words like 'animals' and 'playing' that may challenge learners.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free from formatting or structural errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""There is some practice with target patterns, but coverage is light and not strongly emphasized.""}}","{""consistency"": {""score"": 0, ""justification"": ""The three generations show highly inconsistent decodability and readability for the target level.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- final-e words
+- consonant blends
+
+Here are some example words containing these patterns:
+- final-e words: cake, bike, home, smile
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Trip to the Farm
+
+Dad has made lots of cakes! I have so many cakes, too!
+My mom will make them when it is time for me to go on her trip to the farm.
+We will see what we can find out about animals and plants at the farm. We also
+will have fun playing games at the farm.
+I am going to be a good kid, Dad. My sister will be there to help us. The kids
+and I will learn so much from this trip!"
+base,multisyllabic_vowel_teams_r_controlled_1,1,1001,"multisyllabic words, vowel teams, r-controlled vowels",1.0,0.0,1.0,0.0,1,14,1,0,1,0,1,0,202,1,1,1,0,"The story contains significant above-level vocabulary and complex sentences, making it only partly decodable for the target level.","The story is truncated and ends abruptly, with some incomplete sentences and ideas.","Some target patterns appear, but the text is too advanced and inconsistent for effective decodable practice.","All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.",The Happy Garden of Lila,,,,,7,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story contains significant above-level vocabulary and complex sentences, making it only partly decodable for the target level.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is truncated and ends abruptly, with some incomplete sentences and ideas.""}, ""task_quality"": {""score"": 1, ""justification"": ""Some target patterns appear, but the text is too advanced and inconsistent for effective decodable practice.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Garden of Lila**
+
+In a small village, there lived a girl named Lila who loved to read books and learn new things. One day, she found a book called *The Magic Treehouse* which told her about a forest full of animals and plants. The trees had big leaves, and the flowers were colorful. She learned that the forest was home for many different creatures—birds, squirrels, rabbits, and more.
+
+One morning, Lila discovered a special plant called *Corn*. This plant had a tall stalk and a sweet flavor. It also had a lot of seeds inside, so it could grow a garden. Lila thought this was very fun.
+
+Then one day, Lila met a wise old man who said something like, ""You can be curious and learn from everyone."" He gave her a small box with a map and a basket filled with food. With this, Lila became a part of the garden.
+
+As they played together, Lila learned to count the number of letters and sound words. She used the word **rain**, saying how the trees sang when the weather changed. She noticed that the word **family** was important because it showed people coming together. And the word **bird**"
+tuned,multisyllabic_vowel_teams_r_controlled_1,1,1001,"multisyllabic words, vowel teams, r-controlled vowels",0.8333,0.0,1.0,0.0,1,6,1,0,1,0,1,0,35,1,2,1,0,"The story is decodable but lacks sufficient multisyllabic words, vowel teams, and r-controlled vowels for targeted practice.","The story is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its effectiveness as a focused learning text.","None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.",The Game,,,,,7,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is decodable but lacks sufficient multisyllabic words, vowel teams, and r-controlled vowels for targeted practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with the target patterns, limiting its effectiveness as a focused learning text.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Game
+
+Milo is playing a game. He has to get 10 points. Milo got two of his first three shots right. Then he had one shot left. He took it for himself. Milo won!"
+base,multisyllabic_vowel_teams_r_controlled_1,2,1002,"multisyllabic words, vowel teams, r-controlled vowels",1.0,0.0,1.0,0.0,1,13,1,0,0,1,0,1,209,0,1,0,0,"The story uses above-level vocabulary and directly references phonics terms, making it unsuitable as a decodable text.",The story is mostly coherent but ends abruptly and includes meta-language about phonics.,It is not effective for student practice due to explicit phonics discussion and off-level vocabulary.,"All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.",The Forest Hunt,,no_terminal_punctuation,"multisyllabic, phonics",,7,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses above-level vocabulary and directly references phonics terms, making it unsuitable as a decodable text.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but ends abruptly and includes meta-language about phonics.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is not effective for student practice due to explicit phonics discussion and off-level vocabulary.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest Hunt**
+
+In the heart of the forest, there lived a young fox named Timmy. One day, he noticed a strange sight—there was a big, red squirrel hiding under a bush. Timmy thought it was just a normal squirrel, but then he saw something more important. A group of birds were flying high above the trees, their feathers shimmering like stars. They were all on a long journey to find food for themselves.
+
+Timmy followed them, and soon they met a wise old owl who had been listening for a long time. The owl told Timmy that the forest was full of hidden treasures, and each one could be found by following the clues given. After much searching, Timmy found a map marked with a special symbol—a number that said ""Rabbit"" in bold letters next to it.
+
+He realized that this was a multisyllabic word: *rabbit*. He used his nose to check if the letter R was in the correct place. Then he looked at the word *family*, which also included R. As he learned more, he began to understand the importance of using phonics skills to help him learn new words. With every step he took, he felt closer to understanding how the world around"
+tuned,multisyllabic_vowel_teams_r_controlled_1,2,1002,"multisyllabic words, vowel teams, r-controlled vowels",0.9167,0.0,1.0,0.0,1,5,1,0,1,0,1,0,51,2,2,1,0,The story is fully decodable at the target level with a natural title and clear narrative.,"The text is coherent, complete, and free from errors or formatting issues.",It is readable but offers limited practice with vowel teams and r-controlled vowels.,"None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.",The Farm Family’s Fun Trip,,,,,7,"{""spec_adherence"": {""score"": 2, ""justification"": ""The story is fully decodable at the target level with a natural title and clear narrative.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is coherent, complete, and free from errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It is readable but offers limited practice with vowel teams and r-controlled vowels.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Farm Family’s Fun Trip
+
+The family goes to the farm where they meet their dog.  
+They have fun eating sandwiches and playing games.  
+The dog can run fast on the field.  
+The family has lots of food for lunch.  
+They play together until it is time to go home."
+base,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",1.0,0.0,1.0,0.0,1,8,1,0,1,0,1,0,138,1,2,1,0,The story contains above-level vocabulary and complex sentences that make it challenging for decodable-level readers.,"The narrative is coherent, complete, and free from formatting or structural errors.","Some target patterns appear, but advanced words and phrasing limit its effectiveness as decodable practice.","All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.",The Forest's Whisper,,,,,7,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story contains above-level vocabulary and complex sentences that make it challenging for decodable-level readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The narrative is coherent, complete, and free from formatting or structural errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""Some target patterns appear, but advanced words and phrasing limit its effectiveness as decodable practice.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on multisyllabic words, vowel teams, and r-controlled vowels.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest's Whisper**
+
+In a small forest where the trees hummed with old songs, there lived a curious young squirrel named Tim. One day, he noticed something unusual: a strange shape was growing in the moss under a tree. The next morning, he found a new creature — a giant raccoon! Tim felt so happy to see such an animal. But then he heard a voice saying, *""Look at the plant!""* And just then, a leaf fell from the oak tree, revealing a map of a hidden path leading deep into the forest. As they walked along, Tim saw many things — a river, a bridge, a pond full of water, and even a big stone made of wood. He learned how to listen carefully and find what others didn't. Now, he knew more about the world than ever before. 🌿✨"
+tuned,multisyllabic_vowel_teams_r_controlled_1,3,1003,"multisyllabic words, vowel teams, r-controlled vowels",1.0,0.0,1.0,0.0,1,6,1,0,1,0,1,0,65,1,2,1,0,"The story is decodable but lacks sufficient multisyllabic words, vowel teams, and r-controlled vowels for targeted practice.","The story is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the requested phonics patterns, limiting its instructional effectiveness.","None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.",A Happy Family,,,,,7,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is decodable but lacks sufficient multisyllabic words, vowel teams, and r-controlled vowels for targeted practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with the requested phonics patterns, limiting its instructional effectiveness.""}}","{""consistency"": {""score"": 0, ""justification"": ""None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- multisyllabic words
+- vowel teams
+- r-controlled vowels
+
+Here are some example words containing these patterns:
+- multisyllabic words: rabbit, family, dinosaur, computer
+- vowel teams: rain, seed, boat, play
+- r-controlled vowels: farm, bird, corn, turn
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Happy Family
+
+Mom has a big bag of treats for all of us to eat together at dinner.
+Dad is so happy when they get his treat!
+Buddy likes the hot soup and smooth jelly.
+Patty wants to run fast on the grass. He can run up a hill if he gets there first.
+We will have so much fun eating our treats!"
+base,r_controlled_blends_1,1,1001,"r-controlled vowels, consonant blends",1.0,0.2947,0.7053,0.5474,1,14,1,0,0,1,0,1,190,0,1,0,0,"The story uses above-level vocabulary and directly discusses phonics patterns, making it unsuitable as a decodable text.",The story is coherent and complete but includes explicit phonics explanations inappropriate for student reading.,It is ineffective for student practice due to meta-language and inaccessible vocabulary for the target level.,All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.,The Happy Forest Adventure,,no_terminal_punctuation,"consonant blend, r-controlled","about, adventure, another, between, blending, carefully, colors, combination, consonant, contained, controlled, curious, different, discovered, finally, forest, found, happy, hidden, how, included, including, inside, learning, letter, letters, listened, little, owl, pattern, pronounced, returned, sammy, saw, showed, something, sound, squirrel, stories, together, treasure, vowel",5,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses above-level vocabulary and directly discusses phonics patterns, making it unsuitable as a decodable text.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is coherent and complete but includes explicit phonics explanations inappropriate for student reading.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is ineffective for student practice due to meta-language and inaccessible vocabulary for the target level.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Forest Adventure**
+
+One day, a curious little squirrel named Sammy found a old tree full of treasure. The trunk had strange leaves made of different colors and shapes. Inside, there were stories hidden on each leaf. One was about a wise old owl who told Sammy how to find his own treasure.
+
+Sammy listened carefully and learned something new. He discovered a map in the form of a word—*farm*. The word spelled *f-r-a-m*, which included a r-controlled vowel (the 'a' sound) and a consonant blend between the 'r' and 'm'. 
+
+Then he saw another leaf with the word *turn*. It contained the pattern *t-u-n*, where the 'u' is a r-controlled letter, and the 'n' is pronounced like 'n', but it's still a consonant blending. 
+
+Another leaf showed the word *plant*. The letters spell *p-l-a-n-t*, including the 'l' and 'n' blending together. This time, the 'l'-and-'n' combination made a soft ""pl"" sound.
+
+Finally, Sammy found the treasure inside the tree. He gave it back and returned home, happy and learning a lot from the forest"
+tuned,r_controlled_blends_1,1,1001,"r-controlled vowels, consonant blends",0.875,0.197,0.803,0.3485,1,9,1,0,1,0,1,0,66,2,2,2,1,"The story uses simple, decodable words and stays within the target phonics patterns.","The text is coherent, complete, and free from errors or formatting issues.","It provides clear, accessible practice with r-controlled vowels and consonant blends for early readers.","All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.",The Farm,,,,"chicken, chickens, cow, dawn, family, farmer, grazing, happy, laying, soup, title",5,"{""spec_adherence"": {""score"": 2, ""justification"": ""The story uses simple, decodable words and stays within the target phonics patterns.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is coherent, complete, and free from errors or formatting issues.""}, ""task_quality"": {""score"": 2, ""justification"": ""It provides clear, accessible practice with r-controlled vowels and consonant blends for early readers.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Farm
+
+The farmer is in his barn. He has a large field of corn. A cow is grazing near the barn. A duck sits on a log at dawn. A hen is laying eggs. Some chickens have just hatched from their nests. The chicken coop is next to the barn. The farmer has a big pot for soup. The chicken family is all happy!"
+base,r_controlled_blends_1,2,1002,"r-controlled vowels, consonant blends",1.0,0.3107,0.6893,0.5534,1,19,1,0,1,0,0,1,206,0,1,0,0,"The story uses above-level vocabulary and complex sentences, making it unreadable for early decodable readers.",The story is mostly coherent but ends abruptly with a stray character and some unclear details.,It does not provide accessible or effective practice for students at the target phonics level.,All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.,The Forest Hunt,,,r-controlled,"about, adventures, after, also, always, animal, animals, another, around, boy, carefully, controlled, curious, exciting, forest, getting, group, growing, happy, hours, how, interested, interesting, known, listening, little, maybe, moving, nature, nearby, noticed, now, often, out, really, saw, showed, sitting, sound, squirrel, stories, suddenly, timmy, tired, together, vowels, watching",5,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but ends abruptly with a stray character and some unclear details.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible or effective practice for students at the target phonics level.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest Hunt**
+
+In the heart of a small forest lived a curious boy named Timmy. He was known for his love of animals and nature. One day, he heard a strange sound from a tree nearby. As he looked around, he saw a big red squirrel sitting on its back. The squirrel had a big red nose and a big bush next to it.
+
+Timmy was really interested in this squirrel. He spent hours watching it, listening carefully. He noticed that the squirrel made a soft “r” sound when it moved. That made him think about how r-controlled vowels work—like ""corn"" or ""turn."" He also saw a big blue print made out of sticks and leaves. It showed a group of plants growing together.
+
+One day, the squirrel suddenly stopped moving. Timmy thought maybe it was tired. But then he saw another animal: a big black bear. They were friends. And they played games all day long. After a while, Timmy felt happy.
+
+Now, Timmy is a little old but still loves the world around him. He often goes to the forest and finds new animals. The forest has always been full of interesting stories, and Timmy’s adventures are just getting more exciting. �"
+tuned,r_controlled_blends_1,2,1002,"r-controlled vowels, consonant blends",1.0,0.0933,0.9067,0.1333,1,10,1,0,1,0,1,0,75,2,2,2,1,"The story uses simple, decodable words and stays within the target phonics patterns.","The narrative is coherent, complete, and free from errors or formatting issues.","It provides clear, accessible practice with r-controlled vowels and consonant blends for early readers.","All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.",The Farmhouse,,,,"cow, eating, farmhouse, out, saw, shout, title",5,"{""spec_adherence"": {""score"": 2, ""justification"": ""The story uses simple, decodable words and stays within the target phonics patterns.""}, ""robustness"": {""score"": 2, ""justification"": ""The narrative is coherent, complete, and free from errors or formatting issues.""}, ""task_quality"": {""score"": 2, ""justification"": ""It provides clear, accessible practice with r-controlled vowels and consonant blends for early readers.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Farmhouse
+
+The barn was big. It had a shed for hay. The yard was full of plants!  
+A man got his cow on the block to feed her hay. A girl made cakes.  
+They were eating from the cake tin by the barn door.  
+I saw a dog run by the barn! I ran fast and called out, “Stop!”  
+He ran off when he heard my shout! They came back to see me."
+base,r_controlled_blends_1,3,1003,"r-controlled vowels, consonant blends",1.0,0.2814,0.7186,0.5389,1,13,1,0,1,0,1,0,167,0,2,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.","The story is coherent, complete, and free of formatting or structural errors.",It is not suitable for phonics practice due to advanced words and sentence structures beyond the target level.,All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.,The Forest's Whisper,,,,"about, above, again, animals, answers, branches, colors, creature, creatures, curious, every, flashing, followed, forest, found, growing, happy, hidden, hummed, inside, luna, magic, many, melody, owl, realized, secret, shiny, sitting, something, sound, stronger, tiny, together, trembled, whisper, whispered, young",5,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is not suitable for phonics practice due to advanced words and sentence structures beyond the target level.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on r-controlled vowels and consonant blends.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Forest's Whisper**
+
+In a small forest where the trees hummed with old songs, there lived a young fox named Luna. One day, she heard a soft sound from a tree high above—like a melody. The tree was full of tiny creatures, all curious and happy. They danced together, their colors flashing like stars.
+
+Luna followed them to a big oak tree, which had many branches. She found a hidden cave filled with shiny rocks. Inside, there were plants growing tall, and a big red bird sitting on its wing. The birds sang again, and so did Luna.
+
+As the days passed, more animals came to the forest. A wise owl told her about a secret map. With each step, they could find answers. But one night, when the forest trembled with magic, Luna realized something new: every creature in the forest knew that magic was just right here, in this place.
+
+And so, the forest grew stronger, and the world whispered its name once more."
+tuned,r_controlled_blends_1,3,1003,"r-controlled vowels, consonant blends",1.0,0.0952,0.9048,0.1837,1,15,1,0,1,0,1,0,147,1,2,1,1,The story contains above-level vocabulary and complex sentences that make it hard for early decodable readers.,"The story is coherent, complete, and free of formatting or logical errors.","Some target patterns appear, but inconsistent focus and difficult words limit its effectiveness for practice.","All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.",A Trip to the Farm,,,,"about, also, animals, buses, different, enjoy, every, finish, going, relax, soup, title, tomatoes, visit",5,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story contains above-level vocabulary and complex sentences that make it hard for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or logical errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""Some target patterns appear, but inconsistent focus and difficult words limit its effectiveness for practice.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations attempt to use r-controlled vowels and consonant blends, and each story is generally readable.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- r-controlled vowels
+- consonant blends
+
+Here are some example words containing these patterns:
+- r-controlled vowels: farm, bird, corn, turn
+- consonant blends: stop, frog, black, plant
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Trip to the Farm
+
+Dad has made lots of things for me at home. I can see them all in my mom’s big desk. But I love going on trips to the farm. It is fun to learn about different things on the farm. At first, I thought it would be hard to get there. My dad said no! I had to go by a bus. The buses take us up to the farm and then we do a lot more stuff. We cut plants in the sun. I like to play with the animals when they come to visit. They give us treats so much fun! When we finish work, we have time to relax and enjoy each day at the farm. Mom makes soup from fresh tomatoes. She also eats lunch every day. I guess this trip will make me smile a lot!"
+base,short_vowels_1,1,1001,short-vowel words,1.0,0.5158,0.4842,2.0316,1,12,1,0,1,0,1,0,190,0,2,0,0,"The story uses many above-level words and patterns far beyond simple short-vowel words, making it unreadable for beginners.","The story is coherent, complete, and free of formatting or structural errors.",It does not provide effective short-vowel word practice due to excessive use of complex vocabulary and sentence structures.,All three generations fail to consistently produce in-level decodable text focused on short-vowel words.,The Happy Rabbit Who Jumped to the Moon,,,,"above, across, again, air, all, and, anymore, away, back, because, bigger, bright, brighter, climbed, curious, dark, day, down, far, feeling, flying, for, found, gently, glowing, going, ground, happy, high, himself, home, instead, into, just, landed, like, little, long, looked, moon, more, morning, mountain, moving, near, noticed, now, out, rabbit, reached, round, saw, shape, shining, sky, small, smaller, something, somewhere, starry, stars, still, story, strange, tall, than, that, thing, this, time, tiny, too, tree, unusual, usual, went",1,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses many above-level words and patterns far beyond simple short-vowel words, making it unreadable for beginners.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide effective short-vowel word practice due to excessive use of complex vocabulary and sentence structures.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Rabbit Who Jumped to the Moon**
+
+One day, there was a rabbit named Max who lived on a small hill near a mountain. One morning, he noticed something unusual—there were stars shining bright above the hills, and a strange shape of a little moon that had been up high for a long time.
+
+Max was curious, so he climbed up the hill and looked at the sky. He saw a big, round thing moving through the air like it was going somewhere far away. It was a starry moon, but instead of a full moon, it was just a tiny bit smaller and brighter than usual. The moon was glowing because it wasn't dark anymore.
+
+Now the next day, Max went back home. But this time, he didn’t go back down. Instead, he jumped into a tall tree, reached out to the top, and found himself flying across the sky once more.
+
+He landed gently on the ground, feeling happy again. And though the moon was still there, it was now a little bigger, and the stars were all there too.
+
+And that’s where the story ends. 🌙✨"
+tuned,short_vowels_1,1,1001,short-vowel words,1.0,0.2857,0.7143,0.9643,1,4,1,0,1,0,1,0,28,2,2,2,0,All words are decodable at the short-vowel level and the story avoids above-level vocabulary.,"The story is clean, coherent, and free of errors or formatting issues.","It provides clear, simple practice with short-vowel words in a readable narrative.",The generations are highly inconsistent in decodability for short-vowel words.,The Cat and the Hare,,,,"and, fast, hare, made, straw, title",1,"{""spec_adherence"": {""score"": 2, ""justification"": ""All words are decodable at the short-vowel level and the story avoids above-level vocabulary.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is clean, coherent, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 2, ""justification"": ""It provides clear, simple practice with short-vowel words in a readable narrative.""}}","{""consistency"": {""score"": 0, ""justification"": ""The generations are highly inconsistent in decodability for short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Cat and the Hare
+
+The hare ran fast.  
+The cat sat on the mat.  
+The hare ran to the log.  
+The hat was made of straw."
+base,short_vowels_1,2,1002,short-vowel words,1.0,0.6131,0.3869,2.5779,1,17,1,0,0,1,1,0,199,0,1,0,0,The story uses extensive above-level vocabulary and sentence structures far beyond short-vowel decodable text.,The story is mostly coherent but is truncated and incomplete at the end.,It does not provide accessible or focused short-vowel practice for early readers.,All three generations fail to consistently produce in-level decodable text focused on short-vowel words.,The Happy Forest of Squirrels,,"ends_mid_phrase,no_terminal_punctuation",,"about, adventure, adventures, after, all, along, and, animals, back, became, become, birds, bringing, building, built, called, came, celebrated, cozy, day, different, each, even, exploring, family, favorite, forest, found, friends, friendships, fruits, future, group, grown, happy, heart, home, honeycombs, ideas, join, joined, journey, joy, just, laughter, leader, learned, long, longer, made, main, many, maple, meeting, more, morning, nature, new, now, old, part, place, places, planned, playing, returned, river, seeds, shared, sharing, she, singing, skills, small, songs, soon, sparky, special, squirrel, squirrels, stay, sticks, stories, them, together, traveled, tree, trees, unique, usual, way, went, which, with, woods",1,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses extensive above-level vocabulary and sentence structures far beyond short-vowel decodable text.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and incomplete at the end.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide accessible or focused short-vowel practice for early readers.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Happy Forest of Squirrels**
+
+In the heart of the forest lived a small group of squirrels. They had long been friends, sharing their favorite places—honeycombs, nests, and trees. The main tree was called Maple Tree, which had many holes filled with seeds from all the fruits grown by the squirrels. 
+
+One day, a new squirrel came to join them. She was named Sparky. She loved singing songs, playing games, and exploring new places. Soon after, more squirrels joined the group, each bringing their own unique skills and ideas. There were no longer just the usual ones—they were all part of a big family.
+
+One morning, the group went on a journey. They traveled through different kinds of woods, meeting birds, animals, and even a river. Along the way, they learned about nature and made new friendships. On the way back home, they found a special place where they could stay—a cozy building built from old sticks.
+
+They returned home and shared their stories. Sparky became the leader of the group. Together, they celebrated their adventure and planned future adventures. Now, the squirrels had become a happy family, full of laughter and joy.
+
+And so, the"
+tuned,short_vowels_1,2,1002,short-vowel words,1.0,0.2308,0.7692,0.6462,1,7,1,0,1,0,1,0,65,1,2,1,0,"Contains above-level words like 'playing,' 'jumped,' and 'straw,' making it partly decodable but not fully on-level.","The story is coherent, complete, and free from formatting or logical errors.","Some short-vowel words are present, but above-level vocabulary limits its effectiveness for targeted practice.",The generations are highly inconsistent in decodability for short-vowel words.,The Cat and the Dog,,,,"and, catch, happy, like, pile, playing, saw, see, spot, straw, then, think, this, title, when",1,"{""spec_adherence"": {""score"": 1, ""justification"": ""Contains above-level words like 'playing,' 'jumped,' and 'straw,' making it partly decodable but not fully on-level.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free from formatting or logical errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""Some short-vowel words are present, but above-level vocabulary limits its effectiveness for targeted practice.""}}","{""consistency"": {""score"": 0, ""justification"": ""The generations are highly inconsistent in decodability for short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Cat and the Dog
+
+The dog was playing when he saw the cat. He jumped up on his bed to see if he could catch it. “What do you think?” asked the cat. “I like this spot!” said the dog. “You can sit on my lap,” said the cat. Then they both sat in a big pile of straw! They were so happy."
+base,short_vowels_1,3,1003,short-vowel words,1.0,0.5687,0.4313,2.1754,1,16,1,0,0,1,0,1,211,0,1,0,0,"The story uses much above-level vocabulary and complex sentences, making it unreadable for short-vowel decodable readers.",The story is mostly coherent but is truncated and includes some confusing phrasing.,It does not provide effective short-vowel practice due to off-level words and inconsistent target pattern use.,All three generations fail to consistently produce in-level decodable text focused on short-vowel words.,The Little Red Rabbit's Adventure,,no_terminal_punctuation,short vowel,"adventure, after, all, and, another, around, back, bunch, buttons, color, colorful, colors, continue, curious, cute, day, easy, elephant, ended, explore, felt, floor, found, friends, gave, giggled, happy, her, home, inside, knew, learned, learning, like, little, made, more, new, now, pair, picture, play, played, pointed, rabbit, realized, saw, she, shiny, short, simple, sitting, small, smile, soon, special, stick, that, them, then, things, tiny, took, tool, tools, toy, toys, very, vowel, with, word, world",1,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses much above-level vocabulary and complex sentences, making it unreadable for short-vowel decodable readers.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and includes some confusing phrasing.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide effective short-vowel practice due to off-level words and inconsistent target pattern use.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text focused on short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Little Red Rabbit's Adventure**
+
+One day, the little red rabbit found a small box full of shiny toys. Inside, there was a picture of a big, happy elephant. The elephant had a special tool, a tiny stick and a bunch of colorful buttons. The rabbit was curious and asked what the elephant did with its tools.
+
+The elephant said, ""I like to play games with my friends!"" Then it pointed to a toy hop on the floor. The rabbit saw the toy hop and thought, ""Oh! That's a short vowel word."" She giggled and played with her own hop. Soon after, she found another toy—a red one. The red color made her smile, and she realized that the colors could be a short vowel pair.
+
+Next, she found a cat. The cat was cute, so she named her friend a cat. And then, the rabbit found a sit. It was a simple word, and the rabbit learned that sitting is easy and fun.
+
+As the day ended, the rabbit felt very happy and took the toys back home. She gave them to her new friends, and now they all have their own special things. The rabbit knew she was learning more and would continue to explore the world around"
+tuned,short_vowels_1,3,1003,short-vowel words,1.0,0.2292,0.7708,0.8333,1,5,1,0,1,0,1,0,48,1,2,1,0,"Some above-level words like 'hours', 'jumps', and 'happy' make it partly off-level for short-vowel decodable practice.","The story is coherent, complete, and free of formatting or narrative errors.",It provides some short-vowel practice but includes words that may be too advanced for early decodable readers.,The generations are highly inconsistent in decodability for short-vowel words.,A Cat on the Bed,,,,"all, and, for, glad, happy, hours, looks, sees, sitting, title, when",1,"{""spec_adherence"": {""score"": 1, ""justification"": ""Some above-level words like 'hours', 'jumps', and 'happy' make it partly off-level for short-vowel decodable practice.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or narrative errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""It provides some short-vowel practice but includes words that may be too advanced for early decodable readers.""}}","{""consistency"": {""score"": 0, ""justification"": ""The generations are highly inconsistent in decodability for short-vowel words.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- short-vowel words
+
+Here are some example words containing these patterns:
+- short-vowel words: cat, sit, red, hop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Cat on the Bed
+
+A cat is sitting on a bed. The cat will nap for hours.  
+The dog will run when it sees the cat. It jumps up to sit.  
+The cat looks at the dog and says, “I am glad we are all happy!”"
+base,vowel_teams_digraphs_1,1,1001,"vowel teams, consonant digraphs",1.0,0.3429,0.6571,0.9029,1,16,1,0,1,0,1,0,175,0,2,0,0,"The story contains much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.","The story is coherent, complete, and free of formatting or structural errors.",It is not effective for phonics practice due to excessive use of advanced words and structures.,All three generations fail to consistently produce in-level decodable text suitable for students.,The Boat Adventure,,,,"about, adventure, adventures, after, afternoon, all, always, around, away, brightly, carefully, carried, decided, directions, especially, ever, explore, exploring, far, follow, for, found, going, group, happy, her, how, interesting, knows, language, lily, listen, little, many, meeting, more, nearby, now, other, outside, owned, pointing, proud, river, saw, shining, small, sunny, traveled, very, water, wooden",4,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story contains much above-level vocabulary and complex sentences, making it unreadable for early decodable readers.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free of formatting or structural errors.""}, ""task_quality"": {""score"": 0, ""justification"": ""It is not effective for phonics practice due to excessive use of advanced words and structures.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text suitable for students.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Boat Adventure**
+
+It was a sunny afternoon, and the sun was shining brightly outside the old wooden house where Lily lived. She had always loved to go on adventures—especially going on trips like this. So she decided to take a small boat to explore the river nearby.
+
+Lily found a little old man who owned a boat. He said he used to sail far away for fun. “I can see the big ones,” he said, pointing at the water. “You’ll be there soon.”
+
+As they traveled, they saw many interesting things. They met a group of fish that were so happy, they sang songs. Then they saw a ship that was very long and strong. It carried them all around the river. After a while, they reached the other side.
+
+They spent the day exploring the river and meeting new friends. At night, Lily felt very proud of her adventure. Now she knew how to listen carefully and follow directions just like a child does.
+
+Now she knows more about language than ever! 🌟✨"
+tuned,vowel_teams_digraphs_1,1,1001,"vowel teams, consonant digraphs",0.75,0.0986,0.9014,0.2254,1,7,1,0,1,0,1,0,71,2,2,1,1,"The story uses simple, decodable words and avoids above-level vocabulary, making it accessible for the target level.","The narrative is coherent, complete, and free from errors or formatting issues.",It includes some vowel teams and digraphs but could provide more focused practice with these patterns.,"All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.",The Boat Trip,,,,"for, into, little, saw, title, under, walked",4,"{""spec_adherence"": {""score"": 2, ""justification"": ""The story uses simple, decodable words and avoids above-level vocabulary, making it accessible for the target level.""}, ""robustness"": {""score"": 2, ""justification"": ""The narrative is coherent, complete, and free from errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It includes some vowel teams and digraphs but could provide more focused practice with these patterns.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Boat Trip
+
+The dad took Sam to go on a trip to see the lake.  
+Sam got up to get his coat and hat.  
+The dad got him into the boat.  
+He put the bag under the seat next to Sam.  
+The kid sat on the bench.  
+“Let’s walk for a little bit,” said the dad.  
+They walked by the bank of the lake and saw lots of fish!"
+base,vowel_teams_digraphs_1,2,1002,"vowel teams, consonant digraphs",1.0,0.2919,0.7081,0.7267,1,10,1,0,1,0,1,0,161,1,2,1,0,"The story contains significant above-level vocabulary and complex sentence structures, making it only partly decodable.","The narrative is coherent, complete, and free from formatting or logical errors.","Some target patterns appear, but advanced words and phrasing limit its effectiveness for early decodable practice.",All three generations fail to consistently produce in-level decodable text suitable for students.,The Sea and the Squirrel,,,,"about, above, all, because, bird, birds, boy, brought, decided, different, even, every, everyone, fisherman, for, found, happy, island, later, little, living, many, now, ocean, others, playing, really, saw, seashell, seashill, shining, shiny, small, squirrel, sure, tall, toys, wonders, world",4,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story contains significant above-level vocabulary and complex sentence structures, making it only partly decodable.""}, ""robustness"": {""score"": 2, ""justification"": ""The narrative is coherent, complete, and free from formatting or logical errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""Some target patterns appear, but advanced words and phrasing limit its effectiveness for early decodable practice.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text suitable for students.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Sea and the Squirrel**
+
+One day, a little squirrel found a small island by the sea. The sun was shining bright, and the birds sang their songs from high up above. A new tree grew tall next to the island, and it had a big bird named Seashell living there.
+
+Seashell was really happy because he saw many different things on the island. He met a fisherman who told him about the fish they could catch for food. Then he went to see a boy playing with his friends at the beach, and he got some shiny shells.
+
+Later, Seashell decided to go back home. He brought all his toys and some fish, and even gave them to the others on the island.
+
+At home, Seashill played games with his friends and made sure that the ocean would be safe for everyone. And now, every time Seashell came back, he knew that the world was full of wonders and fun. 🌊✨"
+tuned,vowel_teams_digraphs_1,2,1002,"vowel teams, consonant digraphs",0.5,0.1176,0.8824,0.3235,1,5,1,0,1,0,1,0,34,1,2,1,1,"The story is decodable but barely uses vowel teams or consonant digraphs, limiting its value for the target progression.","The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with the requested patterns, so learning opportunities are limited.","All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.",The Fun Game,,,,"down, playing, sara, title",4,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is decodable but barely uses vowel teams or consonant digraphs, limiting its value for the target progression.""}, ""robustness"": {""score"": 2, ""justification"": ""The text is clean, coherent, and free of errors or formatting issues.""}, ""task_quality"": {""score"": 1, ""justification"": ""It offers minimal practice with the requested patterns, so learning opportunities are limited.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: The Fun Game
+
+Sara and Sam have fun playing a game.  
+They play on the mats.  
+A team has to jump up and down.  
+The mats are big! They can be so fun!"
+base,vowel_teams_digraphs_1,3,1003,"vowel teams, consonant digraphs",1.0,0.3054,0.6946,0.7389,1,10,1,0,0,1,0,1,203,0,1,0,0,"The story uses advanced vocabulary, complex sentences, and explicit phonics discussion, making it unreadable for decodable-level students.","The story is mostly coherent but is truncated and shifts into phonics explanation, not narrative.","It does not provide decodable practice; instead, it discusses phonics concepts and uses above-level language.",All three generations fail to consistently produce in-level decodable text suitable for students.,The Magic Boat Adventure,,no_terminal_punctuation,"phonics, vowel team","about, adventure, after, afternoon, all, also, boy, carefully, combined, combining, construction, continued, curious, example, explain, explained, for, form, formed, found, how, involved, knowledge, learned, learning, letter, letters, listen, listened, little, magic, mentioned, often, or, other, out, pair, pairs, phonics, realized, small, special, sunny, teacher, together, toy, vowel, vowels, wooden, word, words, worked",4,"{""spec_adherence"": {""score"": 0, ""justification"": ""The story uses advanced vocabulary, complex sentences, and explicit phonics discussion, making it unreadable for decodable-level students.""}, ""robustness"": {""score"": 1, ""justification"": ""The story is mostly coherent but is truncated and shifts into phonics explanation, not narrative.""}, ""task_quality"": {""score"": 0, ""justification"": ""It does not provide decodable practice; instead, it discusses phonics concepts and uses above-level language.""}}","{""consistency"": {""score"": 0, ""justification"": ""All three generations fail to consistently produce in-level decodable text suitable for students.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","**The Magic Boat Adventure**
+
+It was a sunny afternoon when the little boy named Jack found his toy boat in the lake. He was curious about how it worked, so he asked his teacher if he could help him find out. The teacher said, ""Oh, I've got a special way to teach you!"" And then they used their knowledge of phonics to explain it.
+
+Jack listened carefully, and he learned that the boat was made of a special kind of wood. It had a big wooden sail on one side and a small wooden bridge on the other. The teacher also explained that there were two vowels together, like 'aa' or 'ee', which helped make the word *boat* come to life. Then the teacher mentioned that the letters A and E can be combined to form words like *seed*, and they often have pairs like this: **rain**, **play**, **sept**, and **fish**.
+
+As Jack continued to listen, he realized that the boat's construction involved both a letter pair and a vowel team. For example, the word *ship* was formed by combining the letter S and H, and the letter T and O were used for the word *that*. 
+
+After learning all this, Jack felt"
+tuned,vowel_teams_digraphs_1,3,1003,"vowel teams, consonant digraphs",0.625,0.1864,0.8136,0.4746,1,8,1,0,1,0,1,0,59,1,2,1,1,The story is mostly decodable but includes above-level words like 'different' and 'swans' for this phonics stage.,"The story is coherent, complete, and free from formatting or narrative errors.",It provides some practice with vowel teams and digraphs but lacks strong repetition and focus on target patterns.,"All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.",A Trip to the Lake,,,,"also, animals, birds, bucket, different, into, out, saw, title",4,"{""spec_adherence"": {""score"": 1, ""justification"": ""The story is mostly decodable but includes above-level words like 'different' and 'swans' for this phonics stage.""}, ""robustness"": {""score"": 2, ""justification"": ""The story is coherent, complete, and free from formatting or narrative errors.""}, ""task_quality"": {""score"": 1, ""justification"": ""It provides some practice with vowel teams and digraphs but lacks strong repetition and focus on target patterns.""}}","{""consistency"": {""score"": 1, ""justification"": ""All three generations are generally readable and simple, but there is inconsistency in the density and focus on the target phonics patterns.""}}","Write a decodable story.
+
+Emphasize these phonics patterns:
+- vowel teams
+- consonant digraphs
+
+Here are some example words containing these patterns:
+- vowel teams: rain, seed, boat, play
+- consonant digraphs: ship, fish, that, chop
+
+Use the example words only as guidance. You may use other words that contain the same patterns.
+Write a coherent narrative with a clear beginning, middle, and ending.
+Include a natural story title.
+Do not mention phonics terms or pattern names in the title or story.","Title: A Trip to the Lake
+
+Dad and Mom went on a trip to the lake.  
+We saw lots of animals there!  
+The lake had different plants too.  
+We also saw some ducks and swans.  
+I got a bucket from Dad. He filled it up.  
+Mom put some seeds into the bucket.  
+We watched as the birds came out."

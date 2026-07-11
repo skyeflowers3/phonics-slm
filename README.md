@@ -38,14 +38,17 @@ Supporting detail:
 ```bash
 pip install -r requirements.txt
 
-# Objective metrics (no API key)
-python scripts/evaluate_outputs.py
+# After all_outputs.csv exists: objective checks + new LLM-judge rubric
+python scripts/run_post_generation_eval.py
 
-# Blind LLM judge (needs OPENAI_API_KEY, ANTHROPIC_API_KEY, or TFY_API_KEY)
-python scripts/llm_judge.py
-
-# Error analysis from existing CSVs
-python scripts/error_analysis.py
+# Objective only (no API key)
+python scripts/run_post_generation_eval.py --objective-only
 ```
 
-Precomputed outputs are already under `results/`; re-running is only needed to regenerate them.
+Outputs:
+
+- `results/scored_outputs.csv`
+- `results/evaluation_summary.csv`
+- `results/error_analysis.csv`
+
+Legacy scripts (`evaluate_outputs.py`, `llm_judge.py`, `error_analysis.py`) remain available under `scripts/` and write to `results/objective/` / `results/subjective/`.
