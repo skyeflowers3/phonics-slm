@@ -7,7 +7,7 @@ Runs AFTER all_outputs.csv already exists. Does not generate stories.
 Produces:
   - results/scored_outputs.csv
   - results/evaluation_summary.csv
-  - results/error_analysis.csv
+  - results/error_analysis/error_analysis.csv
 
 Objective checks reuse phonics_profiler_threshold4 via evaluate_outputs helpers.
 LLM judge uses a decodable-story rubric (spec_adherence, robustness, task_quality)
@@ -880,7 +880,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--error-analysis",
         type=Path,
-        default=RESULTS_DIR / "error_analysis.csv",
+        default=RESULTS_DIR / "error_analysis" / "error_analysis.csv",
     )
     p.add_argument("--provider", choices=["openai", "anthropic", "truefoundry"], default=None)
     p.add_argument("--model", default=None)

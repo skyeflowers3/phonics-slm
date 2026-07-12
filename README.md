@@ -49,6 +49,6 @@ Outputs:
 
 - `results/scored_outputs.csv`
 - `results/evaluation_summary.csv`
-- `results/error_analysis.csv`
+- `results/error_analysis/error_analysis.csv`
 
 Legacy scripts (`evaluate_outputs.py`, `llm_judge.py`, `error_analysis.py`) remain available under `scripts/` and write to `results/objective/` / `results/subjective/`.
