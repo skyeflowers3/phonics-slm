@@ -1,4 +1,4 @@
-failure_type,rank,n_tuned_flagged,pct_tuned_flagged,model,prompt_id,generation_id,seed,target_phonics,target_phonics_coverage,off_target_phonics_rate,title_present,sentence_count,incomplete_output,spec_adherence_score,robustness_score,task_quality_score,consistency_score,story,spec_adherence_justification,robustness_justification,task_quality_justification,consistency_justification
+failure_type,rank,n_tuned_flagged,pct_tuned_flagged,model,prompt_id,generation_id,seed,target_phonics,target_phonics_coverage,above_level_rate,title_present,sentence_count,incomplete_output,spec_adherence_score,robustness_score,task_quality_score,consistency_score,story,spec_adherence_justification,robustness_justification,task_quality_justification,consistency_justification
 low_target_phonics_coverage,1,2,0.0952,tuned,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",0.125,0.093,1,5,0,1,2,1,0,"Title: A Trip to the Zoo
 
 Dad and Mom went on a trip to the zoo.  
@@ -14,13 +14,13 @@ The bus has lots of kids!
 The kids sit on the seats.  
 What can we do?  
 We get on the bus and go!",The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.",The three generations show highly inconsistent decodability and readability for the target level.
-high_off_target_phonics,1,2,0.0952,tuned,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",0.875,0.3429,1,4,0,1,2,1,1,"Title: The Fun Game
+high_above_level_rate,1,2,0.0952,tuned,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",0.875,0.3429,1,4,0,1,2,1,1,"Title: The Fun Game
 
 Sara and Sam have fun playing games together.  
 They play ball and jump rope.  
 A big game is happening at the park!  
 We run to get on the grass for fun!",The story is mostly decodable but uses above-level words like 'together' and lacks strong target pattern emphasis.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with blends and digraphs, limiting its effectiveness for targeted phonics instruction.","All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns."
-high_off_target_phonics,2,2,0.0952,tuned,short_vowels_1,1,1001,short-vowel words,1.0,0.2857,1,4,0,2,2,2,0,"Title: The Cat and the Hare
+high_above_level_rate,2,2,0.0952,tuned,short_vowels_1,1,1001,short-vowel words,1.0,0.2857,1,4,0,2,2,2,0,"Title: The Cat and the Hare
 
 The hare ran fast.  
 The cat sat on the mat.  

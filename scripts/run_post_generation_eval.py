@@ -46,6 +46,8 @@ from llm_judge import JudgeClient, extract_json_object, load_dotenv_files  # noq
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUTS_DIR = REPO_ROOT / "inputs"
 RESULTS_DIR = REPO_ROOT / "results"
+OBJECTIVE_DIR = RESULTS_DIR / "objective"
+SUBJECTIVE_DIR = RESULTS_DIR / "subjective"
 
 SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+|\n+")
 INCOMPLETE_TRAILERS = (
@@ -111,19 +113,28 @@ SCORED_FIELDS = [
     "generation_id",
     "seed",
     "target_phonics",
+    # Legacy objective_eval_summary family
+    "decodability_compliance",
+    "distinct_decodability_compliance",
+    "weighted_above_level_rate",
+    "mean_above_level_distance",
     "target_phonics_coverage",
+    "phonics_leakage_rate",
+    "title_rate",
+    "word_count",
+    "above_level_rate",
+    # Aliases / additional objective checks
     "off_target_phonics_rate",
     "on_level_rate",
-    "weighted_above_level_rate",
     "title_present",
+    "no_phonics_leakage",
+    "phonics_leakage",
     "sentence_count",
     "no_duplicate_sentences",
     "has_duplicate_sentences",
     "complete_output",
     "incomplete_output",
-    "no_phonics_leakage",
-    "phonics_leakage",
-    "word_count",
+    # Judge
     "spec_adherence_score",
     "robustness_score",
     "task_quality_score",
@@ -132,6 +143,7 @@ SCORED_FIELDS = [
     "robustness_justification",
     "task_quality_justification",
     "consistency_justification",
+    # Diagnostics
     "detected_title",
     "duplicate_sentence_norms",
     "incomplete_reasons",
@@ -253,6 +265,7 @@ def objective_checks(row: dict, row_index: int) -> dict[str, Any]:
     incomplete, incomplete_reasons = detect_incomplete(story, body, sentences)
 
     # Higher-is-better objective scores for summary averaging.
+    # Include full objective family from legacy objective_eval_summary.
     return {
         "model": row["model"],
         "prompt_id": row["prompt_id"],
@@ -261,25 +274,32 @@ def objective_checks(row: dict, row_index: int) -> dict[str, Any]:
         "target_phonics": row.get("target_phonics", ""),
         "prompt": row.get("prompt", ""),
         "story": story,
-        # Continuous / rate metrics
-        "target_phonics_coverage": target_coverage,
+        # Legacy-aligned objective metrics (same values as objective_eval_summary)
+        "decodability_compliance": level["decodability_compliance"],
+        "distinct_decodability_compliance": level["distinct_decodability_compliance"],
+        "weighted_above_level_rate": level["weighted_above_level_rate"],
+        "mean_above_level_distance": level["mean_above_level_distance"],
+        "target_phonics_coverage": target_coverage,  # was target_satisfaction
+        "phonics_leakage_rate": int(leaked),
+        "title_rate": int(has_title),
+        "word_count": profile["word_count"],
+        "above_level_rate": level["above_level_rate"],
+        # Friendly aliases used elsewhere in this pipeline
         "off_target_phonics_rate": level["above_level_rate"],
         "on_level_rate": level["decodability_compliance"],
-        "weighted_above_level_rate": level["weighted_above_level_rate"],
-        "word_count": profile["word_count"],
-        "sentence_count": sentence_count,
-        # Binary pass metrics (1 = good)
         "title_present": int(has_title),
-        "no_duplicate_sentences": int(not has_duplicate_sentences),
-        "complete_output": int(not incomplete),
         "no_phonics_leakage": int(not leaked),
+        "phonics_leakage": int(leaked),
+        "sentence_count": sentence_count,
+        # Other measurable checks
+        "no_duplicate_sentences": int(not has_duplicate_sentences),
+        "has_duplicate_sentences": has_duplicate_sentences,
+        "complete_output": int(not incomplete),
+        "incomplete_output": incomplete,
         # Diagnostics
         "detected_title": title_text,
-        "has_duplicate_sentences": has_duplicate_sentences,
         "duplicate_sentence_norms": " | ".join(duplicate_sentences[:5]),
-        "incomplete_output": incomplete,
         "incomplete_reasons": incomplete_reasons,
-        "phonics_leakage": int(leaked),
         "phonics_leakage_terms": leak_terms,
         "above_level_words": level["above_level_words"],
         "permitted_ceiling_stage": ceiling,
@@ -484,19 +504,35 @@ def os_env(key: str) -> str:
     return os.environ.get(key, "")
 
 
+# Full display titles for objective / judge summary columns.
+OBJECTIVE_METRIC_TITLES: list[tuple[str, str]] = [
+    ("decodability_compliance", "Decodability compliance"),
+    ("distinct_decodability_compliance", "Distinct-word decodability compliance"),
+    ("above_level_rate", "Above-level rate"),
+    ("weighted_above_level_rate", "Weighted above-level rate"),
+    ("mean_above_level_distance", "Mean above-level distance"),
+    ("target_phonics_coverage", "Target phonics coverage"),
+    ("phonics_leakage_rate", "Phonics leakage rate"),
+    ("title_rate", "Title present rate"),
+    ("no_duplicate_sentences", "No duplicate sentences rate"),
+    ("complete_output", "Complete output rate"),
+    ("word_count", "Mean word count"),
+    ("sentence_count", "Mean sentence count"),
+]
+
+JUDGE_METRIC_TITLES: list[tuple[str, str]] = [
+    ("spec_adherence_score", "Spec adherence"),
+    ("robustness_score", "Robustness"),
+    ("task_quality_score", "Task quality"),
+    ("consistency_score", "Consistency"),
+]
+
+
 def build_summary(scored: list[dict]) -> list[dict]:
-    objective_metrics = [
-        "target_phonics_coverage",
-        "off_target_phonics_rate",
-        "on_level_rate",
-        "title_present",
-        "no_duplicate_sentences",
-        "complete_output",
-        "no_phonics_leakage",
-        "word_count",
-        "sentence_count",
-    ]
-    judge_metrics = [f"{k}_score" for k in ALL_JUDGE_KEYS]
+    # Include every metric from objective + subjective summaries (single source of truth).
+    metric_specs = [
+        (key, title, "objective") for key, title in OBJECTIVE_METRIC_TITLES
+    ] + [(key, title, "judge") for key, title in JUDGE_METRIC_TITLES]
 
     by_model: dict[str, list[dict]] = defaultdict(list)
     for row in scored:
@@ -505,26 +541,21 @@ def build_summary(scored: list[dict]) -> list[dict]:
     means: dict[str, dict[str, float]] = {}
     for model, rows in by_model.items():
         means[model] = {}
-        for metric in objective_metrics + judge_metrics:
-            means[model][metric] = round(_mean([float(r[metric]) for r in rows]), 4)
+        for key, _, _ in metric_specs:
+            means[model][key] = round(_mean([float(r[key]) for r in rows]), 4)
 
-    # Long-form summary table: one row per metric.
     out = []
-    for metric in objective_metrics + judge_metrics:
-        base = means.get("base", {}).get(metric)
-        tuned = means.get("tuned", {}).get(metric)
+    for key, title, family in metric_specs:
+        base = means.get("base", {}).get(key)
+        tuned = means.get("tuned", {}).get(key)
         delta = None
         if base is not None and tuned is not None:
             delta = round(tuned - base, 4)
         out.append(
             {
-                "metric": metric,
-                "metric_family": (
-                    "judge" if metric.endswith("_score") or metric in {
-                        f"{k}_score" for k in ALL_JUDGE_KEYS
-                    }
-                    else "objective"
-                ),
+                "metric": title,
+                "metric_key": key,
+                "metric_family": family,
                 "base_mean": base if base is not None else "",
                 "tuned_mean": tuned if tuned is not None else "",
                 "tuned_minus_base": delta if delta is not None else "",
@@ -535,13 +566,84 @@ def build_summary(scored: list[dict]) -> list[dict]:
     return out
 
 
+def build_objective_summary_by_model(scored: list[dict]) -> list[dict]:
+    """Wide objective summary — same numbers as evaluation_summary objective rows."""
+    by_model: dict[str, list[dict]] = defaultdict(list)
+    for row in scored:
+        by_model[row["model"]].append(row)
+    out = []
+    for model in sorted(by_model):
+        rows = by_model[model]
+        record: dict[str, Any] = {"model": model, "n": len(rows)}
+        for key, title in OBJECTIVE_METRIC_TITLES:
+            record[title] = round(_mean([float(r[key]) for r in rows]), 4)
+        out.append(record)
+    return out
+
+
+def build_subjective_summary_by_model(scored: list[dict]) -> list[dict]:
+    """Wide subjective summary — same numbers as evaluation_summary judge rows."""
+    by_model: dict[str, list[dict]] = defaultdict(list)
+    for row in scored:
+        if str(row.get("spec_adherence_score", "")) == "":
+            continue
+        by_model[row["model"]].append(row)
+    out = []
+    for model in sorted(by_model):
+        rows = by_model[model]
+        record: dict[str, Any] = {"model": model, "n": len(rows)}
+        for key, title in JUDGE_METRIC_TITLES:
+            record[title] = round(_mean([float(r[key]) for r in rows]), 4)
+        out.append(record)
+    return out
+
+
+def build_objective_summary_by_prompt(scored: list[dict]) -> list[dict]:
+    grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for row in scored:
+        grouped[(row["model"], row["prompt_id"])].append(row)
+    out = []
+    for model, prompt_id in sorted(grouped):
+        rows = grouped[(model, prompt_id)]
+        record: dict[str, Any] = {
+            "model": model,
+            "prompt_id": prompt_id,
+            "target_phonics": rows[0].get("target_phonics", ""),
+            "n": len(rows),
+        }
+        for key, title in OBJECTIVE_METRIC_TITLES:
+            record[title] = round(_mean([float(r[key]) for r in rows]), 4)
+        out.append(record)
+    return out
+
+
+def build_subjective_summary_by_prompt(scored: list[dict]) -> list[dict]:
+    grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for row in scored:
+        if str(row.get("spec_adherence_score", "")) == "":
+            continue
+        grouped[(row["model"], row["prompt_id"])].append(row)
+    out = []
+    for model, prompt_id in sorted(grouped):
+        rows = grouped[(model, prompt_id)]
+        record: dict[str, Any] = {
+            "model": model,
+            "prompt_id": prompt_id,
+            "n": len(rows),
+        }
+        for key, title in JUDGE_METRIC_TITLES:
+            record[title] = round(_mean([float(r[key]) for r in rows]), 4)
+        out.append(record)
+    return out
+
+
 def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
     tuned = [r for r in scored if r["model"] == "tuned"]
     has_judge = any(str(r.get("spec_adherence_score", "")) != "" for r in tuned)
     failure_defs = [
         ("low_target_phonics_coverage", lambda r: float(r["target_phonics_coverage"]) < 0.5),
-        ("high_off_target_phonics", lambda r: float(r["off_target_phonics_rate"]) >= 0.25),
-        ("missing_title", lambda r: int(r["title_present"]) == 0),
+        ("high_above_level_rate", lambda r: float(r["above_level_rate"]) >= 0.25),
+        ("missing_title", lambda r: int(r["title_rate"]) == 0),
         ("duplicate_sentences", lambda r: int(r["has_duplicate_sentences"]) == 1),
         ("incomplete_output", lambda r: int(r["incomplete_output"]) == 1),
         ("phonics_leakage", lambda r: int(r["phonics_leakage"]) == 1),
@@ -565,11 +667,11 @@ def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
         flagged_sorted = sorted(
             flagged,
             key=lambda r: (
-                int(r["spec_adherence_score"]),
-                int(r["task_quality_score"]),
-                int(r["robustness_score"]),
+                int(r.get("spec_adherence_score") or 0),
+                int(r.get("task_quality_score") or 0),
+                int(r.get("robustness_score") or 0),
                 float(r["target_phonics_coverage"]),
-                -float(r["off_target_phonics_rate"]),
+                -float(r["above_level_rate"]),
             ),
         )
         for rank, ex in enumerate(flagged_sorted[:top_n], start=1):
@@ -585,14 +687,14 @@ def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
                     "seed": ex["seed"],
                     "target_phonics": ex["target_phonics"],
                     "target_phonics_coverage": ex["target_phonics_coverage"],
-                    "off_target_phonics_rate": ex["off_target_phonics_rate"],
-                    "title_present": ex["title_present"],
+                    "above_level_rate": ex["above_level_rate"],
+                    "title_present": ex["title_rate"],
                     "sentence_count": ex["sentence_count"],
                     "incomplete_output": ex["incomplete_output"],
-                    "spec_adherence_score": ex["spec_adherence_score"],
-                    "robustness_score": ex["robustness_score"],
-                    "task_quality_score": ex["task_quality_score"],
-                    "consistency_score": ex["consistency_score"],
+                    "spec_adherence_score": ex.get("spec_adherence_score", ""),
+                    "robustness_score": ex.get("robustness_score", ""),
+                    "task_quality_score": ex.get("task_quality_score", ""),
+                    "consistency_score": ex.get("consistency_score", ""),
                     "story": ex["story"],
                     "spec_adherence_justification": ex.get("spec_adherence_justification", ""),
                     "robustness_justification": ex.get("robustness_justification", ""),
@@ -816,6 +918,7 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
 
     summary_fields = [
         "metric",
+        "metric_key",
         "metric_family",
         "base_mean",
         "tuned_mean",
@@ -824,6 +927,82 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
         "n_tuned",
     ]
     write_csv(args.summary, summary, summary_fields)
+
+    # Keep objective/ and subjective/ summaries in sync with evaluation_summary.
+    obj_summary = build_objective_summary_by_model(scored)
+    obj_summary_fields = list(obj_summary[0].keys()) if obj_summary else ["model", "n"]
+    write_csv(OBJECTIVE_DIR / "objective_eval_summary.csv", obj_summary, obj_summary_fields)
+
+    obj_by_prompt = build_objective_summary_by_prompt(scored)
+    obj_by_prompt_fields = list(obj_by_prompt[0].keys()) if obj_by_prompt else ["model", "prompt_id", "n"]
+    write_csv(
+        OBJECTIVE_DIR / "objective_eval_by_prompt.csv",
+        obj_by_prompt,
+        obj_by_prompt_fields,
+    )
+
+    # Row-level objective mirror of scored outputs (objective columns only).
+    obj_row_fields = [
+        "model",
+        "prompt_id",
+        "generation_id",
+        "seed",
+        "target_phonics",
+        "decodability_compliance",
+        "distinct_decodability_compliance",
+        "weighted_above_level_rate",
+        "mean_above_level_distance",
+        "target_phonics_coverage",
+        "phonics_leakage_rate",
+        "title_rate",
+        "word_count",
+        "above_level_rate",
+        "no_duplicate_sentences",
+        "complete_output",
+        "sentence_count",
+        "above_level_words",
+        "phonics_leakage_terms",
+        "detected_title",
+        "incomplete_reasons",
+    ]
+    write_csv(OBJECTIVE_DIR / "objective_eval_results.csv", scored, obj_row_fields)
+
+    judged = [r for r in scored if str(r.get("spec_adherence_score", "")) != ""]
+    if judged:
+        subj_summary = build_subjective_summary_by_model(judged)
+        subj_fields = list(subj_summary[0].keys()) if subj_summary else ["model", "n"]
+        write_csv(SUBJECTIVE_DIR / "llm_judge_summary.csv", subj_summary, subj_fields)
+
+        subj_by_prompt = build_subjective_summary_by_prompt(judged)
+        subj_by_prompt_fields = (
+            list(subj_by_prompt[0].keys()) if subj_by_prompt else ["model", "prompt_id", "n"]
+        )
+        write_csv(
+            SUBJECTIVE_DIR / "llm_judge_by_prompt.csv",
+            subj_by_prompt,
+            subj_by_prompt_fields,
+        )
+
+        judge_row_fields = [
+            "model",
+            "prompt_id",
+            "generation_id",
+            "seed",
+            "target_phonics",
+            "spec_adherence_score",
+            "robustness_score",
+            "task_quality_score",
+            "consistency_score",
+            "spec_adherence_justification",
+            "robustness_justification",
+            "task_quality_justification",
+            "consistency_justification",
+            "raw_story_judge_json",
+            "raw_consistency_judge_json",
+        ]
+        write_csv(SUBJECTIVE_DIR / "llm_judge_results.csv", judged, judge_row_fields)
+        # Merged view = scored outputs
+        write_csv(SUBJECTIVE_DIR / "final_evaluation.csv", scored, SCORED_FIELDS)
 
     error_fields = [
         "failure_type",
@@ -836,7 +1015,7 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
         "seed",
         "target_phonics",
         "target_phonics_coverage",
-        "off_target_phonics_rate",
+        "above_level_rate",
         "title_present",
         "sentence_count",
         "incomplete_output",
@@ -866,6 +1045,8 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
     print()
     print(f"Saved: {args.scored}")
     print(f"Saved: {args.summary}")
+    print(f"Saved: {OBJECTIVE_DIR / 'objective_eval_summary.csv'}")
+    print(f"Saved: {SUBJECTIVE_DIR / 'llm_judge_summary.csv'}")
     print(f"Saved: {args.error_analysis}")
     return 0
 
