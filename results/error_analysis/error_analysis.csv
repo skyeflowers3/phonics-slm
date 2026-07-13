@@ -1,87 +1,56 @@
-failure_type,rank,n_tuned_flagged,pct_tuned_flagged,model,prompt_id,generation_id,seed,target_phonics,target_phonics_coverage,above_level_rate,title_present,sentence_count,incomplete_output,spec_adherence_score,robustness_score,task_quality_score,consistency_score,story,spec_adherence_justification,robustness_justification,task_quality_justification,consistency_justification
-low_target_phonics_coverage,1,2,0.0952,tuned,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",0.125,0.093,1,5,0,1,2,1,0,"Title: A Trip to the Zoo
-
-Dad and Mom went on a trip to the zoo.  
-We met lots of animals!  
-A big cat sat next to us.  
-A monkey looked at us from above.  
-There was a lot of fun and joy!",The story is simple and decodable but barely uses diphthongs or consonant digraphs for practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its instructional value for this phonics focus.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_target_phonics_coverage,2,2,0.0952,tuned,final_e_blends_1,2,1002,"final-e words, consonant blends",0.375,0.1304,1,6,0,1,2,1,0,"Title: The Big Red Bus
-
-Mom and Dad ride to work every day by bus.  
-A big red bus is on the street.  
-The bus has lots of kids!  
-The kids sit on the seats.  
-What can we do?  
-We get on the bus and go!",The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.",The three generations show highly inconsistent decodability and readability for the target level.
-high_above_level_rate,1,2,0.0952,tuned,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",0.875,0.3429,1,4,0,1,2,1,1,"Title: The Fun Game
+failure_type,rank,n_tuned_flagged,pct_tuned_flagged,model,prompt_id,generation_id,seed,target_phonics,above_level_rate,title_present,sentence_count,incomplete_output,spec_adherence_score,robustness_score,task_quality_score,consistency_score,story,spec_adherence_justification,robustness_justification,task_quality_justification,consistency_justification
+high_above_level_rate,1,2,0.0952,tuned,blends_digraphs_1,2,1002,"consonant blends, consonant digraphs",0.3429,1,4,0,1,2,1,1,"Title: The Fun Game
 
 Sara and Sam have fun playing games together.  
 They play ball and jump rope.  
 A big game is happening at the park!  
 We run to get on the grass for fun!",The story is mostly decodable but uses above-level words like 'together' and lacks strong target pattern emphasis.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with blends and digraphs, limiting its effectiveness for targeted phonics instruction.","All three generations attempt to use simple language and some words with consonant blends and digraphs, but there is inconsistency in both decodability and focus on the target patterns."
-high_above_level_rate,2,2,0.0952,tuned,short_vowels_1,1,1001,short-vowel words,1.0,0.2857,1,4,0,2,2,2,0,"Title: The Cat and the Hare
+high_above_level_rate,2,2,0.0952,tuned,short_vowels_1,1,1001,short-vowel words,0.2857,1,4,0,2,2,2,0,"Title: The Cat and the Hare
 
 The hare ran fast.  
 The cat sat on the mat.  
 The hare ran to the log.  
 The hat was made of straw.",All words are decodable at the short-vowel level and the story avoids above-level vocabulary.,"The story is clean, coherent, and free of errors or formatting issues.","It provides clear, simple practice with short-vowel words in a readable narrative.",The generations are highly inconsistent in decodability for short-vowel words.
-low_spec_adherence,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.5,0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
+low_spec_adherence,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
 
 Daisy is the puffing puff.  
 She can puff up her wings like a storm!  
 The puffing puff has a funny look on his face.  
 He looks sad because he is so much taller than him!  
 His puffing puff is too tall for him to see!","The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.","The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.",It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.,None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_robustness,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.5,0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
+low_robustness,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
 
 Daisy is the puffing puff.  
 She can puff up her wings like a storm!  
 The puffing puff has a funny look on his face.  
 He looks sad because he is so much taller than him!  
 His puffing puff is too tall for him to see!","The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.","The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.",It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.,None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_task_quality,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.5,0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
+low_task_quality,1,1,0.0476,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
 
 Daisy is the puffing puff.  
 She can puff up her wings like a storm!  
 The puffing puff has a funny look on his face.  
 He looks sad because he is so much taller than him!  
 His puffing puff is too tall for him to see!","The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.","The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.",It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.,None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_consistency,1,12,0.5714,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.5,0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
+low_consistency,1,12,0.5714,tuned,diphthongs_digraphs_1,1,1001,"diphthongs, consonant digraphs",0.1837,1,5,0,0,0,0,0,"Title: The Puffing Puff
 
 Daisy is the puffing puff.  
 She can puff up her wings like a storm!  
 The puffing puff has a funny look on his face.  
 He looks sad because he is so much taller than him!  
 His puffing puff is too tall for him to see!","The story lacks target diphthongs, has confusing pronoun use, and is not decodable for the intended level.","The text is confusing, contradictory, and contains unclear references, making it unusable as instructional text.",It does not provide practice with diphthongs or consonant digraphs and is not suitable for student learning.,None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_consistency,2,12,0.5714,tuned,final_e_blends_1,1,1001,"final-e words, consonant blends",0.875,0.1829,1,11,0,1,1,1,0,"Title: The Bike
+low_consistency,2,12,0.5714,tuned,final_e_blends_1,1,1001,"final-e words, consonant blends",0.1829,1,11,0,1,1,1,0,"Title: The Bike
 
 Milo is riding his bike to school. He saw a red bike next to him. Milo stops and sees it is a dog. “I will ride my bike to the dog,” said Milo. Milo gets on his bike. He rides fast until he spots a cat. Then he jumps into the dog’s lap. Milo does not get off his bike. Milo sits on the dog’s side of the bike. Milo is happy! Milo rides his bike back to school.",The story is mostly decodable but includes above-level words like 'until' and confusing narrative elements.,The story is readable but contains unclear plot points and some logical inconsistencies.,"There is some practice with final-e words and blends, but coverage and clarity are limited.",The three generations show highly inconsistent decodability and readability for the target level.
-low_consistency,3,12,0.5714,tuned,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",0.125,0.093,1,5,0,1,2,1,0,"Title: A Trip to the Zoo
+low_consistency,3,12,0.5714,tuned,short_vowels_1,2,1002,short-vowel words,0.2308,1,7,0,1,2,1,0,"Title: The Cat and the Dog
 
-Dad and Mom went on a trip to the zoo.  
-We met lots of animals!  
-A big cat sat next to us.  
-A monkey looked at us from above.  
-There was a lot of fun and joy!",The story is simple and decodable but barely uses diphthongs or consonant digraphs for practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its instructional value for this phonics focus.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_consistency,4,12,0.5714,tuned,final_e_blends_1,2,1002,"final-e words, consonant blends",0.375,0.1304,1,6,0,1,2,1,0,"Title: The Big Red Bus
+The dog was playing when he saw the cat. He jumped up on his bed to see if he could catch it. “What do you think?” asked the cat. “I like this spot!” said the dog. “You can sit on my lap,” said the cat. Then they both sat in a big pile of straw! They were so happy.","Contains above-level words like 'playing,' 'jumped,' and 'straw,' making it partly decodable but not fully on-level.","The story is coherent, complete, and free from formatting or logical errors.","Some short-vowel words are present, but above-level vocabulary limits its effectiveness for targeted practice.",The generations are highly inconsistent in decodability for short-vowel words.
+low_consistency,4,12,0.5714,tuned,short_vowels_1,3,1003,short-vowel words,0.2292,1,5,0,1,2,1,0,"Title: A Cat on the Bed
 
-Mom and Dad ride to work every day by bus.  
-A big red bus is on the street.  
-The bus has lots of kids!  
-The kids sit on the seats.  
-What can we do?  
-We get on the bus and go!",The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.",The three generations show highly inconsistent decodability and readability for the target level.
-low_consistency,5,12,0.5714,tuned,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",0.5,0.1795,1,4,0,1,2,1,0,"Title: The Fun Game
-
-Sara and Sam have fun playing games together.  
-They play ball and they play hopscotch too.  
-Sam has two cups of lemonade to drink.  
-The game ends when the kids say “No!” from the table.","The story is decodable but barely uses diphthongs or consonant digraphs, limiting its value for targeted practice.","The text is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the target patterns, reducing its effectiveness as a focused learning tool.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
-low_consistency,6,12,0.5714,tuned,multisyllabic_vowel_teams_r_controlled_1,1,1001,"multisyllabic words, vowel teams, r-controlled vowels",0.8333,0.0,1,6,0,1,2,1,0,"Title: The Game
-
-Milo is playing a game. He has to get 10 points. Milo got two of his first three shots right. Then he had one shot left. He took it for himself. Milo won!","The story is decodable but lacks sufficient multisyllabic words, vowel teams, and r-controlled vowels for targeted practice.","The story is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its effectiveness as a focused learning text.","None of the generations consistently use multisyllabic words, vowel teams, or r-controlled vowels as targeted."
-low_consistency,7,12,0.5714,tuned,final_e_blends_1,3,1003,"final-e words, consonant blends",0.875,0.2,1,10,0,1,2,1,0,"Title: A Trip to the Farm
+A cat is sitting on a bed. The cat will nap for hours.  
+The dog will run when it sees the cat. It jumps up to sit.  
+The cat looks at the dog and says, “I am glad we are all happy!”","Some above-level words like 'hours', 'jumps', and 'happy' make it partly off-level for short-vowel decodable practice.","The story is coherent, complete, and free of formatting or narrative errors.",It provides some short-vowel practice but includes words that may be too advanced for early decodable readers.,The generations are highly inconsistent in decodability for short-vowel words.
+low_consistency,5,12,0.5714,tuned,final_e_blends_1,3,1003,"final-e words, consonant blends",0.2,1,10,0,1,2,1,0,"Title: A Trip to the Farm
 
 Dad has made lots of cakes! I have so many cakes, too!
 My mom will make them when it is time for me to go on her trip to the farm.
@@ -89,6 +58,24 @@ We will see what we can find out about animals and plants at the farm. We also
 will have fun playing games at the farm.
 I am going to be a good kid, Dad. My sister will be there to help us. The kids
 and I will learn so much from this trip!",The story is mostly decodable but includes above-level words like 'animals' and 'playing' that may challenge learners.,"The story is coherent, complete, and free from formatting or structural errors.","There is some practice with target patterns, but coverage is light and not strongly emphasized.",The three generations show highly inconsistent decodability and readability for the target level.
-low_consistency,8,12,0.5714,tuned,short_vowels_1,2,1002,short-vowel words,1.0,0.2308,1,7,0,1,2,1,0,"Title: The Cat and the Dog
+low_consistency,6,12,0.5714,tuned,diphthongs_digraphs_1,2,1002,"diphthongs, consonant digraphs",0.1795,1,4,0,1,2,1,0,"Title: The Fun Game
 
-The dog was playing when he saw the cat. He jumped up on his bed to see if he could catch it. “What do you think?” asked the cat. “I like this spot!” said the dog. “You can sit on my lap,” said the cat. Then they both sat in a big pile of straw! They were so happy.","Contains above-level words like 'playing,' 'jumped,' and 'straw,' making it partly decodable but not fully on-level.","The story is coherent, complete, and free from formatting or logical errors.","Some short-vowel words are present, but above-level vocabulary limits its effectiveness for targeted practice.",The generations are highly inconsistent in decodability for short-vowel words.
+Sara and Sam have fun playing games together.  
+They play ball and they play hopscotch too.  
+Sam has two cups of lemonade to drink.  
+The game ends when the kids say “No!” from the table.","The story is decodable but barely uses diphthongs or consonant digraphs, limiting its value for targeted practice.","The text is coherent, complete, and free of errors or formatting issues.","It offers minimal practice with the target patterns, reducing its effectiveness as a focused learning tool.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.
+low_consistency,7,12,0.5714,tuned,final_e_blends_1,2,1002,"final-e words, consonant blends",0.1304,1,6,0,1,2,1,0,"Title: The Big Red Bus
+
+Mom and Dad ride to work every day by bus.  
+A big red bus is on the street.  
+The bus has lots of kids!  
+The kids sit on the seats.  
+What can we do?  
+We get on the bus and go!",The story is decodable but lacks sufficient final-e words and consonant blends for targeted practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice of the target patterns, limiting its effectiveness as focused phonics instruction.",The three generations show highly inconsistent decodability and readability for the target level.
+low_consistency,8,12,0.5714,tuned,diphthongs_digraphs_1,3,1003,"diphthongs, consonant digraphs",0.093,1,5,0,1,2,1,0,"Title: A Trip to the Zoo
+
+Dad and Mom went on a trip to the zoo.  
+We met lots of animals!  
+A big cat sat next to us.  
+A monkey looked at us from above.  
+There was a lot of fun and joy!",The story is simple and decodable but barely uses diphthongs or consonant digraphs for practice.,"The text is clean, coherent, and free of errors or formatting issues.","It offers minimal practice with the target patterns, limiting its instructional value for this phonics focus.",None of the three generations consistently produce decodable text focused on diphthongs and consonant digraphs.

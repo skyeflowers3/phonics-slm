@@ -4,6 +4,12 @@ Base vs fine-tuned small language model evaluation for **decodable phonics stori
 
 Given 1–3 target phonics patterns, each model generates a short story that should stay at the requested decodability level so students can read and learn from it, emphasize the target patterns, and form a complete narrative.
 
+## Model, dataset, and inference
+
+- **Model:** [skyeflo/qwen3-decodable-story-sft](https://huggingface.co/skyeflo/qwen3-decodable-story-sft)
+- **Dataset:** [skyeflo/decodable-story-dataset](https://huggingface.co/datasets/skyeflo/decodable-story-dataset)
+- **Run inference:** Open this [Colab notebook](https://colab.research.google.com/drive/18j2d5T1Te0vRFnE1bCYtHKEI3QBvZWCk?usp=sharing), click **Run all**, scroll to the bottom, and click the Gradio link the cell produces.
+
 ## Repo layout
 
 | Path | Contents |
@@ -32,7 +38,8 @@ Also:
 
 Primary behavior goal: **decodable text students at the requested level can read and learn from.**
 
-- **Objective:** rule-based phonics metrics (`decodability_compliance`, `above_level_rate`, `weighted_above_level_rate`, `target_phonics_coverage`, leakage, title, completeness, duplicates). Not a perfect linguistic decodability measure.
+- **Objective (primary):** rule-based phonics metrics (`decodability_compliance`, `above_level_rate`, `weighted_above_level_rate`, leakage, title, completeness, duplicates). Not a perfect linguistic decodability measure.
+- **Objective (secondary diagnostic):** `target_phonics_coverage` — reported with a caveat that advanced/above-level stories can inflate it; not a primary success metric.
 - **Subjective (blind LLM judge):** `spec_adherence`, `robustness`, `task_quality`, plus prompt-level `consistency` across the three matched generations. Spec adherence prioritizes in-level readable decodable text.
 
 ## Reproducing

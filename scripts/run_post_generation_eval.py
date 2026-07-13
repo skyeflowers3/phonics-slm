@@ -244,6 +244,7 @@ def objective_checks(row: dict, row_index: int) -> dict[str, Any]:
     ceiling = permitted_ceiling(targets)
     level = compute_level_metrics(profile, ceiling)
 
+    # Secondary / diagnostic only: advanced stories can inflate this.
     credits: list[float] = []
     for display_name in targets:
         internal = DISPLAY_TO_INTERNAL[display_name]
@@ -279,7 +280,7 @@ def objective_checks(row: dict, row_index: int) -> dict[str, Any]:
         "distinct_decodability_compliance": level["distinct_decodability_compliance"],
         "weighted_above_level_rate": level["weighted_above_level_rate"],
         "mean_above_level_distance": level["mean_above_level_distance"],
-        "target_phonics_coverage": target_coverage,  # was target_satisfaction
+        "target_phonics_coverage": target_coverage,
         "phonics_leakage_rate": int(leaked),
         "title_rate": int(has_title),
         "word_count": profile["word_count"],
@@ -504,20 +505,28 @@ def os_env(key: str) -> str:
     return os.environ.get(key, "")
 
 
-# Full display titles for objective / judge summary columns.
+# Primary objective metrics (drive the success claim).
 OBJECTIVE_METRIC_TITLES: list[tuple[str, str]] = [
     ("decodability_compliance", "Decodability compliance"),
     ("distinct_decodability_compliance", "Distinct-word decodability compliance"),
     ("above_level_rate", "Above-level rate"),
     ("weighted_above_level_rate", "Weighted above-level rate"),
     ("mean_above_level_distance", "Mean above-level distance"),
-    ("target_phonics_coverage", "Target phonics coverage"),
     ("phonics_leakage_rate", "Phonics leakage rate"),
     ("title_rate", "Title present rate"),
     ("no_duplicate_sentences", "No duplicate sentences rate"),
     ("complete_output", "Complete output rate"),
     ("word_count", "Mean word count"),
     ("sentence_count", "Mean sentence count"),
+]
+
+# Secondary / diagnostic only — do not treat as primary success criteria.
+# Advanced above-level stories can inflate coverage by accident.
+SECONDARY_OBJECTIVE_METRIC_TITLES: list[tuple[str, str]] = [
+    (
+        "target_phonics_coverage",
+        "Target phonics coverage (secondary; advanced text can inflate)",
+    ),
 ]
 
 JUDGE_METRIC_TITLES: list[tuple[str, str]] = [
@@ -529,10 +538,15 @@ JUDGE_METRIC_TITLES: list[tuple[str, str]] = [
 
 
 def build_summary(scored: list[dict]) -> list[dict]:
-    # Include every metric from objective + subjective summaries (single source of truth).
-    metric_specs = [
-        (key, title, "objective") for key, title in OBJECTIVE_METRIC_TITLES
-    ] + [(key, title, "judge") for key, title in JUDGE_METRIC_TITLES]
+    # Primary objective, then secondary diagnostic, then judge.
+    metric_specs = (
+        [(key, title, "objective") for key, title in OBJECTIVE_METRIC_TITLES]
+        + [
+            (key, title, "objective_secondary")
+            for key, title in SECONDARY_OBJECTIVE_METRIC_TITLES
+        ]
+        + [(key, title, "judge") for key, title in JUDGE_METRIC_TITLES]
+    )
 
     by_model: dict[str, list[dict]] = defaultdict(list)
     for row in scored:
@@ -551,6 +565,13 @@ def build_summary(scored: list[dict]) -> list[dict]:
         delta = None
         if base is not None and tuned is not None:
             delta = round(tuned - base, 4)
+        note = ""
+        if family == "objective_secondary":
+            note = (
+                "Secondary diagnostic only. Not a primary success metric. "
+                "Advanced/above-level stories can inflate coverage by containing "
+                "requested patterns accidentally."
+            )
         out.append(
             {
                 "metric": title,
@@ -561,13 +582,14 @@ def build_summary(scored: list[dict]) -> list[dict]:
                 "tuned_minus_base": delta if delta is not None else "",
                 "n_base": len(by_model.get("base", [])),
                 "n_tuned": len(by_model.get("tuned", [])),
+                "note": note,
             }
         )
     return out
 
 
 def build_objective_summary_by_model(scored: list[dict]) -> list[dict]:
-    """Wide objective summary — same numbers as evaluation_summary objective rows."""
+    """Wide objective summary — primary metrics + secondary coverage."""
     by_model: dict[str, list[dict]] = defaultdict(list)
     for row in scored:
         by_model[row["model"]].append(row)
@@ -575,7 +597,7 @@ def build_objective_summary_by_model(scored: list[dict]) -> list[dict]:
     for model in sorted(by_model):
         rows = by_model[model]
         record: dict[str, Any] = {"model": model, "n": len(rows)}
-        for key, title in OBJECTIVE_METRIC_TITLES:
+        for key, title in OBJECTIVE_METRIC_TITLES + SECONDARY_OBJECTIVE_METRIC_TITLES:
             record[title] = round(_mean([float(r[key]) for r in rows]), 4)
         out.append(record)
     return out
@@ -611,7 +633,7 @@ def build_objective_summary_by_prompt(scored: list[dict]) -> list[dict]:
             "target_phonics": rows[0].get("target_phonics", ""),
             "n": len(rows),
         }
-        for key, title in OBJECTIVE_METRIC_TITLES:
+        for key, title in OBJECTIVE_METRIC_TITLES + SECONDARY_OBJECTIVE_METRIC_TITLES:
             record[title] = round(_mean([float(r[key]) for r in rows]), 4)
         out.append(record)
     return out
@@ -641,7 +663,6 @@ def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
     tuned = [r for r in scored if r["model"] == "tuned"]
     has_judge = any(str(r.get("spec_adherence_score", "")) != "" for r in tuned)
     failure_defs = [
-        ("low_target_phonics_coverage", lambda r: float(r["target_phonics_coverage"]) < 0.5),
         ("high_above_level_rate", lambda r: float(r["above_level_rate"]) >= 0.25),
         ("missing_title", lambda r: int(r["title_rate"]) == 0),
         ("duplicate_sentences", lambda r: int(r["has_duplicate_sentences"]) == 1),
@@ -670,7 +691,6 @@ def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
                 int(r.get("spec_adherence_score") or 0),
                 int(r.get("task_quality_score") or 0),
                 int(r.get("robustness_score") or 0),
-                float(r["target_phonics_coverage"]),
                 -float(r["above_level_rate"]),
             ),
         )
@@ -686,7 +706,6 @@ def build_error_analysis(scored: list[dict], top_n: int = 8) -> list[dict]:
                     "generation_id": ex["generation_id"],
                     "seed": ex["seed"],
                     "target_phonics": ex["target_phonics"],
-                    "target_phonics_coverage": ex["target_phonics_coverage"],
                     "above_level_rate": ex["above_level_rate"],
                     "title_present": ex["title_rate"],
                     "sentence_count": ex["sentence_count"],
@@ -925,6 +944,7 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
         "tuned_minus_base",
         "n_base",
         "n_tuned",
+        "note",
     ]
     write_csv(args.summary, summary, summary_fields)
 
@@ -1014,7 +1034,6 @@ def write_outputs(scored: list[dict], args: argparse.Namespace) -> int:
         "generation_id",
         "seed",
         "target_phonics",
-        "target_phonics_coverage",
         "above_level_rate",
         "title_present",
         "sentence_count",
