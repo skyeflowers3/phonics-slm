@@ -8,7 +8,7 @@ Given 1–3 target phonics patterns, each model generates a short story that sho
 
 - **Model:** [skyeflo/qwen3-decodable-story-sft](https://huggingface.co/skyeflo/qwen3-decodable-story-sft)
 - **Dataset:** [skyeflo/decodable-story-dataset](https://huggingface.co/datasets/skyeflo/decodable-story-dataset)
-- **Run inference:** Open this [Colab notebook](https://colab.research.google.com/drive/18j2d5T1Te0vRFnE1bCYtHKEI3QBvZWCk?usp=sharing), click **Run all**, scroll to the bottom, and click the Gradio link the cell produces.
+- **Run inference:** Open the [Colab notebook](https://colab.research.google.com/drive/18j2d5T1Te0vRFnE1bCYtHKEI3QBvZWCk?usp=sharing) and connect to a GPU runtime (T4 or equivalent). Run the installation cell. Then restart the runtime, run the remaining cells, and click the Gradio link generated in the final cell to launch the demo.
 
 ## Repo layout
 
